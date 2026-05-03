@@ -1,0 +1,111 @@
+---
+layout: base.njk
+pageSlug: "philosophy"
+pagination:
+  data: languages
+  size: 1
+  alias: lang
+permalink: "{{ lang.urlPrefix }}/philosophy.html"
+---
+{% set t = i18n[pageSlug] | localize(lang.code) %}
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+  <div class="container">
+    <p class="section-eyebrow light">{{ t.hero_eyebrow }}</p>
+    <h1>{{ t.hero_title }}</h1>
+    <p>{{ t.hero_subtitle }}</p>
+  </div>
+</div>
+
+<!-- VISION -->
+<section class="section-white">
+  <div class="container">
+    <div class="two-col" style="margin-bottom: 72px;">
+      <div class="col-image">
+        <img src="/images/partnership.webp" alt="Partnership and collaboration" loading="lazy" />
+      </div>
+      <div>
+        <p class="section-eyebrow">{{ t.vision_eyebrow }}</p>
+        <h2 class="section-title crimson">{{ t.vision_title }}</h2>
+        <p class="lead">{{ t.vision_p1 | safe }}</p>
+        <p class="lead">{{ t.vision_p2 }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD — dark bg -->
+<section class="section-dark">
+  <div class="container">
+    <p class="section-eyebrow light">{{ t.method_eyebrow }}</p>
+    <h2 class="section-title light">{{ t.method_title }}</h2>
+    <div class="philosophy-steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-title">{{ t.step1_title }}</div>
+        <div class="step-desc">{{ t.step1_desc }}</div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-title">{{ t.step2_title }}</div>
+        <div class="step-desc">{{ t.step2_desc }}</div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-title">{{ t.step3_title }}</div>
+        <div class="step-desc">{{ t.step3_desc }}</div>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-title">{{ t.step4_title }}</div>
+        <div class="step-desc">{{ t.step4_desc }}</div>
+      </div>
+    </div>
+    <blockquote class="pull-quote">{{ t.pull_quote }}</blockquote>
+    <div class="btn-actions">
+      <a href="{{ lang.urlPrefix }}/about.html" class="btn-outline-white">{{ t.method_btn1 }}</a>
+      <a href="{{ lang.urlPrefix }}/contact.html" class="btn-outline-white">{{ t.method_btn2 }}</a>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERSHIP -->
+<section class="section-off">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <p class="section-eyebrow">{{ t.partner_eyebrow }}</p>
+        <h2 class="section-title crimson">{{ t.partner_title }}</h2>
+        <p class="lead">{{ t.partner_p1 | safe }}</p>
+        <p class="lead">{{ t.partner_p2 }}</p>
+        <p class="lead">{{ t.partner_p3 }}</p>
+      </div>
+      <div>
+        <p class="lead">{{ t.partner_p4 }}</p>
+        <p class="lead">{{ t.partner_p5 }}</p>
+        <div style="background: var(--bg-3); border: 1px solid var(--rose-border); border-radius: 10px; padding: 32px; margin-top: 32px;">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap: 24px;">
+            <div>
+              <div style="font-family:'Space Grotesk',sans-serif;font-size:32px;color:var(--rose);">{{ t.stat1_num }}</div>
+              <div style="font-size:13px;font-weight:700;margin-top:4px;color:var(--text-1);">{{ t.stat1_label }}</div>
+            </div>
+            <div>
+              <div style="font-family:'Space Grotesk',sans-serif;font-size:32px;color:var(--rose);">{{ t.stat2_num }}</div>
+              <div style="font-size:13px;font-weight:700;margin-top:4px;color:var(--text-1);">{{ t.stat2_label }}</div>
+            </div>
+            <div>
+              <div style="font-family:'Space Grotesk',sans-serif;font-size:32px;color:var(--rose);">{{ t.stat3_num }}</div>
+              <div style="font-size:13px;font-weight:700;margin-top:4px;color:var(--text-1);">{{ t.stat3_label }}</div>
+            </div>
+            <div>
+              <div style="font-family:'Space Grotesk',sans-serif;font-size:32px;color:var(--rose);">{{ t.stat4_num }}</div>
+              <div style="font-size:13px;font-weight:700;margin-top:4px;color:var(--text-1);">{{ t.stat4_label }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

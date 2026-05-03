@@ -1,0 +1,121 @@
+---
+layout: base.njk
+pageSlug: "investment-sectors"
+pagination:
+  data: languages
+  size: 1
+  alias: lang
+permalink: "{{ lang.urlPrefix }}/investment-sectors.html"
+---
+{% set t = i18n[pageSlug] | localize(lang.code) %}
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+  <div class="container">
+    <p class="section-eyebrow light">{{ t.hero_eyebrow }}</p>
+    <h1>{{ t.hero_title | safe }}</h1>
+    <p>{{ t.hero_subtitle }}</p>
+  </div>
+</div>
+
+<!-- INTRO + 3 SECTORS -->
+<section class="section-white">
+  <div class="container">
+    <p class="lead" style="margin-bottom: 64px;">{{ t.intro_lead }}</p>
+
+    <!-- SECTOR 1 -->
+    <div class="two-col" style="margin-bottom: 72px; padding-bottom: 72px; border-bottom: 1.5px solid var(--rose-border);">
+      <div>
+        <div class="portfolio-col-icon" style="margin-bottom: 24px;">
+          <svg viewBox="0 0 24 24" style="width:24px;height:24px;stroke:var(--rose);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;">
+            <rect x="3" y="11" width="18" height="3" rx="1"/><path d="M5 11V7l7-4 7 4v4"/><path d="M3 21h18M6 14v7M18 14v7"/>
+          </svg>
+        </div>
+        <p class="section-eyebrow">{{ t.s1_eyebrow }}</p>
+        <h2 class="section-title crimson" style="font-size:32px; margin-bottom: 20px;">{{ t.s1_title }}</h2>
+        <p class="lead">{{ t.s1_p1 | safe }}</p>
+        <p class="lead"><span class="focus-tag">{{ t.s1_focus_label }}</span> {{ t.s1_p2 }}</p>
+      </div>
+      <div class="col-image">
+        <img src="/images/solar-panels-row.webp" alt="Solar photovoltaic plant" loading="lazy" />
+      </div>
+    </div>
+
+    <!-- SECTOR 2 -->
+    <div class="two-col reverse" style="margin-bottom: 72px; padding-bottom: 72px; border-bottom: 1.5px solid var(--rose-border);">
+      <div class="col-image">
+        <img src="/images/corporate-building.webp" alt="Real estate and infrastructure" loading="lazy" />
+      </div>
+      <div>
+        <div class="portfolio-col-icon" style="margin-bottom: 24px;">
+          <svg viewBox="0 0 24 24" style="width:24px;height:24px;stroke:var(--rose);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;">
+            <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+          </svg>
+        </div>
+        <p class="section-eyebrow">{{ t.s2_eyebrow }}</p>
+        <h2 class="section-title crimson" style="font-size:32px; margin-bottom: 20px;">{{ t.s2_title }}</h2>
+        <p class="lead">{{ t.s2_p1 }}</p>
+        <p class="lead"><span class="focus-tag">{{ t.s2_focus_label }}</span> {{ t.s2_p2 }}</p>
+      </div>
+    </div>
+
+    <!-- SECTOR 3 -->
+    <div class="two-col" style="margin-bottom: 72px;">
+      <div>
+        <div class="portfolio-col-icon" style="margin-bottom: 24px;">
+          <svg viewBox="0 0 24 24" style="width:24px;height:24px;stroke:var(--rose);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+          </svg>
+        </div>
+        <p class="section-eyebrow">{{ t.s3_eyebrow }}</p>
+        <h2 class="section-title crimson" style="font-size:32px; margin-bottom: 20px;">{{ t.s3_title }}</h2>
+        <p class="lead">{{ t.s3_p1 }}</p>
+        <p class="lead"><span class="focus-tag">{{ t.s3_focus_label }}</span> {{ t.s3_p2 }}</p>
+      </div>
+      <div class="col-image">
+        <img src="/images/finance-analytics.webp" alt="Finance and alternative instruments" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY DIVERSIFICATION -->
+<section class="section-off">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <p class="section-eyebrow">{{ t.div_eyebrow }}</p>
+        <h2 class="section-title crimson">{{ t.div_title }}</h2>
+        <p class="lead">{{ t.div_p1 }}</p>
+        <p class="lead">{{ t.div_p2 }}</p>
+        <div class="btn-actions" style="margin-top: 32px;">
+          <a href="{{ lang.urlPrefix }}/portfolio.html" class="btn btn-primary">{{ t.div_btn1 }}</a>
+          <a href="{{ lang.urlPrefix }}/contact.html" class="btn-outline">{{ t.div_btn2 }}</a>
+        </div>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+        <div style="background:var(--bg-3);border:1px solid var(--rose-border);border-radius:10px;padding:28px;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:36px;color:var(--rose);line-height:1;">{{ t.stat1_num }}</div>
+          <div style="font-size:13px;font-weight:700;margin-top:8px;color:var(--text-1);">{{ t.stat1_label }}</div>
+          <div style="font-size:12px;color:var(--text-2);margin-top:4px;">{{ t.stat1_sub }}</div>
+        </div>
+        <div style="background:var(--bg-3);border:1px solid var(--rose-border);border-radius:10px;padding:28px;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:36px;color:var(--rose);line-height:1;">{{ t.stat2_num }}</div>
+          <div style="font-size:13px;font-weight:700;margin-top:8px;color:var(--text-1);">{{ t.stat2_label }}</div>
+          <div style="font-size:12px;color:var(--text-2);margin-top:4px;">{{ t.stat2_sub }}</div>
+        </div>
+        <div style="background:var(--bg-3);border:1px solid var(--rose-border);border-radius:10px;padding:28px;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:36px;color:var(--rose);line-height:1;">{{ t.stat3_num }}</div>
+          <div style="font-size:13px;font-weight:700;margin-top:8px;color:var(--text-1);">{{ t.stat3_label }}</div>
+          <div style="font-size:12px;color:var(--text-2);margin-top:4px;">{{ t.stat3_sub }}</div>
+        </div>
+        <div style="background:var(--bg-3);border:1px solid var(--rose-border);border-radius:10px;padding:28px;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:36px;color:var(--rose);line-height:1;">{{ t.stat4_num }}</div>
+          <div style="font-size:13px;font-weight:700;margin-top:8px;color:var(--text-1);">{{ t.stat4_label }}</div>
+          <div style="font-size:12px;color:var(--text-2);margin-top:4px;">{{ t.stat4_sub }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

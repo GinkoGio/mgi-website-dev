@@ -1,0 +1,89 @@
+{% set t = i18n[pageSlug] | localize(lang.code) %}
+{% set t_nav = i18n.nav | localize(lang.code) %}
+{% set t_footer = i18n.footer | localize(lang.code) %}
+<!DOCTYPE html>
+<html lang="{{ lang.code }}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ t.meta_title }}</title>
+<meta name="description" content="{{ t.meta_description }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ t.meta_title }}">
+<meta property="og:description" content="{{ t.meta_description }}">
+<meta property="og:image" content="{{ t.og_image }}">
+<meta property="og:url" content="{{ t.og_url }}">
+<link rel="canonical" href="{{ t.canonical }}">
+<link rel="icon" href="/images/logo.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/hitech.css">
+</head>
+<body>
+
+<nav id="main-nav">
+  <a href="{{ lang.urlPrefix }}/index.html" class="nav-logo">
+    <img src="/images/logo.webp" alt="Maverick Global Investments" class="nav-logo-img">
+    <div class="nav-logo-text">
+      <span class="nav-logo-name">Maverick</span>
+      <span class="nav-logo-sub">Global Investments</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="{{ lang.urlPrefix }}/index.html"{% if pageSlug == 'index' %} class="active"{% endif %}>{{ t_nav.home }}</a></li>
+    <li><a href="{{ lang.urlPrefix }}/about.html"{% if pageSlug == 'about' %} class="active"{% endif %}>{{ t_nav.about }}</a></li>
+    <li><a href="{{ lang.urlPrefix }}/what-we-do.html"{% if pageSlug == 'what-we-do' %} class="active"{% endif %}>{{ t_nav.what_we_do }}</a></li>
+    <li><a href="{{ lang.urlPrefix }}/investment-sectors.html"{% if pageSlug == 'investment-sectors' %} class="active"{% endif %}>{{ t_nav.sectors }}</a></li>
+    <li><a href="{{ lang.urlPrefix }}/philosophy.html"{% if pageSlug == 'philosophy' %} class="active"{% endif %}>{{ t_nav.philosophy }}</a></li>
+    <li><a href="{{ lang.urlPrefix }}/portfolio.html"{% if pageSlug == 'portfolio' %} class="active"{% endif %}>{{ t_nav.portfolio }}</a></li>
+    <li><a href="{{ lang.urlPrefix }}/contact.html" class="nav-cta{% if pageSlug == 'contact' %} active{% endif %}">{{ t_nav.contact }}</a></li>
+    {% if lang.code == 'en' %}
+      <li class="lang-li"><a href="/it/{{ pageSlug }}.html" class="lang-btn">IT</a></li>
+    {% else %}
+      <li class="lang-li"><a href="/{{ pageSlug }}.html" class="lang-btn">EN</a></li>
+    {% endif %}
+  </ul>
+  <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+{{ content | safe }}
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="/images/logo.webp" alt="Maverick Global Investments" class="footer-logo" loading="lazy">
+        <p>{{ t_footer.tagline }}</p>
+      </div>
+      <div class="footer-col">
+        <h5>{{ t_footer.nav_heading }}</h5>
+        <ul>
+          <li><a href="{{ lang.urlPrefix }}/index.html">{{ t_nav.home }}</a></li>
+          <li><a href="{{ lang.urlPrefix }}/about.html">{{ t_nav.about }}</a></li>
+          <li><a href="{{ lang.urlPrefix }}/what-we-do.html">{{ t_nav.what_we_do }}</a></li>
+          <li><a href="{{ lang.urlPrefix }}/investment-sectors.html">{{ t_nav.sectors }}</a></li>
+          <li><a href="{{ lang.urlPrefix }}/philosophy.html">{{ t_nav.philosophy }}</a></li>
+          <li><a href="{{ lang.urlPrefix }}/portfolio.html">{{ t_nav.portfolio }}</a></li>
+          <li><a href="{{ lang.urlPrefix }}/contact.html">{{ t_nav.contact }}</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>{{ t_footer.contact_heading }}</h5>
+        <p>{{ t_footer.address | safe }}</p>
+        <br>
+        <a href="mailto:info@maverickglob.com" class="footer-email">info@maverickglob.com</a>
+        <a href="mailto:mavkglob@pec.it" class="footer-email">mavkglob@pec.it</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>{{ t_footer.copyright }}</span>
+      <span>{{ t_footer.disclaimer }}</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/hitech.js"></script>
+</body>
+</html>

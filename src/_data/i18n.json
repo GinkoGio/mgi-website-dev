@@ -1,0 +1,367 @@
+{
+  "nav": {
+    "home":       { "en": "Home",               "it": "Home" },
+    "about":      { "en": "About",              "it": "Chi Siamo" },
+    "what_we_do": { "en": "What We Do",         "it": "Attività" },
+    "sectors":    { "en": "Investment Sectors", "it": "Settori" },
+    "philosophy": { "en": "Philosophy",         "it": "Filosofia" },
+    "portfolio":  { "en": "Portfolio",          "it": "Portfolio" },
+    "contact":    { "en": "Contact",            "it": "Contatti" }
+  },
+
+  "footer": {
+    "nav_heading":     { "en": "Navigation",  "it": "Navigazione" },
+    "contact_heading": { "en": "Contact",     "it": "Contatti" },
+    "tagline":  { "en": "An independent investment firm. Disciplined capital allocation. Active asset management.", "it": "Una società d'investimento indipendente. Allocazione disciplinata del capitale. Gestione attiva degli asset." },
+    "address":  { "en": "Via Gabrio Serbelloni 5<br>20122 Milan, Italy", "it": "Via Gabrio Serbelloni 5<br>20122 Milano, Italia" },
+    "copyright": { "en": "© 2026 Maverick Global Investments S.r.l. All rights reserved.", "it": "© 2026 Maverick Global Investments S.r.l. Tutti i diritti riservati." },
+    "disclaimer": { "en": "All investment opportunities are subject to thorough due diligence and appropriate risk assessment.", "it": "Ogni opportunità di investimento è subordinata a processi di due diligence e valutazione dei profili di rischio." }
+  },
+
+  "index": {
+    "meta_title":       { "en": "Maverick Global Investments — Home", "it": "Maverick Global Investments — Home" },
+    "meta_description": { "en": "Maverick Global Investments is an independent investment firm based in Milan, operating in renewable energy, real estate, and alternative finance.", "it": "Maverick Global Investments è una società di investimento indipendente con sede a Milano, attiva nell'energia rinnovabile, immobiliare e finanza alternativa." },
+    "og_url":    { "en": "https://www.maverickglob.com/",     "it": "https://www.maverickglob.com/it/" },
+    "canonical": { "en": "https://www.maverickglob.com/",     "it": "https://www.maverickglob.com/it/" },
+    "og_image":  "https://www.maverickglob.com/images/solar-panels-row.webp",
+
+    "badge":         { "en": "Milan · Europe · Sustainable Finance", "it": "Milano · Europa · Finanza Sostenibile" },
+    "hero_title":    { "en": "Investing in the<br><span class=\"accent-word\">Future of Energy</span>", "it": "Investiamo nel<br><span class=\"accent-word\">Futuro dell'Energia</span>" },
+    "hero_subtitle": { "en": "Generating sustainable value through active asset management and selected partnerships.", "it": "Generiamo valore sostenibile attraverso la gestione attiva degli asset e partnership selezionate." },
+    "hero_body":     { "en": "An independent firm specialised in disciplined capital allocation across renewable energy, real estate, and alternative finance. We target stable, measurable returns through active management and rigorous due diligence.", "it": "Società d'investimento indipendente con sede a Milano, specializzata nell'allocazione disciplinata del capitale in energia rinnovabile, real estate e finanza alternativa. Puntiamo a rendimenti stabili e misurabili attraverso la gestione attiva e una rigorosa due diligence." },
+    "hero_btn1":      { "en": "Discover Our Investments", "it": "Esplora il Portfolio" },
+    "hero_btn1_href": { "en": "what-we-do.html",          "it": "portfolio.html" },
+    "hero_btn2":      { "en": "Our Philosophy",           "it": "La Nostra Filosofia" },
+
+    "metric1_display": { "en": "47,130", "it": "47.130" },
+    "metric1_label":   { "en": "MWh Energy Produced",                  "it": "MWh di Energia Prodotta" },
+    "metric1_desc":    { "en": "Annual output from our renewable portfolio", "it": "Produzione annua totale del portafoglio rinnovabile" },
+    "metric2_display": { "en": "15,878", "it": "15.878" },
+    "metric2_label":   { "en": "Households Powered",       "it": "Famiglie Alimentate" },
+    "metric2_desc":    { "en": "Families receiving clean energy", "it": "Famiglie che ricevono energia pulita" },
+    "metric3_display": { "en": "14,518", "it": "14.518" },
+    "metric3_label":   { "en": "Tons CO₂ Saved",             "it": "Emissioni CO₂ Evitate" },
+    "metric3_desc":    { "en": "Annual emissions reduction achieved", "it": "Riduzione annua delle emissioni conseguita" },
+
+    "sectors_eyebrow": { "en": "What We Do",        "it": "Le Nostre Attività" },
+    "sectors_title":   { "en": "Our Focus Areas",   "it": "I Nostri Settori di Riferimento" },
+    "sector1_title": { "en": "Renewable Energy",    "it": "Energia Rinnovabile" },
+    "sector1_desc":  { "en": "Utility-scale renewable infrastructure and PV plants: technical excellence for long-term value creation.", "it": "Infrastrutture energetiche e impianti fotovoltaici utility-scale: eccellenza tecnica orientata alla creazione di valore nel lungo termine." },
+    "sector2_title": { "en": "Real Estate",         "it": "Immobiliare" },
+    "sector2_desc":  { "en": "Strategic real estate assets selected for ESG compliance and capital appreciation potential.", "it": "Asset immobiliari strategici selezionati per la conformità ai criteri ESG e il potenziale di rivalutazione del capitale." },
+    "sector3_title": { "en": "Alternative Finance", "it": "Finanza Alternativa" },
+    "sector3_desc":  { "en": "Mezzanine instruments, private debt, and structured finance solutions for sustainable projects with optimised risk-return profiles.", "it": "Strumenti di debito mezzanine, private debt e soluzioni di finanza strutturata per progetti sostenibili con profili rischio-rendimento ottimizzati." },
+    "explore_link":  { "en": "Explore", "it": "Esplora" },
+
+    "diff_eyebrow": { "en": "Why MGI",    "it": "Perché MGI" },
+    "diff_title":   { "en": "A Different Approach<br>to Capital Allocation", "it": "Un Approccio Diverso<br>all'Allocazione del Capitale" },
+    "diff1_title":  { "en": "Independent by Design",    "it": "Indipendenza Strutturale" },
+    "diff1_body":   { "en": "No institutional affiliations, no conflicts of interest. Every decision is based solely on merit, rigorous analysis, and alignment with our sustainability principles.", "it": "Nessuna affiliazione istituzionale, nessun conflitto di interessi. Ogni decisione si basa esclusivamente sul merito, sull'analisi rigorosa e sulla coerenza con i nostri principi di sostenibilità." },
+    "diff2_title":  { "en": "Active Asset Management",  "it": "Gestione Attiva degli Asset" },
+    "diff2_body":   { "en": "We don't just allocate capital — we actively manage every asset, applying operational expertise to drive performance and long-term value creation.", "it": "Non ci limitiamo ad allocare capitale — gestiamo attivamente ogni asset, applicando competenze operative per massimizzare performance e creazione di valore nel lungo termine." },
+    "diff3_title":  { "en": "ESG at the Core", "it": "ESG al Centro" },
+    "diff3_body":   { "en": "Environmental and financial performance are not trade-offs. Every investment must generate measurable economic and environmental value simultaneously.", "it": "Performance finanziaria e responsabilità ambientale non sono obiettivi in conflitto. Ogni investimento deve generare simultaneamente valore economico e impatto positivo misurabile." },
+
+    "cta_title": { "en": "Ready to Explore Investment Opportunities?", "it": "Pronto a Esplorare le Opportunità di Investimento?" },
+    "cta_body":  { "en": "Our team is available to discuss how we can align our expertise with your investment objectives.", "it": "Il nostro team è disponibile per discutere come allineare la nostra expertise con i tuoi obiettivi d'investimento." },
+    "cta_btn1":  { "en": "Contact Us",      "it": "Contattaci" },
+    "cta_btn2":  { "en": "View Portfolio",  "it": "Vedi il Portfolio" }
+  },
+
+  "about": {
+    "meta_title":       { "en": "About — Maverick Global Investments", "it": "Chi Siamo — Maverick Global Investments" },
+    "meta_description": { "en": "Learn about Maverick Global Investments — an independent firm built on analysis, integrity, and long-term vision, at the intersection of financial performance and positive impact.", "it": "Scopri Maverick Global Investments — una società indipendente fondata su analisi, integrità e visione di lungo termine, all'incrocio tra performance finanziaria e impatto positivo." },
+    "og_url":    { "en": "https://www.maverickglob.com/about.html",     "it": "https://www.maverickglob.com/it/about.html" },
+    "canonical": { "en": "https://www.maverickglob.com/about.html",     "it": "https://www.maverickglob.com/it/about.html" },
+    "og_image":  "https://www.maverickglob.com/images/solar-panels-row.webp",
+
+    "hero_eyebrow":  { "en": "Who We Are",           "it": "La Nostra Identità" },
+    "hero_title":    { "en": "A Pragmatic Approach to<br>Sustainable Investment", "it": "Un Approccio Pragmatico<br>all'Investimento Sostenibile" },
+    "hero_subtitle": { "en": "An independent firm built on analysis, integrity, and long-term vision — operating at the intersection of financial performance and positive impact.", "it": "Una società indipendente fondata su analisi, integrità e visione di lungo periodo — operante all'intersezione tra performance finanziaria e impatto positivo." },
+
+    "lead_p1": { "en": "Maverick Global Investments is an independent firm dedicated to creating long-term value through disciplined capital allocation and active asset management. In partnership with Adoria Partners and selected qualified operators, we build portfolios of real assets that combine <strong>financial returns, structural solidity, and measurable environmental impact</strong>.", "it": "Maverick Global Investments è una società d'investimento indipendente dedicata alla creazione di valore nel lungo periodo, fondata sul rigore metodologico nell'allocazione del capitale e sulla gestione attiva dei patrimoni. In partnership con Adoria Partners e operatori qualificati selezionati, costruiamo portafogli di asset reali in grado di coniugare <strong>rendimento finanziario, solidità strutturale e impatto ambientale misurabile</strong>." },
+    "lead_p2": { "en": "We bridge the gap between financial performance and environmental responsibility, targeting stable, measurable returns through a rigorous due diligence process. Our team integrates financial, strategic, and industrial expertise to identify value opportunities across European energy and sustainable infrastructure markets. Every investment decision is grounded in quantitative analysis, clear methodology, and a long-term horizon.", "it": "Coniughiamo performance finanziaria e responsabilità ambientale, focalizzandoci sulla generazione di rendimenti stabili e misurabili attraverso processi strutturati di analisi e gestione del rischio. Il nostro team integra competenze finanziarie, strategiche e industriali per identificare opportunità di valore nei mercati europei dell'energia e delle infrastrutture sostenibili. Ogni decisione d'investimento si fonda su analisi quantitativa, metodologia rigorosa e un orizzonte di lungo periodo." },
+    "lead_p3": { "en": "Operating from Milan, we maintain deep connections with Italian and European markets while leveraging international best practices. Our independence allows us to make decisions based purely on merit, risk assessment, and alignment with our sustainability principles.", "it": "Operando da Milano, manteniamo un legame profondo con i mercati italiani ed europei, avvalendoci al contempo delle migliori prassi internazionali. La nostra indipendenza ci consente di assumere decisioni basate esclusivamente sul merito, sulla valutazione del rischio e sull'allineamento con i nostri principi di sostenibilità." },
+
+    "values_eyebrow": { "en": "Our Principles", "it": "I Nostri Principi" },
+    "values_title":   { "en": "Three Pillars of<br>Our Approach", "it": "I Tre Pilastri<br>del Nostro Approccio" },
+    "val1_title": { "en": "Independence",  "it": "Integrità e Trasparenza" },
+    "val1_body":  { "en": "Investment choices based on analysis, not fashion. We maintain complete autonomy in decision-making, free from conflicts of interest or market pressures.", "it": "Processi chiari, comunicazione diretta e gestione responsabile a ogni livello. I nostri partner sanno sempre dove si trova il loro capitale e quali risultati sta generando." },
+    "val2_title": { "en": "Sustainability", "it": "Orizzonte di Lungo Periodo" },
+    "val2_body":  { "en": "Every asset must generate both economic and environmental value simultaneously. We don't see these as trade-offs — they are complementary objectives.", "it": "Costruiamo asset destinati a generare valore patrimoniale per decenni, non per trimestri. L'orizzonte temporale è parte integrante di ogni nostra decisione di investimento." },
+    "val3_title": { "en": "Transparency",  "it": "Eccellenza Operativa" },
+    "val3_body":  { "en": "Clear processes, direct communication, responsible management at every level. Our partners always know where their capital is and how it is performing.", "it": "Rigore analitico e coinvolgimento diretto nella gestione degli asset. Non ci limitiamo ad allocare capitale — ottimizziamo continuamente le performance degli asset lungo l'intero ciclo di vita." },
+    "val_btn1":   { "en": "Discover Our Investment Philosophy", "it": "Scopri la Nostra Filosofia di Investimento" },
+    "val_btn2":   { "en": "Get in Touch",                      "it": "Contattaci" },
+
+    "milan_eyebrow": { "en": "Rooted in Milan",                            "it": "Radicati a Milano" },
+    "milan_title":   { "en": "Milan: Our Hub for European Opportunity",    "it": "Milano: Il Nostro Hub per le Opportunità Europee" },
+    "milan_p1": { "en": "From Milan, we access the full breadth of Italian and European capital markets. The city's position as a financial and industrial centre gives us proximity to deal flow, regulatory expertise, and the institutional relationships that underpin every successful investment.", "it": "Da Milano, abbiamo accesso diretto ai mercati dei capitali italiani ed europei. La posizione della città come centro finanziario e industriale ci garantisce accesso diretto al deal flow, competenza normativa e le relazioni istituzionali che sono alla base di ogni investimento di successo." },
+    "milan_p2": { "en": "We combine local market depth with a pan-European investment horizon, enabling us to source proprietary opportunities and execute with the speed and certainty that quality assets demand.", "it": "Coniughiamo una profonda conoscenza del mercato locale con un orizzonte d'investimento pan-europeo, con la capacità di identificare le migliori opportunità ed agire con la tempestività e la precisione di esecuzione richieste dal mercato." },
+    "milan_btn": { "en": "Visit Us", "it": "Visitaci" }
+  },
+
+  "what-we-do": {
+    "meta_title":       { "en": "What We Do — Maverick Global Investments", "it": "Attività — Maverick Global Investments" },
+    "meta_description": { "en": "We operate as an active investor and portfolio manager in renewable energy, real estate, and alternative finance — acquiring, managing, and growing real assets across Europe.", "it": "Operiamo come investitori attivi e gestori di portafoglio nell'energia rinnovabile, nel real estate e nella finanza alternativa — acquisendo, gestendo e valorizzando asset reali in Europa." },
+    "og_url":    { "en": "https://www.maverickglob.com/what-we-do.html",    "it": "https://www.maverickglob.com/it/what-we-do.html" },
+    "canonical": { "en": "https://www.maverickglob.com/what-we-do.html",    "it": "https://www.maverickglob.com/it/what-we-do.html" },
+    "og_image":  "https://www.maverickglob.com/images/solar-panels-row.webp",
+
+    "hero_eyebrow":  { "en": "Our Activities", "it": "Le Nostre Attività" },
+    "hero_title":    { "en": "Real Investments,<br>Measurable Results", "it": "Investimenti Reali,<br>Risultati Misurabili" },
+    "hero_subtitle": { "en": "We operate as an active investor and portfolio manager — acquiring, managing, and growing real assets across energy, real estate, and alternative finance.", "it": "Operiamo come investitore attivo e gestore di portafoglio — acquisendo, gestendo e valorizzando asset reali in ambito energetico, immobiliare e di finanza alternativa." },
+
+    "intro_p1": { "en": "<strong>We operate as an investor and portfolio manager</strong> in strategic assets, with a focus on energy infrastructure, selected real estate, and long-term projects. Our approach is hands-on: we don't simply allocate capital and wait — we actively manage assets to ensure continuous performance and returns over time.", "it": "<strong>Operiamo come investitore e gestore di portafoglio</strong> in asset strategici, con focus su infrastrutture energetiche, immobiliare selezionato e progetti di lungo periodo. Il nostro approccio è diretto e operativo: non ci limitiamo ad allocare capitale in attesa dei risultati — gestiamo attivamente gli asset per garantire performance e rendimenti continuativi nel tempo." },
+    "intro_p2": { "en": "Our investment strategy is built on deep operational knowledge of each sector we enter. We conduct thorough technical, economic, and sustainability assessments before committing capital. Once invested, we maintain direct oversight and management involvement to optimize performance and mitigate risks throughout the asset lifecycle.", "it": "La nostra strategia di investimento si fonda su una conoscenza operativa approfondita di ciascun settore in cui operiamo. Prima di impegnare il capitale, conduciamo valutazioni tecniche, economiche e di sostenibilità di assoluto rigore. Una volta effettuato l'investimento, manteniamo supervisione diretta e coinvolgimento gestionale per ottimizzare le performance e mitigare i rischi lungo l'intero ciclo di vita dell'asset." },
+
+    "card1_title": { "en": "Renewable Energy",         "it": "Energia Rinnovabile" },
+    "card1_p":     { "en": "Acquisition, revamping, and management of photovoltaic plants in Italy and across Europe. We specialize in optimizing existing installations and developing new capacity.", "it": "Acquisizione, revamping e gestione di impianti fotovoltaici in Italia e in Europa. Siamo specializzati nell'ottimizzazione di installazioni esistenti e nello sviluppo di nuova capacità." },
+    "card1_li1":   { "en": "Operational solar farms with proven track records", "it": "Impianti solari operativi con track record consolidato" },
+    "card1_li2":   { "en": "Revamping projects to extend asset life",           "it": "Progetti di revamping per estendere la vita utile degli asset" },
+    "card1_li3":   { "en": "Performance optimization and monitoring",           "it": "Ottimizzazione delle performance e monitoraggio continuo" },
+
+    "card2_title": { "en": "Energy Communities",       "it": "Comunità Energetiche" },
+    "card2_p":     { "en": "Development and investment in shared production and self-consumption models. We're pioneering collaborative energy solutions that benefit entire communities.", "it": "Sviluppo e investimento in modelli di produzione condivisa e autoconsumo. Promuoviamo soluzioni energetiche collaborative capaci di generare benefici concreti per intere comunità." },
+    "card2_li1":   { "en": "Distributed generation infrastructure",  "it": "Infrastrutture di generazione distribuita" },
+    "card2_li2":   { "en": "Community participation frameworks",     "it": "Modelli di partecipazione comunitaria" },
+    "card2_li3":   { "en": "Shared economic and environmental benefits", "it": "Benefici economici e ambientali condivisi" },
+
+    "card3_title": { "en": "Real Estate & Infrastructure", "it": "Immobiliare e Infrastrutture" },
+    "card3_p":     { "en": "Premium residential properties and strategic real estate selected for long-term appreciation and income potential. We prioritize assets with strong revaluation prospects and energy efficiency upgrade capacity.", "it": "Immobili residenziali di pregio e asset strategici selezionati per la rivalutazione nel lungo periodo e la stabilità dei flussi di cassa. Privilegiamo proprietà con solide prospettive di crescita e un elevato potenziale di riqualificazione energetica." },
+    "card3_li1":   { "en": "Private villas and high-quality residential homes",      "it": "Ville private e abitazioni residenziali di qualità" },
+    "card3_li2":   { "en": "Properties in prime locations with revaluation potential","it": "Proprietà in posizioni prime con potenziale di rivalutazione" },
+    "card3_li3":   { "en": "Assets with energy efficiency upgrade prospects",        "it": "Asset con prospettive di upgrade energetico" },
+
+    "card4_title": { "en": "Alternative Finance",  "it": "Finanza Alternativa" },
+    "card4_p":     { "en": "Mezzanine operations, club deals, and hybrid participation instruments in sustainable projects. Flexible structures designed for optimal risk-return profiles.", "it": "Operazioni mezzanine, club deal e strumenti di partecipazione ibridi in progetti sostenibili. Strutture flessibili concepite per profili rischio-rendimento ottimali." },
+    "card4_li1":   { "en": "Mezzanine and hybrid debt instruments", "it": "Strumenti di debito mezzanine e ibrido" },
+    "card4_li2":   { "en": "Co-investment opportunities",          "it": "Opportunità di co-investimento" },
+    "card4_li3":   { "en": "Structured finance solutions",         "it": "Soluzioni di finanza strutturata" },
+
+    "highlight": { "en": "<strong>Operational Approach:</strong> We analyze risk, evaluate technical and economic sustainability, and directly manage assets to ensure continuity of performance and returns over time. Our methodology combines quantitative analysis with qualitative assessment, ensuring we understand not just the numbers, but the underlying dynamics that drive asset performance.", "it": "<strong>Approccio Operativo:</strong> Analizziamo il rischio, valutiamo la sostenibilità tecnica ed economica e gestiamo direttamente gli asset per garantire continuità di performance e rendimenti nel tempo. La nostra metodologia combina analisi quantitativa e valutazione qualitativa, assicurandoci di comprendere non solo i numeri, ma anche le dinamiche sottostanti che guidano la performance degli asset." },
+
+    "btn1": { "en": "Explore Our Investment Sectors", "it": "Esplora i Settori di Investimento" },
+    "btn2": { "en": "See Our Portfolio",              "it": "Vedi il Nostro Portfolio" },
+
+    "active_eyebrow": { "en": "The MGI Difference",                          "it": "La Differenza MGI" },
+    "active_title":   { "en": "Active Management,<br>Not Passive Allocation", "it": "Gestione Attiva,<br>Non Allocazione Passiva" },
+    "active_p1": { "en": "Most funds allocate capital and delegate. We take a different path: every asset in our portfolio benefits from direct MGI involvement, from technical oversight to commercial strategy.", "it": "La maggior parte dei fondi si limita ad allocare il capitale e delegare la gestione. Noi scegliamo un percorso diverso: ogni asset del nostro portafoglio beneficia del coinvolgimento diretto di MGI, dalla supervisione tecnica alla strategia commerciale." },
+    "active_p2": { "en": "This hands-on model means faster identification of underperformance, quicker course correction, and a deeper understanding of the operational realities that drive returns.", "it": "Questo approccio diretto consente un'identificazione più rapida delle sottoperformance, correzioni di rotta più tempestive e una comprensione più profonda delle realtà operative che guidano i rendimenti." }
+  },
+
+  "investment-sectors": {
+    "meta_title":       { "en": "Investment Sectors — Maverick Global Investments", "it": "Settori di Investimento — Maverick Global Investments" },
+    "meta_description": { "en": "Discover the three complementary investment sectors of Maverick Global Investments: renewable energy, real estate, and alternative finance instruments.", "it": "Scopri i tre settori di investimento complementari di Maverick Global Investments: energia rinnovabile, immobiliare e strumenti di finanza alternativa." },
+    "og_url":    { "en": "https://www.maverickglob.com/investment-sectors.html",    "it": "https://www.maverickglob.com/it/investment-sectors.html" },
+    "canonical": { "en": "https://www.maverickglob.com/investment-sectors.html",    "it": "https://www.maverickglob.com/it/investment-sectors.html" },
+    "og_image":  "https://www.maverickglob.com/images/solar-panels-row.webp",
+
+    "hero_eyebrow":  { "en": "Where We Invest",              "it": "Dove Investiamo" },
+    "hero_title":    { "en": "A Diversified Portfolio for<br>a Sustainable Economy", "it": "Un Portafoglio Diversificato per<br>un'Economia Sostenibile" },
+    "hero_subtitle": { "en": "Three complementary sectors, each selected for strong financial returns and contribution to the transition toward a more sustainable economy.", "it": "Tre settori complementari, ciascuno selezionato per la solidità dei rendimenti finanziari e per il contributo alla transizione verso un'economia più sostenibile." },
+
+    "intro_lead": { "en": "Our investment strategy spans three complementary sectors, each selected for its potential to deliver strong financial returns while contributing to the transition toward a more sustainable economy. This diversification approach allows us to capture opportunities across different market cycles while maintaining disciplined risk management.", "it": "La nostra strategia d'investimento si articola in tre settori complementari, selezionati per la capacità di generare rendimenti finanziari solidi contribuendo alla transizione energetica. Analizziamo opportunità in mercati consolidati con un focus specifico sulla massimizzazione dell'efficienza operativa e della sostenibilità fiscale. Questo approccio diversificato ci permette di cogliere opportunità in diversi cicli di mercato, mantenendo una gestione disciplinata del rischio." },
+
+    "s1_eyebrow": { "en": "Sector 01",        "it": "Settore 01" },
+    "s1_title":   { "en": "Renewable Energy", "it": "Energia Rinnovabile" },
+    "s1_p1":      { "en": "Maverick invests in utility-scale photovoltaic plants and renewable energy infrastructure, in partnership with Adoria Partners. Our portfolio includes <strong>operational and developing PV assets</strong> with annual specific yield exceeding 1,700 MWh/MW, strategically distributed throughout Italy.", "it": "Maverick investe in impianti fotovoltaici utility-scale e infrastrutture di energia rinnovabile, in partnership con Adoria Partners. Il portafoglio include <strong>asset FV operativi e in sviluppo</strong> con una produzione specifica annua superiore a 1.700 MWh/MW, distribuiti strategicamente sul territorio italiano." },
+    "s1_focus_label": { "en": "Focus areas:", "it": "Settori di riferimento:" },
+    "s1_p2":      { "en": "Revamping, repowering, and integrated management. We specialize in enhancing the performance of existing installations while developing new capacity in strategic locations. Our technical expertise allows us to maximize energy output and extend asset lifespans significantly beyond industry averages.", "it": "Revamping, repowering e gestione integrata. Siamo specializzati nel miglioramento delle performance di installazioni esistenti e nello sviluppo di nuova capacità in siti strategici. La nostra competenza tecnica ci consente di massimizzare la produzione energetica e di estendere significativamente la vita utile degli asset oltre le medie di settore." },
+
+    "s2_eyebrow": { "en": "Sector 02",   "it": "Settore 02" },
+    "s2_title":   { "en": "Real Estate", "it": "Immobiliare" },
+    "s2_p1":      { "en": "We invest in strategic real estate assets selected for ESG compliance and capital appreciation potential. We prioritise properties integrating energy efficiency criteria, evaluating assets for their medium-to-long-term revaluation trajectory and income stability.", "it": "Investiamo in asset immobiliari strategici selezionati per conformità ai criteri ESG e potenziale di apprezzamento del capitale. Privilegiamo immobili con criteri di efficienza energetica integrata, valutati in base alle prospettive di rivalutazione nel medio-lungo termine e alla stabilità dei flussi di cassa." },
+    "s2_focus_label": { "en": "Focus areas:", "it": "Settori di riferimento:" },
+    "s2_p2":      { "en": "Premium residential properties with high return potential, including private villas and high-quality homes in strategic locations. We prioritize properties with strong revaluation prospects and the potential for energy efficiency upgrades that further enhance their long-term value.", "it": "Immobili residenziali di pregio con elevato potenziale di rendimento, tra cui ville private e abitazioni di qualità in posizioni strategiche. Privilegiamo proprietà con solide prospettive di rivalutazione e potenziale di interventi di efficientamento energetico che ne accrescano ulteriormente il valore nel lungo periodo." },
+
+    "s3_eyebrow": { "en": "Sector 03",                          "it": "Settore 03" },
+    "s3_title":   { "en": "Finance & Alternative Instruments",  "it": "Finanza e Strumenti Alternativi" },
+    "s3_p1":      { "en": "We participate in structured finance and private capital operations with a disciplined, results-oriented approach. Our instruments include mezzanine debt, private debt, and hybrid participatory structures for sustainable projects — designed to deliver optimised risk-return profiles across the capital structure.", "it": "Partecipiamo a operazioni di finanza strutturata e investimento in capitale privato con un approccio disciplinato e orientato ai risultati. Gli strumenti includono debito mezzanine, private debt e strutture partecipative ibride in progetti sostenibili, progettate per offrire profili di rischio-rendimento ottimizzati lungo l'intera struttura del capitale." },
+    "s3_focus_label": { "en": "Focus areas:", "it": "Settori di riferimento:" },
+    "s3_p2":      { "en": "Stable returns, controlled risk, long-term vision. Our structured finance capabilities allow us to design bespoke solutions that align investor objectives with project requirements, creating value for all stakeholders in the capital structure.", "it": "Rendimenti stabili, rischio controllato, visione di lungo periodo. Le nostre capacità di finanza strutturata ci consentono di progettare soluzioni su misura che allineano gli obiettivi degli investitori con le esigenze dei progetti, creando valore per tutti gli stakeholder nella struttura del capitale." },
+
+    "div_eyebrow": { "en": "Strategic Logic",                                 "it": "Logica Strategica" },
+    "div_title":   { "en": "Why Portfolio Diversification Matters",           "it": "Il Valore Strategico della Diversificazione del Portafoglio" },
+    "div_p1":      { "en": "Our multi-sector approach isn't just about spreading risk — it's about capturing synergies. Energy projects benefit from our real estate expertise. Infrastructure investments inform our financing strategies. Each sector strengthens the others, creating a resilient portfolio capable of delivering consistent performance across varying market conditions.", "it": "Il nostro approccio multi-settoriale non si limita a mitigare il rischio — genera sinergie concrete. I progetti energetici si avvalgono della nostra competenza immobiliare. Gli investimenti infrastrutturali informano le nostre strategie di finanziamento. Ogni settore rafforza gli altri, creando un portafoglio resiliente capace di offrire performance costanti in diversi contesti di mercato." },
+    "div_p2":      { "en": "This integrated perspective allows us to identify opportunities that single-sector investors might miss, while maintaining the discipline and focus necessary for excellence in execution.", "it": "Questa prospettiva integrata ci consente di identificare opportunità che investitori focalizzati su un solo settore potrebbero non cogliere, mantenendo al contempo la disciplina e il focus necessari per l'eccellenza nell'esecuzione." },
+    "div_btn1":    { "en": "See Current Assets",       "it": "Asset in Gestione" },
+    "div_btn2":    { "en": "Discuss Opportunities",    "it": "Discuti le Opportunità" },
+
+    "stat1_num":      "34 MW",
+    "stat1_label":    { "en": "Current PV Capacity",         "it": "Capacità FV Attuale" },
+    "stat1_sub":      { "en": "Puglia, Basilicata & Campania, Italy", "it": "Puglia, Basilicata e Campania, Italia" },
+    "stat2_num":      "3",
+    "stat2_label":    { "en": "Asset Classes",               "it": "Classi di Asset" },
+    "stat2_sub":      { "en": "Energy, Real Estate, Finance","it": "Energia, Immobiliare, Finanza" },
+    "stat3_num":      { "en": "1,700+", "it": "1.700+" },
+    "stat3_label":    { "en": "MWh/MW Annual Output",        "it": "MWh/MW Produzione Annua" },
+    "stat3_sub":      { "en": "Exceeding industry average",  "it": "Superiore alla media di settore" },
+    "stat4_num":      "ESG",
+    "stat4_label":    { "en": "Integrated Criteria",         "it": "Criteri Integrati" },
+    "stat4_sub":      { "en": "Across all asset selection",  "it": "In ogni selezione di asset" }
+  },
+
+  "philosophy": {
+    "meta_title":       { "en": "Philosophy — Maverick Global Investments", "it": "Filosofia — Maverick Global Investments" },
+    "meta_description": { "en": "Our investment philosophy: transforming capital into lasting positive impact through rigorous analysis, strategic selection, active management, and transparent reporting.", "it": "La nostra filosofia di investimento: creare valore duraturo attraverso analisi rigorosa, selezione strategica, gestione attiva degli asset e reporting trasparente." },
+    "og_url":    { "en": "https://www.maverickglob.com/philosophy.html",    "it": "https://www.maverickglob.com/it/philosophy.html" },
+    "canonical": { "en": "https://www.maverickglob.com/philosophy.html",    "it": "https://www.maverickglob.com/it/philosophy.html" },
+    "og_image":  "https://www.maverickglob.com/images/solar-panels-row.webp",
+
+    "hero_eyebrow":  { "en": "Our Mindset",          "it": "Il Nostro Approccio" },
+    "hero_title":    { "en": "Investing with Awareness", "it": "Investire con Consapevolezza" },
+    "hero_subtitle": { "en": "Every operation begins with a precise mandate: allocating capital where it generates durable, measurable value. Investment is not speculation — it is disciplined construction.", "it": "Ogni operazione nasce con un mandato preciso: allocare il capitale laddove possa generare valore duraturo e misurabile. Per noi l'investimento non è speculazione, ma costruzione disciplinata." },
+
+    "vision_eyebrow": { "en": "Our Vision",                               "it": "La Nostra Visione" },
+    "vision_title":   { "en": "Transforming Capital into Lasting Impact", "it": "Generare Valore Duraturo e Responsabile" },
+    "vision_p1":      { "en": "Every operation begins with a precise mandate: <strong>allocating capital where it generates durable, measurable value</strong>. For us, investment is not speculation — it is the disciplined construction of infrastructure, returns, and trust over time. We build assets designed to generate value for decades, not quarters.", "it": "Ogni operazione nasce con un mandato preciso: <strong>allocare il capitale laddove possa generare valore duraturo e misurabile</strong>. Per noi, l'investimento non è speculazione — è la costruzione disciplinata di infrastrutture, rendimenti e fiducia nel tempo. Costruiamo asset progettati per generare valore per decenni, non per trimestri." },
+    "vision_p2":      { "en": "This long-term orientation informs every stage of the investment process — from initial due diligence to ongoing asset management. We are not interested in financial engineering or short-term arbitrage. Our focus is the creation of genuine economic value aligned with verifiable environmental outcomes.", "it": "Questo orientamento di lungo periodo informa ogni fase del processo d'investimento, dalla due diligence iniziale alla gestione continuativa degli asset. Non siamo interessati all'ingegneria finanziaria o all'arbitraggio di breve termine. Il nostro obiettivo è la creazione di valore economico reale, allineato a risultati ambientali verificabili." },
+
+    "method_eyebrow": { "en": "How We Work",               "it": "Come Lavoriamo" },
+    "method_title":   { "en": "Four Pillars of Our Method","it": "I Quattro Pilastri del Nostro Metodo" },
+    "step1_title":    { "en": "Rigorous Analysis",   "it": "Analisi Rigorosa" },
+    "step1_desc":     { "en": "Every investment undergoes comprehensive technical, financial, and sustainability assessment before commitment. We leave nothing to assumption.", "it": "Ogni investimento è sottoposto a una valutazione tecnica, finanziaria e di sostenibilità esaustiva prima dell'impegno. Nessun dettaglio è lasciato al caso." },
+    "step2_title":    { "en": "Strategic Selection", "it": "Selezione Strategica" },
+    "step2_desc":     { "en": "We pursue opportunities that align with our risk tolerance, return objectives, and impact goals simultaneously. Quality over quantity, always.", "it": "Perseguiamo opportunità che soddisfano simultaneamente i nostri criteri di rischio, gli obiettivi di rendimento e le finalità di sostenibilità. Qualità prima di quantità, sempre." },
+    "step3_title":    { "en": "Active Management",   "it": "Gestione Attiva" },
+    "step3_desc":     { "en": "Direct oversight and operational involvement ensure continuous performance optimization throughout the asset lifecycle.", "it": "La supervisione diretta e il coinvolgimento operativo garantiscono un'ottimizzazione continua delle performance lungo l'intero ciclo di vita dell'asset." },
+    "step4_title":    { "en": "Transparent Reporting","it": "Reportistica Trasparente" },
+    "step4_desc":     { "en": "Clear communication and measurable results demonstrate value creation to all stakeholders. No surprises, no ambiguity.", "it": "Una comunicazione chiara e risultati misurabili dimostrano la creazione di valore a tutti gli stakeholder. Nessuna sorpresa, nessuna ambiguità." },
+    "pull_quote":     { "en": "\"We don't need to do everything — we need to do things well.\"", "it": "\"Non dobbiamo fare tutto — dobbiamo fare le cose bene.\"" },
+    "method_btn1":    { "en": "Learn About Our Team",    "it": "Scopri Chi Siamo" },
+    "method_btn2":    { "en": "Start a Conversation",   "it": "Inizia una Conversazione" },
+
+    "partner_eyebrow": { "en": "Partnerships",              "it": "Partnership" },
+    "partner_title":   { "en": "Built on Solid Partnerships","it": "Fondata su Partnership Solide" },
+    "partner_p1":      { "en": "We believe that effectiveness comes from <strong>solid partnerships</strong> and a rigorous method of analyzing, selecting, and managing assets. We work alongside our industrial and financial partners to guarantee concrete, measurable, and transparent results.", "it": "Crediamo che l'efficacia derivi da <strong>partnership solide</strong> e da un metodo rigoroso di analisi, selezione e gestione degli asset. Lavoriamo fianco a fianco con i nostri partner industriali e finanziari per garantire risultati concreti, misurabili e trasparenti." },
+    "partner_p2":      { "en": "Partnership means shared objectives, aligned incentives, and mutual accountability — principles that guide all our relationships.", "it": "Partnership significa obiettivi condivisi, incentivi allineati e reciproca responsabilità — principi che guidano tutte le nostre relazioni." },
+    "partner_p3":      { "en": "This philosophy of focused excellence drives our approach to every investment decision. Rather than chasing every opportunity, we concentrate on sectors where we have demonstrable expertise and competitive advantages.", "it": "Questa filosofia di eccellenza focalizzata orienta il nostro approccio a ogni decisione di investimento. Invece di inseguire ogni opportunità, ci concentriamo sui settori in cui deteniamo competenza dimostrabile e vantaggi competitivi." },
+    "partner_p4":      { "en": "Our awareness extends beyond financial metrics to encompass the full spectrum of impacts our investments create. We measure success not only in euros returned, but in kilowatt-hours generated, tons of CO₂ avoided, and communities benefited.", "it": "La nostra attenzione va oltre le metriche finanziarie e abbraccia l'intero spettro degli impatti generati dai nostri investimenti. Misuriamo il successo non soltanto in rendimenti monetari, ma in kilowattora prodotti, tonnellate di CO₂ evitate e comunità che ne traggono beneficio." },
+    "partner_p5":      { "en": "This comprehensive view of value creation distinguishes our approach and aligns perfectly with the priorities of sophisticated investors who recognize that long-term financial performance and sustainability are inseparable.", "it": "Questa visione integrata della creazione di valore distingue il nostro approccio e si allinea perfettamente alle priorità degli investitori più sofisticati, che riconoscono come performance finanziaria di lungo periodo e sostenibilità siano inscindibili." },
+
+    "stat1_num":   { "en": "14,518",  "it": "14.518" },
+    "stat1_label": { "en": "Tons CO₂ Saved",         "it": "Emissioni CO₂ Evitate" },
+    "stat2_num":   { "en": "15,878",  "it": "15.878" },
+    "stat2_label": { "en": "Households Powered",     "it": "Famiglie Alimentate" },
+    "stat3_num":   { "en": "47.6M",   "it": "47,6M" },
+    "stat3_label": { "en": "kWh Produced Annually",  "it": "kWh Prodotti Annualmente" },
+    "stat4_num":   "34 MW",
+    "stat4_label": { "en": "Portfolio Capacity",     "it": "Capacità del Portafoglio" }
+  },
+
+  "portfolio": {
+    "meta_title":       { "en": "Portfolio — Maverick Global Investments", "it": "Portfolio — Maverick Global Investments" },
+    "meta_description": { "en": "34 MW of operational photovoltaic parks across southern Italy — the foundation of Maverick Global Investments' sustainable investment strategy.", "it": "34 MW di impianti fotovoltaici operativi nel sud Italia — la base della strategia di investimento sostenibile di Maverick Global Investments." },
+    "og_url":    { "en": "https://www.maverickglob.com/portfolio.html",    "it": "https://www.maverickglob.com/it/portfolio.html" },
+    "canonical": { "en": "https://www.maverickglob.com/portfolio.html",    "it": "https://www.maverickglob.com/it/portfolio.html" },
+    "og_image":  "https://www.maverickglob.com/images/solar-landscape.webp",
+
+    "hero_eyebrow":  { "en": "Our Assets",                  "it": "I Nostri Asset" },
+    "hero_title":    { "en": "Current Portfolio Assets",    "it": "Asset in Gestione" },
+    "hero_subtitle": { "en": "34 MW of operational photovoltaic parks across southern Italy — the foundation of our sustainable investment strategy.", "it": "34 MW di parchi fotovoltaici operativi nel sud Italia — la base della nostra strategia di investimento sostenibile." },
+
+    "intro_p1": { "en": "Our initial portfolio comprises approximately <strong>34 MW of PV parks</strong> strategically located in southern Italy, specifically across the regions of Puglia, Basilicata and Campania. These installations represent our commitment to sustainable energy generation and form the foundation of our impactful investment strategy.", "it": "Il nostro portafoglio iniziale comprende circa <strong>34 MW di impianti fotovoltaici</strong> strategicamente localizzati nel Sud Italia, nelle regioni di Puglia, Basilicata e Campania. Questi impianti testimoniano il nostro impegno per la generazione di energia sostenibile e costituiscono il nucleo della nostra strategia di investimento ad alto valore ambientale." },
+    "intro_p2": { "en": "Each asset has been selected through our rigorous due diligence process, evaluated for technical performance, grid connection quality, irradiation levels, and long-term operational stability.", "it": "Ogni asset è sottoposto a un rigoroso processo di due diligence, che include l'analisi delle performance tecniche, la qualità dell'infrastruttura di connessione alla rete, i livelli di irraggiamento solare e la stabilità operativa di lungo periodo. Analizziamo opportunità in mercati consolidati con un focus specifico sulla massimizzazione dell'efficienza operativa." },
+
+    "stat1_num":   "34 MW",
+    "stat1_label": { "en": "Total PV Capacity",      "it": "Capacità FV Totale" },
+    "stat1_sub":   { "en": "Operational portfolio",  "it": "Portafoglio operativo" },
+    "stat2_num":   { "en": "47.1M", "it": "47,1M" },
+    "stat2_label": { "en": "MWh Produced",           "it": "MWh Prodotti" },
+    "stat2_sub":   { "en": "Annual energy output",   "it": "Produzione energetica annua" },
+    "stat3_num":   "3",
+    "stat3_label": { "en": "Regions",                "it": "Regioni" },
+    "stat3_sub":   { "en": "Puglia, Basilicata & Campania", "it": "Puglia, Basilicata e Campania" },
+    "stat4_num":   { "en": "14,518", "it": "14.518" },
+    "stat4_label": { "en": "Tons CO₂ Saved",         "it": "Emissioni CO₂ Evitate" },
+    "stat4_sub":   { "en": "Annual reduction",        "it": "Riduzione annua" },
+
+    "tab_gallery": { "en": "Photo Gallery",      "it": "Galleria Fotografica" },
+    "tab_map":     { "en": "Interactive Map",    "it": "Mappa Interattiva" },
+    "gallery_eyebrow": { "en": "Gallery",        "it": "Galleria" },
+    "gallery_title":   { "en": "PV Plant Collection", "it": "I Nostri Impianti FV" },
+    "slider_prev_label": { "en": "Previous",     "it": "Precedente" },
+    "slider_next_label": { "en": "Next",         "it": "Successivo" },
+    "map_iframe_title":  "Interactive PV Portfolio Map",
+    "map_mobile_link":   { "en": "Open full map ↗", "it": "Apri la mappa completa ↗" },
+
+    "regions_eyebrow": { "en": "Locations",          "it": "Localizzazioni" },
+    "regions_title":   { "en": "Southern Italy's<br>Solar Potential", "it": "Il Potenziale Solare<br>del Sud Italia" },
+    "regions_p1":      { "en": "Puglia, Basilicata and Campania represent three of Italy's highest-irradiation regions, with solar resource levels that rank among the best in continental Europe. Our strategic asset selection in these regions was driven by superior energy yield potential, robust grid infrastructure, and a favourable regulatory environment.", "it": "Puglia, Basilicata e Campania rappresentano tre delle regioni italiane con il più alto irraggiamento solare, con livelli di risorsa che si collocano tra i migliori dell'Europa continentale. La selezione strategica degli asset in queste regioni è stata guidata dalla superiore resa energetica, dalla robustezza delle infrastrutture di rete e da un contesto normativo favorevole." },
+    "regions_p2":      { "en": "These characteristics translate directly into performance stability and predictable long-term returns for our partners.", "it": "Queste caratteristiche si traducono direttamente in stabilità delle performance e rendimenti prevedibili nel lungo periodo per i nostri partner." },
+
+    "hl_title":  { "en": "Portfolio Highlights",  "it": "Riepilogo del Portafoglio" },
+    "hl_r1_label": { "en": "Asset type",          "it": "Tipologia di asset" },
+    "hl_r1_val":   { "en": "Ground-mounted PV",   "it": "Impianti FV a terra" },
+    "hl_r2_label": { "en": "Regions",             "it": "Regioni" },
+    "hl_r2_val":   "Puglia, Basilicata, Campania",
+    "hl_r3_label": { "en": "Total capacity",      "it": "Capacità totale" },
+    "hl_r3_val":   "~34 MW",
+    "hl_r4_label": { "en": "Specific yield",      "it": "Resa specifica" },
+    "hl_r4_val":   { "en": ">1,700 MWh/MW/yr",    "it": ">1.700 MWh/MW/anno" },
+    "hl_r5_label": { "en": "Management",          "it": "Gestione" },
+    "hl_r5_val":   { "en": "Active (MGI direct)", "it": "Attiva (diretta MGI)" },
+
+    "cta_eyebrow": { "en": "Interested in Co-investing?",              "it": "Interessati a Co-investire?" },
+    "cta_title":   { "en": "Let's Explore Opportunities Together",     "it": "Esploriamo Insieme le Opportunità" },
+    "cta_body":    { "en": "Whether you're an institutional investor seeking sustainable infrastructure exposure or a developer looking for a strategic capital partner, we welcome the conversation.", "it": "Che siate investitori istituzionali alla ricerca di esposizione a infrastrutture sostenibili o sviluppatori in cerca di un partner strategico di capitale, siamo a vostra disposizione per un confronto." },
+    "cta_btn":     { "en": "Get in Touch", "it": "Contattaci" }
+  },
+
+  "contact": {
+    "meta_title":       { "en": "Contact — Maverick Global Investments", "it": "Contatti — Maverick Global Investments" },
+    "meta_description": { "en": "Contact Maverick Global Investments. Headquartered in Milan at Via Gabrio Serbelloni 5. Reach us at info@maverickglob.com or by phone.", "it": "Contatta Maverick Global Investments. Sede a Milano in Via Gabrio Serbelloni 5. Scrivici a info@maverickglob.com o chiamaci." },
+    "og_url":    { "en": "https://www.maverickglob.com/contact.html",    "it": "https://www.maverickglob.com/it/contact.html" },
+    "canonical": { "en": "https://www.maverickglob.com/contact.html",    "it": "https://www.maverickglob.com/it/contact.html" },
+    "og_image":  "https://www.maverickglob.com/images/solar-panels-row.webp",
+
+    "hero_eyebrow":  { "en": "Get in Touch",             "it": "Siamo a Vostra Disposizione" },
+    "hero_title":    { "en": "Let's Talk",               "it": "Contattaci" },
+    "hero_subtitle": { "en": "We are always open to new collaborations and investment opportunities. Reach out to evaluate projects, partnerships, or initiatives together.", "it": "Siamo a disposizione per approfondire nuove opportunità di partnership e d'investimento." },
+
+    "intro_p": { "en": "Whether you're an institutional investor seeking exposure to sustainable infrastructure, a developer looking for capital partnership, or an operator exploring strategic collaborations, we welcome the conversation. Our team brings together diverse expertise and a track record of successful investments across multiple asset classes.", "it": "Che siate investitori istituzionali interessati all'esposizione su infrastrutture sostenibili, sviluppatori in cerca di un partner finanziario, o operatori aperti a collaborazioni strategiche, saremo lieti di confrontarci con voi. Il nostro team unisce competenze multidisciplinari a una comprovata esperienza nell'investimento attraverso diverse asset class." },
+
+    "hq_label":    { "en": "Headquarters",                   "it": "Sede" },
+    "hq_line1":    "Via Gabrio Serbelloni 5",
+    "hq_line2":    { "en": "20122 Milan, Italy",             "it": "20122 Milano, Italia" },
+    "email_label": "Email",
+    "phone_label": { "en": "Phone",                          "it": "Telefono" },
+    "phone_num":   "+39 02 36636663",
+    "phone_hours": { "en": "Available Monday–Friday · 9:00 AM – 6:00 PM CET", "it": "Disponibile lunedì–venerdì · 9:00 – 18:00 CET" },
+
+    "btn_write":    { "en": "Write to Us",        "it": "Scrivici" },
+    "btn_schedule": { "en": "Schedule a Meeting", "it": "Fissa un Incontro" },
+
+    "form_eyebrow":    { "en": "Send a Message",                        "it": "Invia un Messaggio" },
+    "form_title":      { "en": "Tell Us About Your Project",            "it": "Raccontaci il Tuo Progetto" },
+    "form_helper":     { "en": "Fill in the form below and a member of our team will be in touch within 2 business days.", "it": "Compilate il modulo sottostante e un membro del nostro team vi risponderà entro 2 giorni lavorativi." },
+    "form_label_name": { "en": "Full Name *",                           "it": "Nome e Cognome *" },
+    "form_ph_name":    { "en": "Your full name",                        "it": "Nome e Cognome" },
+    "form_label_co":   { "en": "Company / Organisation",               "it": "Azienda / Ente" },
+    "form_ph_co":      { "en": "Your company name",                     "it": "Nome dell'azienda" },
+    "form_label_email":{ "en": "Email Address *",                      "it": "Indirizzo Email *" },
+    "form_ph_email":   { "en": "your@email.com",                       "it": "vostra@email.com" },
+    "form_label_type": { "en": "I am a…",                         "it": "Sono un/a…" },
+    "form_select_default": { "en": "Select your profile",              "it": "Seleziona il tuo profilo" },
+    "form_opt_investor":   { "en": "Institutional Investor",           "it": "Investitore Istituzionale" },
+    "form_opt_developer":  { "en": "Project Developer",                "it": "Sviluppatore di Progetto" },
+    "form_opt_operator":   { "en": "Asset Operator",                   "it": "Operatore di Asset" },
+    "form_opt_partner":    { "en": "Potential Partner",                "it": "Potenziale Partner" },
+    "form_opt_other":      { "en": "Other",                            "it": "Altro" },
+    "form_label_subject":  { "en": "Subject",                         "it": "Oggetto" },
+    "form_ph_subject":     { "en": "What would you like to discuss?", "it": "Di cosa vorreste parlare?" },
+    "form_label_message":  { "en": "Message *",                       "it": "Messaggio *" },
+    "form_ph_message":     { "en": "Tell us about your project, investment interest, or collaboration idea…", "it": "Raccontateci il vostro progetto, il vostro interesse di investimento o la vostra idea di collaborazione…" },
+    "form_submit":         { "en": "Send Message",                    "it": "Invia Messaggio" },
+    "form_submit_opening": { "en": "Opening Email Client…",      "it": "Apertura client email…" },
+    "form_note":           { "en": "* Required fields. Your information is handled confidentially and will not be shared with third parties.", "it": "* Campi obbligatori. Le tue informazioni saranno trattate con riservatezza e non condivise con terze parti." },
+    "form_subject_default":{ "en": "Contact Form — Maverick Global Investments", "it": "Modulo di Contatto — Maverick Global Investments" },
+    "form_js_name":        { "en": "Name: ",     "it": "Nome: " },
+    "form_js_company":     { "en": "Company: ",  "it": "Azienda: " },
+    "form_js_email":       { "en": "Email: ",    "it": "Email: " },
+    "form_js_profile":     { "en": "Profile: ",  "it": "Profilo: " },
+
+    "footer_disclaimer": { "en": "Maverick Global Investments S.r.l. — P.IVA / C.F. [VAT number]", "it": "Ogni opportunità di investimento è subordinata a processi di due diligence e valutazione dei profili di rischio." }
+  }
+}

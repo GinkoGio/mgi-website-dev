@@ -1,0 +1,26 @@
+{
+  "name": "mgi-tech",
+  "version": "1.0.0",
+  "description": "Corporate website for **Maverick Global Investments S.r.l.**, an independent investment firm headquartered in Milan, operating in renewable energy, real estate, and alternative finance.",
+  "main": "animations.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GinkoGio/mgi-tech.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/GinkoGio/mgi-tech/issues"
+  },
+  "homepage": "https://github.com/GinkoGio/mgi-tech#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

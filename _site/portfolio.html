@@ -1,0 +1,328 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — Maverick Global Investments</title>
+<meta name="description" content="34 MW of operational photovoltaic parks across southern Italy — the foundation of Maverick Global Investments&#39; sustainable investment strategy.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Portfolio — Maverick Global Investments">
+<meta property="og:description" content="34 MW of operational photovoltaic parks across southern Italy — the foundation of Maverick Global Investments&#39; sustainable investment strategy.">
+<meta property="og:image" content="https://www.maverickglob.com/images/solar-landscape.webp">
+<meta property="og:url" content="https://www.maverickglob.com/portfolio.html">
+<link rel="canonical" href="https://www.maverickglob.com/portfolio.html">
+<link rel="icon" href="/images/logo.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/hitech.css">
+</head>
+<body>
+
+<nav id="main-nav">
+  <a href="/index.html" class="nav-logo">
+    <img src="/images/logo.webp" alt="Maverick Global Investments" class="nav-logo-img">
+    <div class="nav-logo-text">
+      <span class="nav-logo-name">Maverick</span>
+      <span class="nav-logo-sub">Global Investments</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/what-we-do.html">What We Do</a></li>
+    <li><a href="/investment-sectors.html">Investment Sectors</a></li>
+    <li><a href="/philosophy.html">Philosophy</a></li>
+    <li><a href="/portfolio.html" class="active">Portfolio</a></li>
+    <li><a href="/contact.html" class="nav-cta">Contact</a></li>
+    
+      <li class="lang-li"><a href="/it/portfolio.html" class="lang-btn">IT</a></li>
+    
+  </ul>
+  <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+
+
+
+<style>
+.map-tabs{display:flex;gap:4px;margin-bottom:28px;border-bottom:1px solid rgba(224,40,90,0.2);}
+.map-tab{padding:10px 22px;border:none;background:transparent;color:var(--text-2);
+         font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;
+         letter-spacing:.06em;cursor:pointer;border-bottom:2px solid transparent;
+         margin-bottom:-1px;transition:color .2s,border-color .2s;}
+.map-tab:hover{color:var(--text-1);}
+.map-tab.active{color:var(--rose);border-bottom-color:var(--rose);}
+.map-mobile-link{display:none;text-align:center;margin-top:14px;font-size:13px;
+                 color:var(--rose);text-decoration:none;letter-spacing:.04em;}
+@media(max-width:767px){
+  #mapPanel iframe{display:none;}
+  .map-mobile-link{display:block;}
+}
+</style>
+
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+  <div class="container">
+    <p class="section-eyebrow light">Our Assets</p>
+    <h1>Current Portfolio Assets</h1>
+    <p>34 MW of operational photovoltaic parks across southern Italy — the foundation of our sustainable investment strategy.</p>
+  </div>
+</div>
+
+<!-- INTRO + STATS -->
+<section class="section-white">
+  <div class="container">
+    <div class="two-col top" style="margin-bottom: 64px;">
+      <div>
+        <p class="lead">Our initial portfolio comprises approximately <strong>34 MW of PV parks</strong> strategically located in southern Italy, specifically across the regions of Puglia, Basilicata and Campania. These installations represent our commitment to sustainable energy generation and form the foundation of our impactful investment strategy.</p>
+        <p class="lead">Each asset has been selected through our rigorous due diligence process, evaluated for technical performance, grid connection quality, irradiation levels, and long-term operational stability.</p>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+        <div style="background:var(--bg-3);border:1px solid var(--rose-border);border-radius:10px;padding:28px;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:38px;color:var(--rose);line-height:1;">34 MW</div>
+          <div style="font-size:13px;font-weight:700;margin-top:8px;color:var(--text-1);">Total PV Capacity</div>
+          <div style="font-size:12px;color:var(--text-2);margin-top:4px;">Operational portfolio</div>
+        </div>
+        <div style="background:var(--bg-3);border:1px solid var(--rose-border);border-radius:10px;padding:28px;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:38px;color:var(--rose);line-height:1;">47.1M</div>
+          <div style="font-size:13px;font-weight:700;margin-top:8px;color:var(--text-1);">MWh Produced</div>
+          <div style="font-size:12px;color:var(--text-2);margin-top:4px;">Annual energy output</div>
+        </div>
+        <div style="background:var(--bg-3);border:1px solid var(--rose-border);border-radius:10px;padding:28px;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:38px;color:var(--rose);line-height:1;">3</div>
+          <div style="font-size:13px;font-weight:700;margin-top:8px;color:var(--text-1);">Regions</div>
+          <div style="font-size:12px;color:var(--text-2);margin-top:4px;">Puglia, Basilicata &amp; Campania</div>
+        </div>
+        <div style="background:var(--bg-3);border:1px solid var(--rose-border);border-radius:10px;padding:28px;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:38px;color:var(--rose);line-height:1;">14,518</div>
+          <div style="font-size:13px;font-weight:700;margin-top:8px;color:var(--text-1);">Tons CO₂ Saved</div>
+          <div style="font-size:12px;color:var(--text-2);margin-top:4px;">Annual reduction</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB SWITCHER -->
+    <div class="map-tabs" id="mapTabs">
+      <button class="map-tab active" data-tab="gallery">Photo Gallery</button>
+      <button class="map-tab" data-tab="map">Interactive Map</button>
+    </div>
+
+    <!-- GALLERY -->
+    <div class="gallery-slider">
+      <p class="section-eyebrow">Gallery</p>
+      <h2 class="section-title" style="margin-top: 10px;">PV Plant Collection</h2>
+      <div class="slider-outer">
+        <button class="slider-btn slider-prev" aria-label="Previous">&#8249;</button>
+        <div class="slider-viewport">
+        <div class="slider-track">
+        <img src="/images/PV%20plant/Avalon%20-%20Lustra%20%28SA%29.webp" alt="Lustra (SA)" />
+        <img src="/images/PV%20plant/Enfo%208%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
+        <img src="/images/PV%20plant/Enfo%209%20-%20Montalbano%20%28MT%29.webp" alt="Montalbano (MT)" />
+        <img src="/images/PV%20plant/Enfo%2015%20-%20Pisticci%20%28MT%29.webp" alt="Pisticci (MT)" />
+        <img src="/images/PV%20plant/Enfo%2020%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
+        <img src="/images/PV%20plant/Enfo%2026%20-%20Irsina%20%28MT%29.webp" alt="Irsina (MT)" />
+        <img src="/images/PV%20plant/Enfo%2033%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
+        <img src="/images/PV%20plant/Enfo%2040%20-%20Palazzo%20San%20Gervasio%20%28PZ%29.webp" alt="Palazzo San Gervasio (PZ)" />
+        <img src="/images/PV%20plant/Enfo%2041%20-%20Palazzo%20San%20Gervasio%20%28PZ%29.webp" alt="Palazzo San Gervasio (PZ)" />
+        <img src="/images/PV%20plant/Enfo%2045%20-%20Miglionico%20%28MT%29.webp" alt="Miglionico (MT)" />
+        <img src="/images/PV%20plant/Enfo%2062%20-%20Policoro%20%28MT%29.webp" alt="Policoro (MT)" />
+        <img src="/images/PV%20plant/Enfo%2064%20-%20Craco%20%28MT%29.webp" alt="Craco (MT)" />
+        <img src="/images/PV%20plant/Enfo%2065%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
+        <img src="/images/PV%20plant/Enfo%2072%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
+        <img src="/images/PV%20plant/Enfo%2074%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
+        <img src="/images/PV%20plant/Enfo%2087%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
+        <img src="/images/PV%20plant/Enfo%2091%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
+        <img src="/images/PV%20plant/Estate%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
+        <img src="/images/PV%20plant/Primavera%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
+        <img src="/images/PV%20plant/Saemsolar%20-%20Paterno%20%28PZ%29.webp" alt="Paterno (PZ)" />
+        <img src="/images/PV%20plant/Zenith%201%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
+        <!-- duplicate set for seamless infinite scroll -->
+        <img src="/images/PV%20plant/Avalon%20-%20Lustra%20%28SA%29.webp" alt="Lustra (SA)" />
+        <img src="/images/PV%20plant/Enfo%208%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
+        <img src="/images/PV%20plant/Enfo%209%20-%20Montalbano%20%28MT%29.webp" alt="Montalbano (MT)" />
+        <img src="/images/PV%20plant/Enfo%2015%20-%20Pisticci%20%28MT%29.webp" alt="Pisticci (MT)" />
+        <img src="/images/PV%20plant/Enfo%2020%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
+        <img src="/images/PV%20plant/Enfo%2026%20-%20Irsina%20%28MT%29.webp" alt="Irsina (MT)" />
+        <img src="/images/PV%20plant/Enfo%2033%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
+        <img src="/images/PV%20plant/Enfo%2040%20-%20Palazzo%20San%20Gervasio%20%28PZ%29.webp" alt="Palazzo San Gervasio (PZ)" />
+        <img src="/images/PV%20plant/Enfo%2041%20-%20Palazzo%20San%20Gervasio%20%28PZ%29.webp" alt="Palazzo San Gervasio (PZ)" />
+        <img src="/images/PV%20plant/Enfo%2045%20-%20Miglionico%20%28MT%29.webp" alt="Miglionico (MT)" />
+        <img src="/images/PV%20plant/Enfo%2062%20-%20Policoro%20%28MT%29.webp" alt="Policoro (MT)" />
+        <img src="/images/PV%20plant/Enfo%2064%20-%20Craco%20%28MT%29.webp" alt="Craco (MT)" />
+        <img src="/images/PV%20plant/Enfo%2065%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
+        <img src="/images/PV%20plant/Enfo%2072%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
+        <img src="/images/PV%20plant/Enfo%2074%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
+        <img src="/images/PV%20plant/Enfo%2087%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
+        <img src="/images/PV%20plant/Enfo%2091%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
+        <img src="/images/PV%20plant/Estate%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
+        <img src="/images/PV%20plant/Primavera%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
+        <img src="/images/PV%20plant/Saemsolar%20-%20Paterno%20%28PZ%29.webp" alt="Paterno (PZ)" />
+        <img src="/images/PV%20plant/Zenith%201%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
+        </div>
+        </div>
+        <button class="slider-btn slider-next" aria-label="Next">&#8250;</button>
+      </div>
+    </div>
+
+    <!-- MAP PANEL -->
+    <div id="mapPanel" style="display:none; margin-top:4px;">
+      <iframe src="/pv_portfolio_map_en.html"
+              id="mapIframe"
+              style="width:100%;height:680px;border:1px solid rgba(224,40,90,0.2);border-radius:10px;display:block;"
+              title="Interactive PV Portfolio Map"
+              loading="lazy"></iframe>
+      <a href="/pv_portfolio_map_en.html" target="_blank" class="map-mobile-link">Open full map ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- REGIONS -->
+<section class="section-off">
+  <div class="container">
+    <p class="section-eyebrow">Locations</p>
+    <h2 class="section-title crimson">Southern Italy's<br>Solar Potential</h2>
+    <div class="two-col" style="margin-top: 40px;">
+      <div>
+        <p class="lead">Puglia, Basilicata and Campania represent three of Italy&#39;s highest-irradiation regions, with solar resource levels that rank among the best in continental Europe. Our strategic asset selection in these regions was driven by superior energy yield potential, robust grid infrastructure, and a favourable regulatory environment.</p>
+        <p class="lead">These characteristics translate directly into performance stability and predictable long-term returns for our partners.</p>
+      </div>
+      <div>
+        <div style="background: var(--bg-2); border-radius: 10px; padding: 32px; border: 1.5px solid var(--rose-border);">
+          <h4 style="font-size:16px; font-weight:700; margin-bottom:20px; color:var(--rose);">Portfolio Highlights</h4>
+          <div style="display:flex; flex-direction:column; gap:14px;">
+            <div style="display:flex; justify-content:space-between; padding-bottom:14px; border-bottom:1px solid var(--rose-border);">
+              <span style="font-size:14px; color:var(--text-2);">Asset type</span>
+              <span style="font-size:14px; font-weight:600; color:var(--text-1);">Ground-mounted PV</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; padding-bottom:14px; border-bottom:1px solid var(--rose-border);">
+              <span style="font-size:14px; color:var(--text-2);">Regions</span>
+              <span style="font-size:14px; font-weight:600; color:var(--text-1);">Puglia, Basilicata, Campania</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; padding-bottom:14px; border-bottom:1px solid var(--rose-border);">
+              <span style="font-size:14px; color:var(--text-2);">Total capacity</span>
+              <span style="font-size:14px; font-weight:600; color:var(--text-1);">~34 MW</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; padding-bottom:14px; border-bottom:1px solid var(--rose-border);">
+              <span style="font-size:14px; color:var(--text-2);">Specific yield</span>
+              <span style="font-size:14px; font-weight:600; color:var(--text-1);">&gt;1,700 MWh/MW/yr</span>
+            </div>
+            <div style="display:flex; justify-content:space-between;">
+              <span style="font-size:14px; color:var(--text-2);">Management</span>
+              <span style="font-size:14px; font-weight:600; color:var(--text-1);">Active (MGI direct)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section-dark">
+  <div class="container" style="text-align:center; max-width: 680px;">
+    <p class="section-eyebrow light">Interested in Co-investing?</p>
+    <h2 class="section-title light">Let&#39;s Explore Opportunities Together</h2>
+    <p style="font-size:16px; color:var(--text-2); line-height:1.8; margin-bottom:40px;">Whether you&#39;re an institutional investor seeking sustainable infrastructure exposure or a developer looking for a strategic capital partner, we welcome the conversation.</p>
+    <div class="btn-actions" style="justify-content:center;">
+      <a href="/contact.html" class="btn-outline-white">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+
+<script>
+(function () {
+  var track = document.querySelector('.slider-track');
+  if (!track) return;
+  var BASE = 0.6;
+  var speed = BASE;
+  var x = 0;
+
+  function half() { return track.scrollWidth / 2; }
+
+  function tick() {
+    x -= speed;
+    var h = half();
+    if (-x >= h) x += h;
+    if (x > 0) x -= h;
+    track.style.transform = 'translateX(' + x + 'px)';
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+
+  document.querySelector('.slider-prev').addEventListener('click', function () {
+    speed = -BASE * 10;
+    setTimeout(function () { speed = BASE; }, 500);
+  });
+  document.querySelector('.slider-next').addEventListener('click', function () {
+    speed = BASE * 10;
+    setTimeout(function () { speed = BASE; }, 500);
+  });
+})();
+
+(function () {
+  var tabs = document.querySelectorAll('.map-tab');
+  var gallery = document.querySelector('.gallery-slider');
+  var mapPanel = document.getElementById('mapPanel');
+  tabs.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      tabs.forEach(function (t) { t.classList.remove('active'); });
+      btn.classList.add('active');
+      if (btn.dataset.tab === 'map') {
+        gallery.style.display = 'none';
+        mapPanel.style.display = 'block';
+      } else {
+        gallery.style.display = '';
+        mapPanel.style.display = 'none';
+      }
+    });
+  });
+})();
+</script>
+
+
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="/images/logo.webp" alt="Maverick Global Investments" class="footer-logo" loading="lazy">
+        <p>An independent investment firm. Disciplined capital allocation. Active asset management.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/what-we-do.html">What We Do</a></li>
+          <li><a href="/investment-sectors.html">Investment Sectors</a></li>
+          <li><a href="/philosophy.html">Philosophy</a></li>
+          <li><a href="/portfolio.html">Portfolio</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <p>Via Gabrio Serbelloni 5<br>20122 Milan, Italy</p>
+        <br>
+        <a href="mailto:info@maverickglob.com" class="footer-email">info@maverickglob.com</a>
+        <a href="mailto:mavkglob@pec.it" class="footer-email">mavkglob@pec.it</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Maverick Global Investments S.r.l. All rights reserved.</span>
+      <span>All investment opportunities are subject to thorough due diligence and appropriate risk assessment.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/hitech.js"></script>
+</body>
+</html>

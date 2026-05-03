@@ -1,0 +1,250 @@
+---
+layout: base.njk
+pageSlug: "portfolio"
+pagination:
+  data: languages
+  size: 1
+  alias: lang
+permalink: "{{ lang.urlPrefix }}/portfolio.html"
+---
+{% set t = i18n[pageSlug] | localize(lang.code) %}
+
+{% block head %}
+<style>
+.map-tabs{display:flex;gap:4px;margin-bottom:28px;border-bottom:1px solid rgba(224,40,90,0.2);}
+.map-tab{padding:10px 22px;border:none;background:transparent;color:var(--text-2);
+         font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;
+         letter-spacing:.06em;cursor:pointer;border-bottom:2px solid transparent;
+         margin-bottom:-1px;transition:color .2s,border-color .2s;}
+.map-tab:hover{color:var(--text-1);}
+.map-tab.active{color:var(--rose);border-bottom-color:var(--rose);}
+.map-mobile-link{display:none;text-align:center;margin-top:14px;font-size:13px;
+                 color:var(--rose);text-decoration:none;letter-spacing:.04em;}
+@media(max-width:767px){
+  #mapPanel iframe{display:none;}
+  .map-mobile-link{display:block;}
+}
+</style>
+{% endblock %}
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+  <div class="container">
+    <p class="section-eyebrow light">{{ t.hero_eyebrow }}</p>
+    <h1>{{ t.hero_title }}</h1>
+    <p>{{ t.hero_subtitle }}</p>
+  </div>
+</div>
+
+<!-- INTRO + STATS -->
+<section class="section-white">
+  <div class="container">
+    <div class="two-col top" style="margin-bottom: 64px;">
+      <div>
+        <p class="lead">{{ t.intro_p1 | safe }}</p>
+        <p class="lead">{{ t.intro_p2 }}</p>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+        <div style="background:var(--bg-3);border:1px solid var(--rose-border);border-radius:10px;padding:28px;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:38px;color:var(--rose);line-height:1;">{{ t.stat1_num }}</div>
+          <div style="font-size:13px;font-weight:700;margin-top:8px;color:var(--text-1);">{{ t.stat1_label }}</div>
+          <div style="font-size:12px;color:var(--text-2);margin-top:4px;">{{ t.stat1_sub }}</div>
+        </div>
+        <div style="background:var(--bg-3);border:1px solid var(--rose-border);border-radius:10px;padding:28px;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:38px;color:var(--rose);line-height:1;">{{ t.stat2_num }}</div>
+          <div style="font-size:13px;font-weight:700;margin-top:8px;color:var(--text-1);">{{ t.stat2_label }}</div>
+          <div style="font-size:12px;color:var(--text-2);margin-top:4px;">{{ t.stat2_sub }}</div>
+        </div>
+        <div style="background:var(--bg-3);border:1px solid var(--rose-border);border-radius:10px;padding:28px;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:38px;color:var(--rose);line-height:1;">{{ t.stat3_num }}</div>
+          <div style="font-size:13px;font-weight:700;margin-top:8px;color:var(--text-1);">{{ t.stat3_label }}</div>
+          <div style="font-size:12px;color:var(--text-2);margin-top:4px;">{{ t.stat3_sub }}</div>
+        </div>
+        <div style="background:var(--bg-3);border:1px solid var(--rose-border);border-radius:10px;padding:28px;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:38px;color:var(--rose);line-height:1;">{{ t.stat4_num }}</div>
+          <div style="font-size:13px;font-weight:700;margin-top:8px;color:var(--text-1);">{{ t.stat4_label }}</div>
+          <div style="font-size:12px;color:var(--text-2);margin-top:4px;">{{ t.stat4_sub }}</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB SWITCHER -->
+    <div class="map-tabs" id="mapTabs">
+      <button class="map-tab active" data-tab="gallery">{{ t.tab_gallery }}</button>
+      <button class="map-tab" data-tab="map">{{ t.tab_map }}</button>
+    </div>
+
+    <!-- GALLERY -->
+    <div class="gallery-slider">
+      <p class="section-eyebrow">{{ t.gallery_eyebrow }}</p>
+      <h2 class="section-title" style="margin-top: 10px;">{{ t.gallery_title }}</h2>
+      <div class="slider-outer">
+        <button class="slider-btn slider-prev" aria-label="{{ t.slider_prev_label }}">&#8249;</button>
+        <div class="slider-viewport">
+        <div class="slider-track">
+        <img src="/images/PV%20plant/Avalon%20-%20Lustra%20%28SA%29.webp" alt="Lustra (SA)" />
+        <img src="/images/PV%20plant/Enfo%208%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
+        <img src="/images/PV%20plant/Enfo%209%20-%20Montalbano%20%28MT%29.webp" alt="Montalbano (MT)" />
+        <img src="/images/PV%20plant/Enfo%2015%20-%20Pisticci%20%28MT%29.webp" alt="Pisticci (MT)" />
+        <img src="/images/PV%20plant/Enfo%2020%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
+        <img src="/images/PV%20plant/Enfo%2026%20-%20Irsina%20%28MT%29.webp" alt="Irsina (MT)" />
+        <img src="/images/PV%20plant/Enfo%2033%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
+        <img src="/images/PV%20plant/Enfo%2040%20-%20Palazzo%20San%20Gervasio%20%28PZ%29.webp" alt="Palazzo San Gervasio (PZ)" />
+        <img src="/images/PV%20plant/Enfo%2041%20-%20Palazzo%20San%20Gervasio%20%28PZ%29.webp" alt="Palazzo San Gervasio (PZ)" />
+        <img src="/images/PV%20plant/Enfo%2045%20-%20Miglionico%20%28MT%29.webp" alt="Miglionico (MT)" />
+        <img src="/images/PV%20plant/Enfo%2062%20-%20Policoro%20%28MT%29.webp" alt="Policoro (MT)" />
+        <img src="/images/PV%20plant/Enfo%2064%20-%20Craco%20%28MT%29.webp" alt="Craco (MT)" />
+        <img src="/images/PV%20plant/Enfo%2065%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
+        <img src="/images/PV%20plant/Enfo%2072%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
+        <img src="/images/PV%20plant/Enfo%2074%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
+        <img src="/images/PV%20plant/Enfo%2087%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
+        <img src="/images/PV%20plant/Enfo%2091%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
+        <img src="/images/PV%20plant/Estate%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
+        <img src="/images/PV%20plant/Primavera%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
+        <img src="/images/PV%20plant/Saemsolar%20-%20Paterno%20%28PZ%29.webp" alt="Paterno (PZ)" />
+        <img src="/images/PV%20plant/Zenith%201%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
+        <!-- duplicate set for seamless infinite scroll -->
+        <img src="/images/PV%20plant/Avalon%20-%20Lustra%20%28SA%29.webp" alt="Lustra (SA)" />
+        <img src="/images/PV%20plant/Enfo%208%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
+        <img src="/images/PV%20plant/Enfo%209%20-%20Montalbano%20%28MT%29.webp" alt="Montalbano (MT)" />
+        <img src="/images/PV%20plant/Enfo%2015%20-%20Pisticci%20%28MT%29.webp" alt="Pisticci (MT)" />
+        <img src="/images/PV%20plant/Enfo%2020%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
+        <img src="/images/PV%20plant/Enfo%2026%20-%20Irsina%20%28MT%29.webp" alt="Irsina (MT)" />
+        <img src="/images/PV%20plant/Enfo%2033%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
+        <img src="/images/PV%20plant/Enfo%2040%20-%20Palazzo%20San%20Gervasio%20%28PZ%29.webp" alt="Palazzo San Gervasio (PZ)" />
+        <img src="/images/PV%20plant/Enfo%2041%20-%20Palazzo%20San%20Gervasio%20%28PZ%29.webp" alt="Palazzo San Gervasio (PZ)" />
+        <img src="/images/PV%20plant/Enfo%2045%20-%20Miglionico%20%28MT%29.webp" alt="Miglionico (MT)" />
+        <img src="/images/PV%20plant/Enfo%2062%20-%20Policoro%20%28MT%29.webp" alt="Policoro (MT)" />
+        <img src="/images/PV%20plant/Enfo%2064%20-%20Craco%20%28MT%29.webp" alt="Craco (MT)" />
+        <img src="/images/PV%20plant/Enfo%2065%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
+        <img src="/images/PV%20plant/Enfo%2072%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
+        <img src="/images/PV%20plant/Enfo%2074%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
+        <img src="/images/PV%20plant/Enfo%2087%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
+        <img src="/images/PV%20plant/Enfo%2091%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
+        <img src="/images/PV%20plant/Estate%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
+        <img src="/images/PV%20plant/Primavera%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
+        <img src="/images/PV%20plant/Saemsolar%20-%20Paterno%20%28PZ%29.webp" alt="Paterno (PZ)" />
+        <img src="/images/PV%20plant/Zenith%201%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
+        </div>
+        </div>
+        <button class="slider-btn slider-next" aria-label="{{ t.slider_next_label }}">&#8250;</button>
+      </div>
+    </div>
+
+    <!-- MAP PANEL -->
+    <div id="mapPanel" style="display:none; margin-top:4px;">
+      <iframe src="/pv_portfolio_map_en.html"
+              id="mapIframe"
+              style="width:100%;height:680px;border:1px solid rgba(224,40,90,0.2);border-radius:10px;display:block;"
+              title="{{ t.map_iframe_title }}"
+              loading="lazy"></iframe>
+      <a href="/pv_portfolio_map_en.html" target="_blank" class="map-mobile-link">{{ t.map_mobile_link }}</a>
+    </div>
+  </div>
+</section>
+
+<!-- REGIONS -->
+<section class="section-off">
+  <div class="container">
+    <p class="section-eyebrow">{{ t.regions_eyebrow }}</p>
+    <h2 class="section-title crimson">{{ t.regions_title | safe }}</h2>
+    <div class="two-col" style="margin-top: 40px;">
+      <div>
+        <p class="lead">{{ t.regions_p1 }}</p>
+        <p class="lead">{{ t.regions_p2 }}</p>
+      </div>
+      <div>
+        <div style="background: var(--bg-2); border-radius: 10px; padding: 32px; border: 1.5px solid var(--rose-border);">
+          <h4 style="font-size:16px; font-weight:700; margin-bottom:20px; color:var(--rose);">{{ t.hl_title }}</h4>
+          <div style="display:flex; flex-direction:column; gap:14px;">
+            <div style="display:flex; justify-content:space-between; padding-bottom:14px; border-bottom:1px solid var(--rose-border);">
+              <span style="font-size:14px; color:var(--text-2);">{{ t.hl_r1_label }}</span>
+              <span style="font-size:14px; font-weight:600; color:var(--text-1);">{{ t.hl_r1_val }}</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; padding-bottom:14px; border-bottom:1px solid var(--rose-border);">
+              <span style="font-size:14px; color:var(--text-2);">{{ t.hl_r2_label }}</span>
+              <span style="font-size:14px; font-weight:600; color:var(--text-1);">{{ t.hl_r2_val }}</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; padding-bottom:14px; border-bottom:1px solid var(--rose-border);">
+              <span style="font-size:14px; color:var(--text-2);">{{ t.hl_r3_label }}</span>
+              <span style="font-size:14px; font-weight:600; color:var(--text-1);">{{ t.hl_r3_val }}</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; padding-bottom:14px; border-bottom:1px solid var(--rose-border);">
+              <span style="font-size:14px; color:var(--text-2);">{{ t.hl_r4_label }}</span>
+              <span style="font-size:14px; font-weight:600; color:var(--text-1);">{{ t.hl_r4_val }}</span>
+            </div>
+            <div style="display:flex; justify-content:space-between;">
+              <span style="font-size:14px; color:var(--text-2);">{{ t.hl_r5_label }}</span>
+              <span style="font-size:14px; font-weight:600; color:var(--text-1);">{{ t.hl_r5_val }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section-dark">
+  <div class="container" style="text-align:center; max-width: 680px;">
+    <p class="section-eyebrow light">{{ t.cta_eyebrow }}</p>
+    <h2 class="section-title light">{{ t.cta_title }}</h2>
+    <p style="font-size:16px; color:var(--text-2); line-height:1.8; margin-bottom:40px;">{{ t.cta_body }}</p>
+    <div class="btn-actions" style="justify-content:center;">
+      <a href="{{ lang.urlPrefix }}/contact.html" class="btn-outline-white">{{ t.cta_btn }}</a>
+    </div>
+  </div>
+</section>
+
+{% block scripts %}
+<script>
+(function () {
+  var track = document.querySelector('.slider-track');
+  if (!track) return;
+  var BASE = 0.6;
+  var speed = BASE;
+  var x = 0;
+
+  function half() { return track.scrollWidth / 2; }
+
+  function tick() {
+    x -= speed;
+    var h = half();
+    if (-x >= h) x += h;
+    if (x > 0) x -= h;
+    track.style.transform = 'translateX(' + x + 'px)';
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+
+  document.querySelector('.slider-prev').addEventListener('click', function () {
+    speed = -BASE * 10;
+    setTimeout(function () { speed = BASE; }, 500);
+  });
+  document.querySelector('.slider-next').addEventListener('click', function () {
+    speed = BASE * 10;
+    setTimeout(function () { speed = BASE; }, 500);
+  });
+})();
+
+(function () {
+  var tabs = document.querySelectorAll('.map-tab');
+  var gallery = document.querySelector('.gallery-slider');
+  var mapPanel = document.getElementById('mapPanel');
+  tabs.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      tabs.forEach(function (t) { t.classList.remove('active'); });
+      btn.classList.add('active');
+      if (btn.dataset.tab === 'map') {
+        gallery.style.display = 'none';
+        mapPanel.style.display = 'block';
+      } else {
+        gallery.style.display = '';
+        mapPanel.style.display = 'none';
+      }
+    });
+  });
+})();
+</script>
+{% endblock %}
