@@ -1,4 +1,8 @@
+const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+
   eleventyConfig.addPassthroughCopy({ "hitech.css": "hitech.css" });
   eleventyConfig.addPassthroughCopy({ "hitech.js": "hitech.js" });
   eleventyConfig.addPassthroughCopy({ "images": "images" });
@@ -19,6 +23,7 @@ module.exports = function (eleventyConfig) {
   });
 
   return {
+    pathPrefix: "/mgi-website-dev/",
     dir: {
       input: "src",
       output: "_site",
