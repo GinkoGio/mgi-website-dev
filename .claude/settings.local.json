@@ -5,7 +5,8 @@
       "Bash(npm install *)",
       "Bash(git rm *)",
       "Bash(git add *)",
-      "Bash(git commit -m ' *)"
+      "Bash(git commit -m ' *)",
+      "Bash(powershell -Command \"Get-Content 'd:\\\\DEV\\\\mgi-website-dev\\\\pv_portfolio_map_en.html' | Select-Object -First 5 -Skip 226\")"
     ]
   }
 }
