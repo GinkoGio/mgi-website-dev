@@ -36,7 +36,7 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/GinkoGio/mgi-tech.git
+   git clone https://github.com/GinkoGio/mgi-website-dev.git
    ```
 2. Install dependencies:
    ```bash
@@ -51,16 +51,20 @@ npm start
 The site will be available at `http://localhost:8080`.
 
 ### Production Build
-To build the site for production:
+To build the site for production (with the GitHub Pages path prefix):
 ```bash
 npm run build
 ```
 This generates the static files in the `_site/` directory.
 
-To preview the built production output, you need to use a local web server (opening HTML files directly via `file://` will break absolute asset paths). You can use Python's built-in HTTP server:
+### Local Preview (built output)
+To build and preview the static output locally (without the GitHub Pages path prefix):
 ```bash
-python -m http.server 8000 --directory _site
+npm run preview
 ```
+This builds the site with `pathPrefix=/` and serves it at `http://localhost:3000`.
+
+> ⚠️ Do **not** open `.html` files directly via `file://` — absolute asset paths will break.
 
 ## 🌍 Multilingual Architecture (i18n)
 

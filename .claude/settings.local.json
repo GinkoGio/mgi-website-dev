@@ -3,7 +3,8 @@
     "allow": [
       "Bash(npm init *)",
       "Bash(npm install *)",
-      "PowerShell(Set-Location \"g:\\\\My Drive\\\\Programming\\\\MGI GIT\\\\mgi-tech\"; npm install @11ty/eleventy --save-dev 2>&1; Write-Output \"EXIT: $LASTEXITCODE\")"
+      "Bash(git rm *)",
+      "Bash(git add *)"
     ]
   }
 }

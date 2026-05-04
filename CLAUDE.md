@@ -11,14 +11,12 @@ Corporate website for Maverick Global Investments S.r.l. (Milan, Italy) — an i
 ## Commands
 
 ```bash
-npm start        # dev server with live reload → http://localhost:8080
-npm run build    # production build → _site/
+npm start          # dev server with live reload → http://localhost:8080
+npm run build      # production build → _site/ (uses pathPrefix /mgi-website-dev/ for GitHub Pages)
+npm run preview    # local build (pathPrefix /) + serve → http://localhost:3000
 ```
 
-To preview the built output as a proper web server (required — opening HTML files directly via `file://` breaks absolute asset paths):
-```bash
-python -m http.server 8000 --directory _site
-```
+> ⚠️ `npm run build` sets `pathPrefix: /mgi-website-dev/` for GitHub Pages. Use `npm run preview` to build and serve locally with correct asset paths.
 
 ## Architecture
 
@@ -52,7 +50,7 @@ The `localize` filter (defined in `.eleventy.js`) resolves `{"en":"...","it":"..
 
 **Note:** The rose accent `#e0285a` is hardcoded in `hitech.js` line 46 (canvas stroke), not read from the CSS custom property.
 
-**Legacy files** (`animations.css`, `animations.js`, `fancy.css`, `fancy.js`) are unused — kept for reference only.
+**Note:** Legacy files (`animations.css`, `animations.js`, `fancy.css`, `fancy.js`) have been removed — they were unused reference copies of older code.
 
 ## Adding or Editing Content
 

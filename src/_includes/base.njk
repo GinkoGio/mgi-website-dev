@@ -38,9 +38,9 @@
     <li><a href="{{ lang.urlPrefix }}/portfolio.html"{% if pageSlug == 'portfolio' %} class="active"{% endif %}>{{ t_nav.portfolio }}</a></li>
     <li><a href="{{ lang.urlPrefix }}/contact.html" class="nav-cta{% if pageSlug == 'contact' %} active{% endif %}">{{ t_nav.contact }}</a></li>
     {% if lang.code == 'en' %}
-      <li class="lang-li"><a href="/it/{{ pageSlug }}.html" class="lang-btn">IT</a></li>
+      <li class="lang-li"><a href="/it/{{ pageSlug }}.html" class="lang-btn" data-lang-switch>IT</a></li>
     {% else %}
-      <li class="lang-li"><a href="/{{ pageSlug }}.html" class="lang-btn">EN</a></li>
+      <li class="lang-li"><a href="/{{ pageSlug }}.html" class="lang-btn" data-lang-switch>EN</a></li>
     {% endif %}
   </ul>
   <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">

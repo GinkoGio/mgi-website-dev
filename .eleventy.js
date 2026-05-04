@@ -1,5 +1,10 @@
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
+// Use ELEVENTY_PATH_PREFIX env var if set, otherwise default to GitHub Pages path.
+// For local preview: set ELEVENTY_PATH_PREFIX=/
+// For GitHub Pages deploy: leave unset (defaults to /mgi-website-dev/)
+const pathPrefix = process.env.ELEVENTY_PATH_PREFIX ?? "/mgi-website-dev/";
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 
@@ -23,7 +28,7 @@ module.exports = function (eleventyConfig) {
   });
 
   return {
-    pathPrefix: "/mgi-website-dev/",
+    pathPrefix,
     dir: {
       input: "src",
       output: "_site",
