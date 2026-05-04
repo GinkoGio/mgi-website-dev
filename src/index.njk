@@ -8,6 +8,11 @@ pagination:
 permalink: "{{ lang.urlPrefix }}/index.html"
 ---
 {% set t = i18n[pageSlug] | localize(lang.code) %}
+{% if lang.code == 'it' %}
+  {% set assetBase = '../' %}
+{% else %}
+  {% set assetBase = '' %}
+{% endif %}
 
 <!-- ═══════════════════════════════════ HERO ═══════ -->
 <section class="hero">
@@ -20,7 +25,7 @@ permalink: "{{ lang.urlPrefix }}/index.html"
           {{ t.badge }}
         </div>
         <div class="hero-brand">
-          <img src="/images/logo.webp" alt="" class="hero-logo" aria-hidden="true">
+          <img src="{{ assetBase }}images/logo.webp" alt="" class="hero-logo" aria-hidden="true">
           <div class="hero-wordmark">
             <span class="hw-main">Maverick</span>
             <span class="hw-sub">Global Investments</span>
@@ -30,14 +35,14 @@ permalink: "{{ lang.urlPrefix }}/index.html"
         <p class="hero-subtitle">{{ t.hero_subtitle }}</p>
         <p class="hero-body">{{ t.hero_body }}</p>
         <div class="hero-actions">
-          <a href="{{ lang.urlPrefix }}/{{ t.hero_btn1_href }}" class="btn btn-primary">{{ t.hero_btn1 }}</a>
-          <a href="{{ lang.urlPrefix }}/philosophy.html" class="btn btn-ghost">{{ t.hero_btn2 }}</a>
+          <a href="{{ t.hero_btn1_href }}" class="btn btn-primary">{{ t.hero_btn1 }}</a>
+          <a href="philosophy.html" class="btn btn-ghost">{{ t.hero_btn2 }}</a>
         </div>
       </div><!-- /hero-left -->
 
       <div class="hero-right">
         <div class="hero-wireframe" aria-hidden="true">
-          <img src="/images/solar-wireframe.webp" alt="">
+          <img src="{{ assetBase }}images/solar-wireframe.webp" alt="">
         </div>
         <div class="hero-metrics">
           <div class="hero-metric">
@@ -84,7 +89,7 @@ permalink: "{{ lang.urlPrefix }}/index.html"
         </div>
         <h3>{{ t.sector1_title }}</h3>
         <p>{{ t.sector1_desc }}</p>
-        <a href="{{ lang.urlPrefix }}/investment-sectors.html" class="card-link">{{ t.explore_link }} <span>→</span></a>
+        <a href="investment-sectors.html" class="card-link">{{ t.explore_link }} <span>→</span></a>
       </div>
 
       <div class="sector-card reveal reveal-delay-1">
@@ -97,7 +102,7 @@ permalink: "{{ lang.urlPrefix }}/index.html"
         </div>
         <h3>{{ t.sector2_title }}</h3>
         <p>{{ t.sector2_desc }}</p>
-        <a href="{{ lang.urlPrefix }}/investment-sectors.html" class="card-link">{{ t.explore_link }} <span>→</span></a>
+        <a href="investment-sectors.html" class="card-link">{{ t.explore_link }} <span>→</span></a>
       </div>
 
       <div class="sector-card reveal reveal-delay-2">
@@ -109,7 +114,7 @@ permalink: "{{ lang.urlPrefix }}/index.html"
         </div>
         <h3>{{ t.sector3_title }}</h3>
         <p>{{ t.sector3_desc }}</p>
-        <a href="{{ lang.urlPrefix }}/investment-sectors.html" class="card-link">{{ t.explore_link }} <span>→</span></a>
+        <a href="investment-sectors.html" class="card-link">{{ t.explore_link }} <span>→</span></a>
       </div>
 
     </div><!-- /sectors-grid -->
@@ -154,9 +159,10 @@ permalink: "{{ lang.urlPrefix }}/index.html"
         <p>{{ t.cta_body }}</p>
       </div>
       <div class="cta-banner-actions">
-        <a href="{{ lang.urlPrefix }}/contact.html"   class="btn btn-primary">{{ t.cta_btn1 }}</a>
-        <a href="{{ lang.urlPrefix }}/portfolio.html" class="btn btn-ghost">{{ t.cta_btn2 }}</a>
+        <a href="contact.html"   class="btn btn-primary">{{ t.cta_btn1 }}</a>
+        <a href="portfolio.html" class="btn btn-ghost">{{ t.cta_btn2 }}</a>
       </div>
     </div>
   </div>
 </section>
+

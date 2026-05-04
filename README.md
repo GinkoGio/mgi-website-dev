@@ -57,6 +57,8 @@ npm run build
 ```
 This generates the static files in the `_site/` directory.
 
+The generated `_site/` files use relative asset and page links, so they can be opened directly from disk in a browser via `file://`.
+
 ### Local Preview (built output)
 To build and preview the static output locally (without the GitHub Pages path prefix):
 ```bash
@@ -64,7 +66,7 @@ npm run preview
 ```
 This builds the site with `pathPrefix=/` and serves it at `http://localhost:3000`.
 
-> ⚠️ Do **not** open `.html` files directly via `file://` — absolute asset paths will break.
+> ✅ You can also open `_site/index.html` or `_site/it/index.html` directly in your browser after `npm run build`.
 
 ## 🌍 Multilingual Architecture (i18n)
 

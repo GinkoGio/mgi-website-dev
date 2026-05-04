@@ -8,6 +8,11 @@ pagination:
 permalink: "{{ lang.urlPrefix }}/philosophy.html"
 ---
 {% set t = i18n[pageSlug] | localize(lang.code) %}
+{% if lang.code == 'it' %}
+  {% set assetBase = '../' %}
+{% else %}
+  {% set assetBase = '' %}
+{% endif %}
 
 <!-- PAGE HERO -->
 <div class="page-hero">
@@ -24,7 +29,7 @@ permalink: "{{ lang.urlPrefix }}/philosophy.html"
   <div class="container">
     <div class="two-col" style="margin-bottom: 72px;">
       <div class="col-image">
-        <img src="/images/partnership.webp" alt="Partnership and collaboration" loading="lazy" />
+        <img src="{{ assetBase }}images/partnership.webp" alt="Partnership and collaboration" loading="lazy" />
       </div>
       <div>
         <p class="section-eyebrow">{{ t.vision_eyebrow }}</p>
@@ -65,8 +70,8 @@ permalink: "{{ lang.urlPrefix }}/philosophy.html"
     </div>
     <blockquote class="pull-quote">{{ t.pull_quote }}</blockquote>
     <div class="btn-actions">
-      <a href="{{ lang.urlPrefix }}/about.html" class="btn-outline-white">{{ t.method_btn1 }}</a>
-      <a href="{{ lang.urlPrefix }}/contact.html" class="btn-outline-white">{{ t.method_btn2 }}</a>
+      <a href="about.html" class="btn-outline-white">{{ t.method_btn1 }}</a>
+      <a href="contact.html" class="btn-outline-white">{{ t.method_btn2 }}</a>
     </div>
   </div>
 </section>
@@ -109,3 +114,4 @@ permalink: "{{ lang.urlPrefix }}/philosophy.html"
     </div>
   </div>
 </section>
+

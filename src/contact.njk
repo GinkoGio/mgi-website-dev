@@ -8,6 +8,11 @@ pagination:
 permalink: "{{ lang.urlPrefix }}/contact.html"
 ---
 {% set t = i18n[pageSlug] | localize(lang.code) %}
+{% if lang.code == 'it' %}
+  {% set assetBase = '../' %}
+{% else %}
+  {% set assetBase = '' %}
+{% endif %}
 
 {% block footer_disclaimer %}{{ t.footer_disclaimer }}{% endblock %}
 
@@ -62,7 +67,7 @@ permalink: "{{ lang.urlPrefix }}/contact.html"
       </div>
 
       <div class="col-image">
-        <img src="/images/milan-skyline.webp" alt="Milan Duomo" loading="lazy" />
+        <img src="{{ assetBase }}images/milan-skyline.webp" alt="Milan Duomo" loading="lazy" />
       </div>
     </div>
 
@@ -131,7 +136,8 @@ function handleSubmit(e) {
     type && type !== '{{ t.form_select_default }}' ? '{{ t.form_js_profile }}' + type : '',
     '',
     message
-  ].filter(Boolean).join('\n');
+  ].filter(Boolean).join('
+');
 
   const mailto =
     'mailto:contact@maverickglob.com' +
@@ -154,3 +160,5 @@ function handleSubmit(e) {
 }
 </script>
 {% endblock %}
+
+

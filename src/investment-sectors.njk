@@ -8,6 +8,11 @@ pagination:
 permalink: "{{ lang.urlPrefix }}/investment-sectors.html"
 ---
 {% set t = i18n[pageSlug] | localize(lang.code) %}
+{% if lang.code == 'it' %}
+  {% set assetBase = '../' %}
+{% else %}
+  {% set assetBase = '' %}
+{% endif %}
 
 <!-- PAGE HERO -->
 <div class="page-hero">
@@ -38,14 +43,14 @@ permalink: "{{ lang.urlPrefix }}/investment-sectors.html"
         <p class="lead"><span class="focus-tag">{{ t.s1_focus_label }}</span> {{ t.s1_p2 }}</p>
       </div>
       <div class="col-image">
-        <img src="/images/solar-panels-row.webp" alt="Solar photovoltaic plant" loading="lazy" />
+        <img src="{{ assetBase }}images/solar-panels-row.webp" alt="Solar photovoltaic plant" loading="lazy" />
       </div>
     </div>
 
     <!-- SECTOR 2 -->
     <div class="two-col reverse" style="margin-bottom: 72px; padding-bottom: 72px; border-bottom: 1.5px solid var(--rose-border);">
       <div class="col-image">
-        <img src="/images/corporate-building.webp" alt="Real estate and infrastructure" loading="lazy" />
+        <img src="{{ assetBase }}images/corporate-building.webp" alt="Real estate and infrastructure" loading="lazy" />
       </div>
       <div>
         <div class="portfolio-col-icon" style="margin-bottom: 24px;">
@@ -74,7 +79,7 @@ permalink: "{{ lang.urlPrefix }}/investment-sectors.html"
         <p class="lead"><span class="focus-tag">{{ t.s3_focus_label }}</span> {{ t.s3_p2 }}</p>
       </div>
       <div class="col-image">
-        <img src="/images/finance-analytics.webp" alt="Finance and alternative instruments" loading="lazy" />
+        <img src="{{ assetBase }}images/finance-analytics.webp" alt="Finance and alternative instruments" loading="lazy" />
       </div>
     </div>
   </div>
@@ -90,8 +95,8 @@ permalink: "{{ lang.urlPrefix }}/investment-sectors.html"
         <p class="lead">{{ t.div_p1 }}</p>
         <p class="lead">{{ t.div_p2 }}</p>
         <div class="btn-actions" style="margin-top: 32px;">
-          <a href="{{ lang.urlPrefix }}/portfolio.html" class="btn btn-primary">{{ t.div_btn1 }}</a>
-          <a href="{{ lang.urlPrefix }}/contact.html" class="btn-outline">{{ t.div_btn2 }}</a>
+          <a href="portfolio.html" class="btn btn-primary">{{ t.div_btn1 }}</a>
+          <a href="contact.html" class="btn-outline">{{ t.div_btn2 }}</a>
         </div>
       </div>
       <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
@@ -119,3 +124,4 @@ permalink: "{{ lang.urlPrefix }}/investment-sectors.html"
     </div>
   </div>
 </section>
+

@@ -8,6 +8,11 @@ pagination:
 permalink: "{{ lang.urlPrefix }}/what-we-do.html"
 ---
 {% set t = i18n[pageSlug] | localize(lang.code) %}
+{% if lang.code == 'it' %}
+  {% set assetBase = '../' %}
+{% else %}
+  {% set assetBase = '' %}
+{% endif %}
 
 <!-- PAGE HERO -->
 <div class="page-hero">
@@ -94,8 +99,8 @@ permalink: "{{ lang.urlPrefix }}/what-we-do.html"
     </div>
 
     <div class="btn-actions">
-      <a href="{{ lang.urlPrefix }}/investment-sectors.html" class="btn btn-primary">{{ t.btn1 }}</a>
-      <a href="{{ lang.urlPrefix }}/portfolio.html" class="btn-outline">{{ t.btn2 }}</a>
+      <a href="investment-sectors.html" class="btn btn-primary">{{ t.btn1 }}</a>
+      <a href="portfolio.html" class="btn-outline">{{ t.btn2 }}</a>
     </div>
   </div>
 </section>
@@ -111,8 +116,9 @@ permalink: "{{ lang.urlPrefix }}/what-we-do.html"
         <p class="lead">{{ t.active_p2 }}</p>
       </div>
       <div class="col-image">
-        <img src="/images/solar-aerial.webp" alt="Solar energy installation management" loading="lazy" />
+        <img src="{{ assetBase }}images/solar-aerial.webp" alt="Solar energy installation management" loading="lazy" />
       </div>
     </div>
   </div>
 </section>
+

@@ -8,6 +8,11 @@ pagination:
 permalink: "{{ lang.urlPrefix }}/about.html"
 ---
 {% set t = i18n[pageSlug] | localize(lang.code) %}
+{% if lang.code == 'it' %}
+  {% set assetBase = '../' %}
+{% else %}
+  {% set assetBase = '' %}
+{% endif %}
 
 <!-- PAGE HERO -->
 <div class="page-hero">
@@ -31,7 +36,7 @@ permalink: "{{ lang.urlPrefix }}/about.html"
         <p class="lead">{{ t.lead_p3 }}</p>
       </div>
       <div class="col-image">
-        <img src="/images/corporate-building.webp" alt="Modern corporate building" loading="lazy" />
+        <img src="{{ assetBase }}images/corporate-building.webp" alt="Modern corporate building" loading="lazy" />
       </div>
     </div>
   </div>
@@ -57,8 +62,8 @@ permalink: "{{ lang.urlPrefix }}/about.html"
       </div>
     </div>
     <div class="btn-actions">
-      <a href="{{ lang.urlPrefix }}/philosophy.html" class="btn-outline-white">{{ t.val_btn1 }}</a>
-      <a href="{{ lang.urlPrefix }}/contact.html" class="btn-outline-white">{{ t.val_btn2 }}</a>
+      <a href="philosophy.html" class="btn-outline-white">{{ t.val_btn1 }}</a>
+      <a href="contact.html" class="btn-outline-white">{{ t.val_btn2 }}</a>
     </div>
   </div>
 </section>
@@ -68,7 +73,7 @@ permalink: "{{ lang.urlPrefix }}/about.html"
   <div class="container">
     <div class="two-col reverse">
       <div class="col-image">
-        <img src="/images/milan-skyline.webp" alt="Milan skyline" loading="lazy" />
+        <img src="{{ assetBase }}images/milan-skyline.webp" alt="Milan skyline" loading="lazy" />
       </div>
       <div>
         <p class="section-eyebrow">{{ t.milan_eyebrow }}</p>
@@ -76,9 +81,10 @@ permalink: "{{ lang.urlPrefix }}/about.html"
         <p class="lead">{{ t.milan_p1 }}</p>
         <p class="lead">{{ t.milan_p2 }}</p>
         <div class="btn-actions" style="margin-top: 32px;">
-          <a href="{{ lang.urlPrefix }}/contact.html" class="btn btn-primary">{{ t.milan_btn }}</a>
+          <a href="contact.html" class="btn btn-primary">{{ t.milan_btn }}</a>
         </div>
       </div>
     </div>
   </div>
 </section>
+

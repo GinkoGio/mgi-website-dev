@@ -8,6 +8,11 @@ pagination:
 permalink: "{{ lang.urlPrefix }}/portfolio.html"
 ---
 {% set t = i18n[pageSlug] | localize(lang.code) %}
+{% if lang.code == 'it' %}
+  {% set assetBase = '../' %}
+{% else %}
+  {% set assetBase = '' %}
+{% endif %}
 
 {% block head %}
 <style>
@@ -83,49 +88,49 @@ permalink: "{{ lang.urlPrefix }}/portfolio.html"
         <button class="slider-btn slider-prev" aria-label="{{ t.slider_prev_label }}">&#8249;</button>
         <div class="slider-viewport">
         <div class="slider-track">
-        <img src="/images/PV%20plant/Avalon%20-%20Lustra%20%28SA%29.webp" alt="Lustra (SA)" />
-        <img src="/images/PV%20plant/Enfo%208%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
-        <img src="/images/PV%20plant/Enfo%209%20-%20Montalbano%20%28MT%29.webp" alt="Montalbano (MT)" />
-        <img src="/images/PV%20plant/Enfo%2015%20-%20Pisticci%20%28MT%29.webp" alt="Pisticci (MT)" />
-        <img src="/images/PV%20plant/Enfo%2020%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
-        <img src="/images/PV%20plant/Enfo%2026%20-%20Irsina%20%28MT%29.webp" alt="Irsina (MT)" />
-        <img src="/images/PV%20plant/Enfo%2033%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
-        <img src="/images/PV%20plant/Enfo%2040%20-%20Palazzo%20San%20Gervasio%20%28PZ%29.webp" alt="Palazzo San Gervasio (PZ)" />
-        <img src="/images/PV%20plant/Enfo%2041%20-%20Palazzo%20San%20Gervasio%20%28PZ%29.webp" alt="Palazzo San Gervasio (PZ)" />
-        <img src="/images/PV%20plant/Enfo%2045%20-%20Miglionico%20%28MT%29.webp" alt="Miglionico (MT)" />
-        <img src="/images/PV%20plant/Enfo%2062%20-%20Policoro%20%28MT%29.webp" alt="Policoro (MT)" />
-        <img src="/images/PV%20plant/Enfo%2064%20-%20Craco%20%28MT%29.webp" alt="Craco (MT)" />
-        <img src="/images/PV%20plant/Enfo%2065%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
-        <img src="/images/PV%20plant/Enfo%2072%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
-        <img src="/images/PV%20plant/Enfo%2074%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
-        <img src="/images/PV%20plant/Enfo%2087%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
-        <img src="/images/PV%20plant/Enfo%2091%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
-        <img src="/images/PV%20plant/Estate%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
-        <img src="/images/PV%20plant/Primavera%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
-        <img src="/images/PV%20plant/Saemsolar%20-%20Paterno%20%28PZ%29.webp" alt="Paterno (PZ)" />
-        <img src="/images/PV%20plant/Zenith%201%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
+        <img src="{{ assetBase }}images/PV%20plant/Avalon%20-%20Lustra%20%28SA%29.webp" alt="Lustra (SA)" />
+        <img src="{{ assetBase }}images/PV%20plant/Enfo%208%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
+        <img src="{{ assetBase }}images/PV%20plant/Enfo%209%20-%20Montalbano%20%28MT%29.webp" alt="Montalbano (MT)" />
+        <img src="{{ assetBase }}images/PV%20plant/Enfo%2015%20-%20Pisticci%20%28MT%29.webp" alt="Pisticci (MT)" />
+        <img src="{{ assetBase }}images/PV%20plant/Enfo%2020%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
+        <img src="{{ assetBase }}images/PV%20plant/Enfo%2026%20-%20Irsina%20%28MT%29.webp" alt="Irsina (MT)" />
+        <img src="{{ assetBase }}images/PV%20plant/Enfo%2033%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
+        <img src="{{ assetBase }}images/PV%20plant/Enfo%2040%20-%20Palazzo%20San%20Gervasio%20%28PZ%29.webp" alt="Palazzo San Gervasio (PZ)" />
+        <img src="{{ assetBase }}images/PV%20plant/Enfo%2041%20-%20Palazzo%20San%20Gervasio%20%28PZ%29.webp" alt="Palazzo San Gervasio (PZ)" />
+        <img src="{{ assetBase }}images/PV%20plant/Enfo%2045%20-%20Miglionico%20%28MT%29.webp" alt="Miglionico (MT)" />
+        <img src="{{ assetBase }}images/PV%20plant/Enfo%2062%20-%20Policoro%20%28MT%29.webp" alt="Policoro (MT)" />
+        <img src="{{ assetBase }}images/PV%20plant/Enfo%2064%20-%20Craco%20%28MT%29.webp" alt="Craco (MT)" />
+        <img src="{{ assetBase }}images/PV%20plant/Enfo%2065%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
+        <img src="{{ assetBase }}images/PV%20plant/Enfo%2072%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
+        <img src="{{ assetBase }}images/PV%20plant/Enfo%2074%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
+        <img src="{{ assetBase }}images/PV%20plant/Enfo%2087%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
+        <img src="{{ assetBase }}images/PV%20plant/Enfo%2091%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
+        <img src="{{ assetBase }}images/PV%20plant/Estate%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
+        <img src="{{ assetBase }}images/PV%20plant/Primavera%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
+        <img src="{{ assetBase }}images/PV%20plant/Saemsolar%20-%20Paterno%20%28PZ%29.webp" alt="Paterno (PZ)" />
+        <img src="{{ assetBase }}images/PV%20plant/Zenith%201%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
         <!-- duplicate set for seamless infinite scroll -->
-        <img src="/images/PV%20plant/Avalon%20-%20Lustra%20%28SA%29.webp" alt="Lustra (SA)" />
-        <img src="/images/PV%20plant/Enfo%208%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
-        <img src="/images/PV%20plant/Enfo%209%20-%20Montalbano%20%28MT%29.webp" alt="Montalbano (MT)" />
-        <img src="/images/PV%20plant/Enfo%2015%20-%20Pisticci%20%28MT%29.webp" alt="Pisticci (MT)" />
-        <img src="/images/PV%20plant/Enfo%2020%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
-        <img src="/images/PV%20plant/Enfo%2026%20-%20Irsina%20%28MT%29.webp" alt="Irsina (MT)" />
-        <img src="/images/PV%20plant/Enfo%2033%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
-        <img src="/images/PV%20plant/Enfo%2040%20-%20Palazzo%20San%20Gervasio%20%28PZ%29.webp" alt="Palazzo San Gervasio (PZ)" />
-        <img src="/images/PV%20plant/Enfo%2041%20-%20Palazzo%20San%20Gervasio%20%28PZ%29.webp" alt="Palazzo San Gervasio (PZ)" />
-        <img src="/images/PV%20plant/Enfo%2045%20-%20Miglionico%20%28MT%29.webp" alt="Miglionico (MT)" />
-        <img src="/images/PV%20plant/Enfo%2062%20-%20Policoro%20%28MT%29.webp" alt="Policoro (MT)" />
-        <img src="/images/PV%20plant/Enfo%2064%20-%20Craco%20%28MT%29.webp" alt="Craco (MT)" />
-        <img src="/images/PV%20plant/Enfo%2065%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
-        <img src="/images/PV%20plant/Enfo%2072%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
-        <img src="/images/PV%20plant/Enfo%2074%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
-        <img src="/images/PV%20plant/Enfo%2087%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
-        <img src="/images/PV%20plant/Enfo%2091%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
-        <img src="/images/PV%20plant/Estate%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
-        <img src="/images/PV%20plant/Primavera%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
-        <img src="/images/PV%20plant/Saemsolar%20-%20Paterno%20%28PZ%29.webp" alt="Paterno (PZ)" />
-        <img src="/images/PV%20plant/Zenith%201%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
+        <img src="{{ assetBase }}images/PV%20plant/Avalon%20-%20Lustra%20%28SA%29.webp" alt="Lustra (SA)" />
+        <img src="{{ assetBase }}images/PV%20plant/Enfo%208%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
+        <img src="{{ assetBase }}images/PV%20plant/Enfo%209%20-%20Montalbano%20%28MT%29.webp" alt="Montalbano (MT)" />
+        <img src="{{ assetBase }}images/PV%20plant/Enfo%2015%20-%20Pisticci%20%28MT%29.webp" alt="Pisticci (MT)" />
+        <img src="{{ assetBase }}images/PV%20plant/Enfo%2020%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
+        <img src="{{ assetBase }}images/PV%20plant/Enfo%2026%20-%20Irsina%20%28MT%29.webp" alt="Irsina (MT)" />
+        <img src="{{ assetBase }}images/PV%20plant/Enfo%2033%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
+        <img src="{{ assetBase }}images/PV%20plant/Enfo%2040%20-%20Palazzo%20San%20Gervasio%20%28PZ%29.webp" alt="Palazzo San Gervasio (PZ)" />
+        <img src="{{ assetBase }}images/PV%20plant/Enfo%2041%20-%20Palazzo%20San%20Gervasio%20%28PZ%29.webp" alt="Palazzo San Gervasio (PZ)" />
+        <img src="{{ assetBase }}images/PV%20plant/Enfo%2045%20-%20Miglionico%20%28MT%29.webp" alt="Miglionico (MT)" />
+        <img src="{{ assetBase }}images/PV%20plant/Enfo%2062%20-%20Policoro%20%28MT%29.webp" alt="Policoro (MT)" />
+        <img src="{{ assetBase }}images/PV%20plant/Enfo%2064%20-%20Craco%20%28MT%29.webp" alt="Craco (MT)" />
+        <img src="{{ assetBase }}images/PV%20plant/Enfo%2065%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
+        <img src="{{ assetBase }}images/PV%20plant/Enfo%2072%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
+        <img src="{{ assetBase }}images/PV%20plant/Enfo%2074%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
+        <img src="{{ assetBase }}images/PV%20plant/Enfo%2087%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
+        <img src="{{ assetBase }}images/PV%20plant/Enfo%2091%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
+        <img src="{{ assetBase }}images/PV%20plant/Estate%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
+        <img src="{{ assetBase }}images/PV%20plant/Primavera%20-%20Tricarico%20%28MT%29.webp" alt="Tricarico (MT)" />
+        <img src="{{ assetBase }}images/PV%20plant/Saemsolar%20-%20Paterno%20%28PZ%29.webp" alt="Paterno (PZ)" />
+        <img src="{{ assetBase }}images/PV%20plant/Zenith%201%20-%20Ferrandina%20%28MT%29.webp" alt="Ferrandina (MT)" />
         </div>
         </div>
         <button class="slider-btn slider-next" aria-label="{{ t.slider_next_label }}">&#8250;</button>
@@ -134,12 +139,12 @@ permalink: "{{ lang.urlPrefix }}/portfolio.html"
 
     <!-- MAP PANEL -->
     <div id="mapPanel" style="display:none; margin-top:4px;">
-      <iframe src="/pv_portfolio_map_en.html"
+      <iframe src="{{ assetBase }}pv_portfolio_map_en.html"
               id="mapIframe"
               style="width:100%;height:680px;border:1px solid rgba(224,40,90,0.2);border-radius:10px;display:block;"
               title="{{ t.map_iframe_title }}"
               loading="lazy"></iframe>
-      <a href="/pv_portfolio_map_en.html" target="_blank" class="map-mobile-link">{{ t.map_mobile_link }}</a>
+      <a href="{{ assetBase }}pv_portfolio_map_en.html" target="_blank" class="map-mobile-link">{{ t.map_mobile_link }}</a>
     </div>
   </div>
 </section>
@@ -192,7 +197,7 @@ permalink: "{{ lang.urlPrefix }}/portfolio.html"
     <h2 class="section-title light">{{ t.cta_title }}</h2>
     <p style="font-size:16px; color:var(--text-2); line-height:1.8; margin-bottom:40px;">{{ t.cta_body }}</p>
     <div class="btn-actions" style="justify-content:center;">
-      <a href="{{ lang.urlPrefix }}/contact.html" class="btn-outline-white">{{ t.cta_btn }}</a>
+      <a href="contact.html" class="btn-outline-white">{{ t.cta_btn }}</a>
     </div>
   </div>
 </section>
@@ -248,3 +253,4 @@ permalink: "{{ lang.urlPrefix }}/portfolio.html"
 })();
 </script>
 {% endblock %}
+
