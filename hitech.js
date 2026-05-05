@@ -119,7 +119,9 @@
         var t0      = performance.now();
 
         function fmt(n) {
-          return Math.round(n).toLocaleString('en-US');
+          var lang = document.documentElement.lang || 'en';
+          var locale = (lang === 'it') ? 'it-IT' : 'en-US';
+          return Math.round(n).toLocaleString(locale);
         }
 
         function step(now) {
