@@ -33,13 +33,13 @@
     "hero_btn1_href": { "en": "what-we-do.html",          "it": "portfolio.html" },
     "hero_btn2":      { "en": "Our Philosophy",           "it": "La Nostra Filosofia" },
 
-    "metric1_display": { "en": "69,300", "it": "69.300" },
+    "metric1_display": { "en": "70,000", "it": "70.000" },
     "metric1_label":   { "en": "MWh Energy Produced",                  "it": "MWh di Energia Prodotta" },
     "metric1_desc":    { "en": "Annual output from our renewable portfolio", "it": "Produzione annua totale del portafoglio rinnovabile" },
-    "metric2_display": { "en": "23,350", "it": "23.350" },
+    "metric2_display": { "en": "26,000", "it": "26.000" },
     "metric2_label":   { "en": "Households Powered",       "it": "Famiglie Alimentate" },
     "metric2_desc":    { "en": "Families receiving clean energy", "it": "Famiglie che ricevono energia pulita" },
-    "metric3_display": { "en": "21,350", "it": "21.350" },
+    "metric3_display": { "en": "21,000", "it": "21.000" },
     "metric3_label":   { "en": "Tons CO₂ Saved",             "it": "Emissioni CO₂ Evitate" },
     "metric3_desc":    { "en": "Annual emissions reduction achieved", "it": "Riduzione annua delle emissioni conseguita" },
 
@@ -79,7 +79,7 @@
     "hero_title":    { "en": "A Pragmatic Approach to<br>Sustainable Investment", "it": "Un Approccio Pragmatico<br>all'Investimento Sostenibile" },
     "hero_subtitle": { "en": "An independent firm built on analysis, integrity, and long-term vision — operating at the intersection of financial performance and positive impact.", "it": "Una società indipendente fondata su analisi, integrità e visione di lungo periodo — operante all'intersezione tra performance finanziaria e impatto positivo." },
 
-    "lead_p1": { "en": "Maverick Global Investments is an independent firm dedicated to creating long-term value through disciplined capital allocation and active asset management. In partnership with Adoria Partners and selected qualified operators, we build portfolios of real assets that combine <strong>financial returns, structural solidity, and measurable environmental impact</strong>.", "it": "Maverick Global Investments è una società d'investimento indipendente dedicata alla creazione di valore nel lungo periodo, fondata sul rigore metodologico nell'allocazione del capitale e sulla gestione attiva dei patrimoni. In partnership con Adoria Partners e operatori qualificati selezionati, costruiamo portafogli di asset reali in grado di coniugare <strong>rendimento finanziario, solidità strutturale e impatto ambientale misurabile</strong>." },
+    "lead_p1": { "en": "Maverick Global Investments is an independent firm dedicated to creating long-term value through disciplined capital allocation and active asset management. In partnership with selected qualified operators, we build portfolios of real assets that combine <strong>financial returns, structural solidity, and measurable environmental impact</strong>.", "it": "Maverick Global Investments è una società d'investimento indipendente dedicata alla creazione di valore nel lungo periodo, fondata sul rigore metodologico nell'allocazione del capitale e sulla gestione attiva dei patrimoni. In partnership con operatori qualificati selezionati, costruiamo portafogli di asset reali in grado di coniugare <strong>rendimento finanziario, solidità strutturale e impatto ambientale misurabile</strong>." },
     "lead_p2": { "en": "We bridge the gap between financial performance and environmental responsibility, targeting stable, measurable returns through a rigorous due diligence process. Our team integrates financial, strategic, and industrial expertise to identify value opportunities across European energy and sustainable infrastructure markets. Every investment decision is grounded in quantitative analysis, clear methodology, and a long-term horizon.", "it": "Coniughiamo performance finanziaria e responsabilità ambientale, focalizzandoci sulla generazione di rendimenti stabili e misurabili attraverso processi strutturati di analisi e gestione del rischio. Il nostro team integra competenze finanziarie, strategiche e industriali per identificare opportunità di valore nei mercati europei dell'energia e delle infrastrutture sostenibili. Ogni decisione d'investimento si fonda su analisi quantitativa, metodologia rigorosa e un orizzonte di lungo periodo." },
     "lead_p3": { "en": "Operating from Milan, we maintain deep connections with Italian and European markets while leveraging international best practices. Our independence allows us to make decisions based purely on merit, risk assessment, and alignment with our sustainability principles.", "it": "Operando da Milano, manteniamo un legame profondo con i mercati italiani ed europei, avvalendoci al contempo delle migliori prassi internazionali. La nostra indipendenza ci consente di assumere decisioni basate esclusivamente sul merito, sulla valutazione del rischio e sull'allineamento con i nostri principi di sostenibilità." },
 
@@ -93,6 +93,10 @@
     "val3_body":  { "en": "Clear processes, direct communication, responsible management at every level. Our partners always know where their capital is and how it is performing.", "it": "Rigore analitico e coinvolgimento diretto nella gestione degli asset. Non ci limitiamo ad allocare capitale — ottimizziamo continuamente le performance degli asset lungo l'intero ciclo di vita." },
     "val_btn1":   { "en": "Discover Our Investment Philosophy", "it": "Scopri la Nostra Filosofia di Investimento" },
     "val_btn2":   { "en": "Get in Touch",                      "it": "Contattaci" },
+
+    "team_eyebrow": { "en": "Our Team",          "it": "Il Nostro Team" },
+    "team_title":   { "en": "People Behind the Capital", "it": "Le Persone Dietro il Capitale" },
+    "team_body":    { "en": "The MGI team brings together two decades of experience at the intersection of energy markets, investment banks, and strategic management. Forged in leading international institutions — from the trading floors of European energy groups to the advisory rooms of global investment banks and leading management consulting firms — our principals combine the analytical rigour of energy finance with the operational depth of direct asset management. The result is a team capable of reading markets, structuring transactions, and actively managing assets with equal precision.", "it": "Il team MGI riunisce due decenni di esperienza all'intersezione tra mercati energetici, banche d'investimento e management strategico. Formatisi in istituzioni internazionali di primo piano — dai desk delle energy company europee alle sale di primarie banche d'investimento e società di management consulting — i nostri manager coniugano il rigore analitico dell'energy finance con la profondità operativa della gestione diretta degli asset. Il risultato è un team capace di leggere i mercati, strutturare le operazioni e gestire gli asset con pari precisione." },
 
     "milan_eyebrow": { "en": "Rooted in Milan",                            "it": "Radicati a Milano" },
     "milan_title":   { "en": "Milan: Our Hub for European Opportunity",    "it": "Milano: Il Nostro Hub per le Opportunità Europee" },
@@ -165,7 +169,7 @@
 
     "s1_eyebrow": { "en": "Sector 01",        "it": "Settore 01" },
     "s1_title":   { "en": "Renewable Energy", "it": "Energia Rinnovabile" },
-    "s1_p1":      { "en": "Maverick invests in utility-scale photovoltaic plants and renewable energy infrastructure, in partnership with Adoria Partners. Our portfolio includes <strong>operational and developing PV assets</strong> with annual specific yield exceeding 1,700 MWh/MW, strategically distributed throughout Italy.", "it": "Maverick investe in impianti fotovoltaici utility-scale e infrastrutture di energia rinnovabile, in partnership con Adoria Partners. Il portafoglio include <strong>asset FV operativi e in sviluppo</strong> con una produzione specifica annua superiore a 1.700 MWh/MW, distribuiti strategicamente sul territorio italiano." },
+    "s1_p1":      { "en": "Maverick invests in utility-scale photovoltaic plants and renewable energy infrastructure, in partnership with selected industrial operators. Our portfolio includes <strong>operational and developing PV assets</strong> with annual specific yield exceeding 1,700 MWh/MW, strategically distributed throughout Italy.", "it": "Maverick investe in impianti fotovoltaici utility-scale e infrastrutture di energia rinnovabile, in partnership con operatori industriali selezionati. Il portafoglio include <strong>asset FV operativi e in sviluppo</strong> con una produzione specifica annua superiore a 1.700 MWh/MW, distribuiti strategicamente sul territorio italiano." },
     "s1_focus_label": { "en": "Focus areas:", "it": "Settori di riferimento:" },
     "s1_p2":      { "en": "Revamping, repowering, and integrated management. We specialize in enhancing the performance of existing installations while developing new capacity in strategic locations. Our technical expertise allows us to maximize energy output and extend asset lifespans significantly beyond industry averages.", "it": "Revamping, repowering e gestione integrata. Siamo specializzati nel miglioramento delle performance di installazioni esistenti e nello sviluppo di nuova capacità in siti strategici. La nostra competenza tecnica ci consente di massimizzare la produzione energetica e di estendere significativamente la vita utile degli asset oltre le medie di settore." },
 
@@ -194,7 +198,7 @@
     "stat2_num":      "3",
     "stat2_label":    { "en": "Asset Classes",               "it": "Classi di Asset" },
     "stat2_sub":      { "en": "Energy, Real Estate, Finance","it": "Energia, Immobiliare, Finanza" },
-    "stat3_num":      { "en": "1,700+", "it": "1.700+" },
+    "stat3_num":      { "en": "1,400+", "it": "1.400+" },
     "stat3_label":    { "en": "MWh/MW Annual Output",        "it": "MWh/MW Produzione Annua" },
     "stat3_sub":      { "en": "Exceeding industry average",  "it": "Superiore alla media di settore" },
     "stat4_num":      "ESG",
@@ -240,9 +244,9 @@
     "partner_p4":      { "en": "Our awareness extends beyond financial metrics to encompass the full spectrum of impacts our investments create. We measure success not only in euros returned, but in kilowatt-hours generated, tons of CO₂ avoided, and communities benefited.", "it": "La nostra attenzione va oltre le metriche finanziarie e abbraccia l'intero spettro degli impatti generati dai nostri investimenti. Misuriamo il successo non soltanto in rendimenti monetari, ma in kilowattora prodotti, tonnellate di CO₂ evitate e comunità che ne traggono beneficio." },
     "partner_p5":      { "en": "This comprehensive view of value creation distinguishes our approach and aligns perfectly with the priorities of sophisticated investors who recognize that long-term financial performance and sustainability are inseparable.", "it": "Questa visione integrata della creazione di valore distingue il nostro approccio e si allinea perfettamente alle priorità degli investitori più sofisticati, che riconoscono come performance finanziaria di lungo periodo e sostenibilità siano inscindibili." },
 
-    "stat1_num":   { "en": "21,350",  "it": "21.350" },
+    "stat1_num":   { "en": "21,000",  "it": "21.000" },
     "stat1_label": { "en": "Tons CO₂ Saved",         "it": "Emissioni CO₂ Evitate" },
-    "stat2_num":   { "en": "23,350",  "it": "23.350" },
+    "stat2_num":   { "en": "26,000",  "it": "26.000" },
     "stat2_label": { "en": "Households Powered",     "it": "Famiglie Alimentate" },
     "stat3_num":   { "en": "70M",     "it": "70M" },
     "stat3_label": { "en": "kWh Produced Annually",  "it": "kWh Prodotti Annualmente" },
@@ -267,13 +271,13 @@
     "stat1_num":   "~50 MW",
     "stat1_label": { "en": "Total PV Capacity",      "it": "Capacità FV Totale" },
     "stat1_sub":   { "en": "Operational portfolio",  "it": "Portafoglio operativo" },
-    "stat2_num":   { "en": "69.3M", "it": "69,3M" },
+    "stat2_num":   { "en": "70,000", "it": "70.000" },
     "stat2_label": { "en": "MWh Produced",           "it": "MWh Prodotti" },
     "stat2_sub":   { "en": "Annual energy output",   "it": "Produzione energetica annua" },
     "stat3_num":   "3",
     "stat3_label": { "en": "Regions",                "it": "Regioni" },
     "stat3_sub":   { "en": "Puglia, Basilicata & Campania", "it": "Puglia, Basilicata e Campania" },
-    "stat4_num":   { "en": "21,350", "it": "21.350" },
+    "stat4_num":   { "en": "21,000", "it": "21.000" },
     "stat4_label": { "en": "Tons CO₂ Saved",         "it": "Emissioni CO₂ Evitate" },
     "stat4_sub":   { "en": "Annual reduction",        "it": "Riduzione annua" },
 
@@ -299,7 +303,7 @@
     "hl_r3_label": { "en": "Total capacity",      "it": "Capacità totale" },
     "hl_r3_val":   "~50 MW",
     "hl_r4_label": { "en": "Specific yield",      "it": "Resa specifica" },
-    "hl_r4_val":   { "en": ">1,700 MWh/MW/yr",    "it": ">1.700 MWh/MW/anno" },
+    "hl_r4_val":   { "en": ">1,400 MWh/MW/yr",    "it": ">1.400 MWh/MW/anno" },
     "hl_r5_label": { "en": "Management",          "it": "Gestione" },
     "hl_r5_val":   { "en": "Active (MGI direct)", "it": "Attiva (diretta MGI)" },
 
