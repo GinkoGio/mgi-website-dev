@@ -97,10 +97,31 @@ Structure format:
 | `main` | Dark — near-black purple/rose palette (production) |
 | `restyling/solar-white` | Solar White — warm cream, terracotta accent, Cormorant Garamond headings |
 
+Ogni branch ha il proprio `deploy.yml` configurato per triggerare solo da sé stesso, in modo che i due design non si sovrascrivano su GitHub Pages.
+
+### Switchare il design su GitHub Pages
+
+**Pubblicare Solar White:**
 ```bash
-git checkout restyling/solar-white   # switch to light-mode redesign
-git checkout main                    # back to production
-npm run build                        # rebuild after switching
+git checkout restyling/solar-white
+git commit --allow-empty -m "deploy: solar white preview"
+git push
+```
+
+**Tornare al dark (main):**
+```bash
+git checkout main
+git commit --allow-empty -m "deploy: restore dark design"
+git push
+```
+
+> `git push` triggera il deploy solo se ci sono commit nuovi. Se il branch è già aggiornato, usa `git commit --allow-empty` per forzare il workflow senza modifiche reali.
+
+### Sviluppo locale
+```bash
+git checkout restyling/solar-white   # o main
+npm run build                        # ribuilda dopo il cambio branch
+npm run preview                      # serve a http://localhost:3000
 ```
 
 ## 🎨 Design System & Assets
