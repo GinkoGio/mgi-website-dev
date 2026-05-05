@@ -1,35 +1,34 @@
 /* =============================================
-   MGI — Hi-Tech Dark Design System
-   Color system derived from brand logo:
-   Primary hue ≈ 336° (berry-crimson #8B1A4A)
-   Accent on dark: #e0285a (same hue, +L +S)
+   MGI — Solar White Design System (Option C)
+   Mediterranean warmth: cream bg, terracotta
+   accent, verde secondary. Dark hero / footer.
    ============================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 /* ── VARIABLES ─────────────────────────────── */
 :root {
-  /* Backgrounds — near-black, warm undertone matching logo hue */
-  --bg-0:        #06010a;
-  --bg-1:        #0d0315;
-  --bg-2:        #14071e;
-  --bg-3:        #1d0b28;
+  /* Backgrounds — warm cream, light-mode dominant */
+  --bg-0:        #faf8f5;
+  --bg-1:        #f0ece6;
+  --bg-2:        #e8e2d9;
+  --bg-3:        #1a1614;
 
-  /* Primary accent — logo hue (336°) boosted for dark-bg legibility */
-  --rose:        #e0285a;
-  --rose-dim:    rgba(224, 40, 90, 0.12);
-  --rose-border: rgba(224, 40, 90, 0.2);
-  --rose-glow:   rgba(224, 40, 90, 0.4);
+  /* Primary accent — terracotta/solar amber */
+  --rose:        #e8700a;
+  --rose-dim:    rgba(232, 112, 10, 0.10);
+  --rose-border: rgba(232, 112, 10, 0.28);
+  --rose-glow:   rgba(232, 112, 10, 0.38);
 
-  /* Status / active — warm amber, complements crimson */
-  --amber:       #ffa040;
+  /* Secondary — verde prato */
+  --amber:       #2a7d4f;
 
-  /* Text — near-white with the faintest warm rose tint */
-  --text-1:      #f5e8ed;
-  --text-2:      #b08898;
-  --text-3:      #8a6070;
+  /* Text — dark on light backgrounds */
+  --text-1:      #1a1614;
+  --text-2:      #6b5e54;
+  --text-3:      #9a8a7a;
 
-  --border:      rgba(224, 40, 90, 0.1);
+  --border:      rgba(232, 112, 10, 0.15);
   --nav-h:       68px;
 }
 
@@ -62,7 +61,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(6, 1, 10, 0.82);
+  background: rgba(26, 22, 20, 0.90);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border-bottom: 1px solid var(--border);
@@ -81,7 +80,7 @@ body {
 }
 
 #main-nav.scrolled {
-  background: rgba(6, 1, 10, 0.97);
+  background: rgba(26, 22, 20, 0.98);
   border-bottom-color: var(--rose-border);
   box-shadow: 0 4px 48px rgba(0, 0, 0, 0.7);
 }
@@ -164,8 +163,8 @@ body {
 }
 
 .nav-links a.nav-cta:hover {
-  background: #ff3d70;
-  box-shadow: 0 0 20px rgba(224, 40, 90, 0.35);
+  background: #f07820;
+  box-shadow: 0 0 20px rgba(232, 112, 10, 0.35);
   color: #fff;
 }
 
@@ -181,12 +180,12 @@ body {
   padding: 5px 12px !important;
   opacity: 1;
   transition: background 0.2s, box-shadow 0.2s !important;
-  background: rgba(224, 40, 90, 0.08) !important;
+  background: rgba(232, 112, 10, 0.08) !important;
 }
 
 .lang-btn:hover {
   background: var(--rose-dim) !important;
-  box-shadow: 0 0 14px rgba(224, 40, 90, 0.3) !important;
+  box-shadow: 0 0 14px rgba(232, 112, 10, 0.3) !important;
   color: var(--rose) !important;
 }
 
@@ -243,7 +242,7 @@ body {
   align-items: center;
   gap: clamp(48px, 6vw, 96px);
   position: relative;
-  background: linear-gradient(135deg, #06010a 0%, #0d0315 55%, #14071e 100%);
+  background: linear-gradient(135deg, #1a1614 0%, #221a18 55%, #2a201c 100%);
   overflow: hidden;
 }
 
@@ -262,7 +261,7 @@ body {
   width: clamp(280px, 42vw, 540px);
   display: flex;
   flex-direction: column;
-  border-left: 1px solid rgba(224, 40, 90, 0.18);
+  border-left: 1px solid rgba(232, 112, 10, 0.18);
   padding-left: clamp(28px, 3vw, 48px);
   position: relative;
   z-index: 1;
@@ -287,7 +286,7 @@ body {
 /* Metrics row — horizontal under the image */
 .hero-metrics {
   display: flex;
-  border-top: 1px solid rgba(224, 40, 90, 0.18);
+  border-top: 1px solid rgba(232, 112, 10, 0.18);
   padding-top: 22px;
 }
 
@@ -295,7 +294,7 @@ body {
   flex: 1;
   padding: 0 18px 0 0;
   border-bottom: none;
-  border-right: 1px solid rgba(224, 40, 90, 0.08);
+  border-right: 1px solid rgba(232, 112, 10, 0.08);
 }
 
 .hero-metrics .hero-metric:last-child {
@@ -310,7 +309,7 @@ body {
 /* keep the rule but it's now only for bare .hero-metric outside .hero-metrics */
 .hero-metric {
   padding: 28px 0;
-  border-bottom: 1px solid rgba(224, 40, 90, 0.08);
+  border-bottom: 1px solid rgba(232, 112, 10, 0.08);
 }
 .hero-metric:first-child { padding-top: 0; }
 .hero-metric:last-child  { border-bottom: none; padding-bottom: 0; }
@@ -320,7 +319,7 @@ body {
   font-size: clamp(28px, 3vw, 42px);
   font-weight: 700;
   color: var(--rose);
-  text-shadow: 0 0 18px rgba(224, 40, 90, 0.45);
+  text-shadow: 0 0 18px rgba(232, 112, 10, 0.45);
   line-height: 1;
   letter-spacing: -0.02em;
 }
@@ -357,8 +356,8 @@ body {
   position: absolute;
   inset: -30%;           /* oversized: gives translate buffer inside overflow:hidden */
   background:
-    radial-gradient(ellipse 44% 38% at 78% 22%, rgba(139, 26, 74, 0.42) 0%, transparent 55%),
-    radial-gradient(ellipse 36% 44% at 18% 82%, rgba(80, 10, 45, 0.28) 0%, transparent 52%);
+    radial-gradient(ellipse 44% 38% at 78% 22%, rgba(232, 112, 10, 0.42) 0%, transparent 55%),
+    radial-gradient(ellipse 36% 44% at 18% 82%, rgba(26, 22, 20, 0.28) 0%, transparent 52%);
   pointer-events: none;
   z-index: -1;
   will-change: transform;
@@ -370,7 +369,7 @@ body {
   content: '';
   position: absolute;
   inset: -30%;
-  background: radial-gradient(ellipse 54% 46% at 22% 78%, rgba(224, 40, 90, 0.36) 0%, transparent 55%);
+  background: radial-gradient(ellipse 54% 46% at 22% 78%, rgba(232, 112, 10, 0.36) 0%, transparent 55%);
   pointer-events: none;
   z-index: -1;
   will-change: transform, opacity;
@@ -407,8 +406,8 @@ body {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--rose);
-  background: rgba(224, 40, 90, 0.08);
-  border: 1px solid rgba(224, 40, 90, 0.24);
+  background: rgba(232, 112, 10, 0.08);
+  border: 1px solid rgba(232, 112, 10, 0.24);
   border-radius: 40px;
   padding: 6px 14px 6px 10px;
   margin-bottom: 30px;
@@ -420,7 +419,7 @@ body {
   height: 6px;
   background: var(--amber);
   border-radius: 50%;
-  box-shadow: 0 0 8px rgba(255, 160, 64, 0.7), 0 0 16px rgba(255, 160, 64, 0.3);
+  box-shadow: 0 0 8px rgba(42, 125, 79, 0.7), 0 0 16px rgba(42, 125, 79, 0.3);
   animation: pulseDot 2.2s ease-in-out infinite;
   flex-shrink: 0;
 }
@@ -443,7 +442,7 @@ body {
   width: auto;
   flex-shrink: 0;
   /* Let the logo's own crimson read naturally — no filter */
-  filter: drop-shadow(0 4px 24px rgba(139, 26, 74, 0.3));
+  filter: drop-shadow(0 4px 24px rgba(232, 112, 10, 0.3));
 }
 
 .hero-wordmark {
@@ -483,7 +482,7 @@ body {
 
 .accent-word {
   color: var(--rose);
-  text-shadow: 0 0 28px rgba(224, 40, 90, 0.45), 0 0 56px rgba(224, 40, 90, 0.18);
+  text-shadow: 0 0 28px rgba(232, 112, 10, 0.45), 0 0 56px rgba(232, 112, 10, 0.18);
 }
 
 .hero-subtitle {
@@ -505,7 +504,7 @@ body {
 .hero-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  border-top: 1px solid rgba(224, 40, 90, 0.12);
+  border-top: 1px solid rgba(232, 112, 10, 0.12);
   padding-top: 28px;
   margin-bottom: 36px;
 }
@@ -513,7 +512,7 @@ body {
 .stat-item { padding-right: 16px; }
 
 .stat-item + .stat-item {
-  border-left: 1px solid rgba(224, 40, 90, 0.1);
+  border-left: 1px solid rgba(232, 112, 10, 0.1);
   padding-left: 16px;
 }
 
@@ -522,7 +521,7 @@ body {
   font-size: clamp(22px, 2.8vw, 34px);
   font-weight: 700;
   color: var(--rose);
-  text-shadow: 0 0 18px rgba(224, 40, 90, 0.5), 0 0 36px rgba(224, 40, 90, 0.22);
+  text-shadow: 0 0 18px rgba(232, 112, 10, 0.5), 0 0 36px rgba(232, 112, 10, 0.22);
   line-height: 1;
   letter-spacing: -0.01em;
 }
@@ -582,8 +581,8 @@ body {
 }
 
 .btn-primary:hover {
-  background: #ff3d70;
-  box-shadow: 0 0 28px rgba(224, 40, 90, 0.45);
+  background: #f07820;
+  box-shadow: 0 0 28px rgba(232, 112, 10, 0.45);
   transform: translateY(-1px);
 }
 
@@ -592,14 +591,14 @@ body {
 .btn-ghost {
   background: transparent;
   color: var(--text-1);
-  border: 1px solid rgba(224, 40, 90, 0.24);
+  border: 1px solid rgba(232, 112, 10, 0.24);
 }
 
 .btn-ghost:hover {
   border-color: var(--rose);
   color: var(--rose);
   background: var(--rose-dim);
-  box-shadow: 0 0 16px rgba(224, 40, 90, 0.12);
+  box-shadow: 0 0 16px rgba(232, 112, 10, 0.12);
   transform: translateY(-1px);
 }
 
@@ -623,8 +622,8 @@ body {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(6,1,10,0.7) 0%, rgba(6,1,10,0.22) 30%, transparent 60%),
-    linear-gradient(to top, rgba(6,1,10,0.55) 0%, transparent 45%);
+    linear-gradient(90deg, rgba(26,22,20,0.7) 0%, rgba(26,22,20,0.22) 30%, transparent 60%),
+    linear-gradient(to top, rgba(26,22,20,0.55) 0%, transparent 45%);
   z-index: 2;
   pointer-events: none;
 }
@@ -662,8 +661,8 @@ body {
   bottom: 28px;
   right: 20px;
   z-index: 3;
-  background: rgba(6, 1, 10, 0.84);
-  border: 1px solid rgba(224, 40, 90, 0.22);
+  background: rgba(26, 22, 20, 0.84);
+  border: 1px solid rgba(232, 112, 10, 0.22);
   border-radius: 6px;
   padding: 14px 18px;
   backdrop-filter: blur(16px);
@@ -702,7 +701,7 @@ body {
 }
 
 .hud-row + .hud-row {
-  border-top: 1px solid rgba(224, 40, 90, 0.08);
+  border-top: 1px solid rgba(232, 112, 10, 0.08);
   margin-top: 5px;
   padding-top: 7px;
 }
@@ -725,7 +724,7 @@ body {
 
 .hud-value.is-active {
   color: var(--amber);
-  text-shadow: 0 0 10px rgba(255, 160, 64, 0.5);
+  text-shadow: 0 0 10px rgba(42, 125, 79, 0.5);
   animation: hudBlink 3s ease-in-out infinite;
 }
 
@@ -763,7 +762,7 @@ body {
 /* ── SECTORS SECTION ───────────────────────── */
 .sectors-section {
   background: var(--bg-1);
-  background-image: radial-gradient(circle, rgba(224, 40, 90, 0.045) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(232, 112, 10, 0.045) 1px, transparent 1px);
   background-size: 36px 36px;
   padding: 96px 0;
   position: relative;
@@ -834,11 +833,11 @@ body {
 }
 
 .sector-card:hover {
-  border-color: rgba(224, 40, 90, 0.42);
+  border-color: rgba(232, 112, 10, 0.42);
   box-shadow:
-    0 0 40px rgba(224, 40, 90, 0.08),
+    0 0 40px rgba(232, 112, 10, 0.08),
     0 20px 40px rgba(0, 0, 0, 0.5),
-    inset 0 0 40px rgba(224, 40, 90, 0.03);
+    inset 0 0 40px rgba(232, 112, 10, 0.03);
   transform: translateY(-3px);
 }
 
@@ -861,8 +860,8 @@ body {
 .sector-icon {
   width: 46px;
   height: 46px;
-  background: rgba(224, 40, 90, 0.07);
-  border: 1px solid rgba(224, 40, 90, 0.16);
+  background: rgba(232, 112, 10, 0.07);
+  border: 1px solid rgba(232, 112, 10, 0.16);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -874,9 +873,9 @@ body {
 }
 
 .sector-card:hover .sector-icon {
-  background: rgba(224, 40, 90, 0.13);
-  border-color: rgba(224, 40, 90, 0.32);
-  box-shadow: 0 0 16px rgba(224, 40, 90, 0.18);
+  background: rgba(232, 112, 10, 0.13);
+  border-color: rgba(232, 112, 10, 0.32);
+  box-shadow: 0 0 16px rgba(232, 112, 10, 0.18);
 }
 
 .sector-icon svg {
@@ -919,8 +918,8 @@ body {
 
 /* ── FOOTER ────────────────────────────────── */
 footer {
-  background: var(--bg-0);
-  border-top: 1px solid var(--border);
+  background: #1a1614;
+  border-top: 1px solid rgba(232, 112, 10, 0.18);
   padding: 56px 0 28px;
   position: relative;
   z-index: 1;
@@ -932,7 +931,7 @@ footer::before {
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(224, 40, 90, 0.32) 35%, rgba(224, 40, 90, 0.32) 65%, transparent);
+  background: linear-gradient(90deg, transparent, rgba(232, 112, 10, 0.32) 35%, rgba(232, 112, 10, 0.32) 65%, transparent);
 }
 
 .footer-inner {
@@ -1046,7 +1045,7 @@ footer::before {
     flex-direction: column;
     align-items: stretch;
     gap: 0;
-    background: rgba(6, 1, 10, 0.98);
+    background: rgba(26, 22, 20, 0.98);
     border-bottom: 1px solid var(--border);
     backdrop-filter: blur(20px);
     padding: 8px 0 16px;
@@ -1062,7 +1061,7 @@ footer::before {
     padding: 12px 24px;
     font-size: 14px;
     border-radius: 0;
-    border-bottom: 1px solid rgba(224, 40, 90, 0.06);
+    border-bottom: 1px solid rgba(232, 112, 10, 0.06);
   }
 
   .nav-links a.nav-cta {
@@ -1083,7 +1082,7 @@ footer::before {
   .hero-right {
     width: 100%;
     border-left: none;
-    border-top: 1px solid rgba(224, 40, 90, 0.18);
+    border-top: 1px solid rgba(232, 112, 10, 0.18);
     padding-left: 0;
     padding-top: 32px;
   }
@@ -1120,7 +1119,7 @@ footer::before {
     border-left: none !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
-    border-top: 1px solid rgba(224, 40, 90, 0.08);
+    border-top: 1px solid rgba(232, 112, 10, 0.08);
     padding-top: 16px;
   }
 
@@ -1152,20 +1151,20 @@ footer::before {
 /* ── PAGE HERO (inner pages) ─────────────────── */
 .page-hero {
   background-color: var(--bg-3);
-  background-image: radial-gradient(circle, rgba(224,40,90,0.20) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(232,112,10,0.20) 1px, transparent 1px);
   background-size: 52px 52px;
   padding: calc(var(--nav-h) + 64px) 0 64px;
   position: relative;
   overflow: hidden;
-  border-bottom: 1px solid rgba(224,40,90,0.30);
+  border-bottom: 1px solid rgba(232,112,10,0.30);
 }
 .page-hero::before {
   content: '';
   position: absolute;
   inset: -25%;
   background:
-    radial-gradient(ellipse 55% 48% at 22% 60%, rgba(224,40,90,0.32) 0%, transparent 58%),
-    radial-gradient(ellipse 42% 38% at 80% 18%, rgba(139,26,74,0.20) 0%, transparent 55%);
+    radial-gradient(ellipse 55% 48% at 22% 60%, rgba(232,112,10,0.32) 0%, transparent 58%),
+    radial-gradient(ellipse 42% 38% at 80% 18%, rgba(232,112,10,0.20) 0%, transparent 55%);
   pointer-events: none;
   will-change: transform;
   animation: meshFloat1 28s ease-in-out infinite alternate;
@@ -1175,7 +1174,7 @@ footer::before {
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(224,40,90,0.35) 50%, transparent);
+  background: linear-gradient(90deg, transparent, rgba(232,112,10,0.35) 50%, transparent);
   pointer-events: none;
   z-index: 2;
 }
@@ -1466,7 +1465,7 @@ footer::before {
   position: absolute;
   bottom: 0; left: 0; right: 0;
   padding: 48px 16px 14px;
-  background: linear-gradient(transparent, rgba(6,1,10,0.80));
+  background: linear-gradient(transparent, rgba(26,22,20,0.80));
   color: var(--text-2);
   font-family: 'Space Mono', monospace;
   font-size: 11px;
@@ -1559,7 +1558,7 @@ footer::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 60% 80% at 90% 50%, rgba(224, 40, 90, 0.10) 0%, transparent 65%);
+  background: radial-gradient(ellipse 60% 80% at 90% 50%, rgba(232, 112, 10, 0.10) 0%, transparent 65%);
   pointer-events: none;
 }
 
@@ -1619,3 +1618,82 @@ footer::before {
   .form-field.full   { grid-column: span 1; }
   .contact-form-wrap { padding: 24px; }
 }
+
+
+/* ═══════════════════════════════════════════════
+   SOLAR WHITE — dark-section overrides
+   Hero, page-hero, section-dark, CTA, footer
+   need light text since bg is charcoal (#1a1614)
+   ═══════════════════════════════════════════════ */
+.hero-content,
+.page-hero,
+.section-dark,
+.cta-banner,
+footer {
+  --text-1: #f0ece8;
+  --text-2: #c0a898;
+  --text-3: #8a7868;
+}
+
+/* Mobile nav dropdown — stays dark */
+@media (max-width: 960px) {
+  .nav-links {
+    --text-1: #f0ece8;
+    --text-2: #c0a898;
+  }
+}
+
+
+/* ═══════════════════════════════════════════════
+   SOLAR WHITE — Cormorant Garamond display font
+   Applied to editorial H1/H2 only; card titles
+   and UI labels stay Space Grotesk for clarity.
+   ═══════════════════════════════════════════════ */
+.hero-title,
+.section-title,
+.page-hero h1,
+.cta-banner-text h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.hero-title        { font-size: clamp(44px, 5.6vw, 80px); line-height: 1.05; }
+.section-title     { font-size: clamp(30px, 3.8vw, 50px); line-height: 1.1; }
+.page-hero h1      { font-size: clamp(34px, 5.2vw, 58px); line-height: 1.1; }
+.cta-banner-text h2 { font-size: clamp(26px, 3.2vw, 40px); }
+
+
+/* ═══════════════════════════════════════════════
+   SOLAR WHITE — light-mode content tweaks
+   Dot pattern, cards, borders for cream bg.
+   ═══════════════════════════════════════════════ */
+
+/* Sectors dot pattern — more visible on cream */
+.sectors-section {
+  background-image: radial-gradient(circle, rgba(232, 112, 10, 0.08) 1px, transparent 1px);
+}
+
+/* Cards on cream bg need slightly stronger border */
+.sector-card,
+.value-card,
+.step,
+.portfolio-col,
+.contact-card,
+.highlight-box {
+  box-shadow: 0 2px 12px rgba(26, 22, 20, 0.06);
+}
+
+/* Diff section on cream — subtle top divider */
+.diff-section {
+  border-top-color: rgba(232, 112, 10, 0.12);
+}
+
+/* Form inputs — warm cream bg, dark text */
+.form-field input,
+.form-field select,
+.form-field textarea {
+  background: #faf8f5;
+  color: #1a1614;
+}
+.form-field select option { background: #faf8f5; color: #1a1614; }

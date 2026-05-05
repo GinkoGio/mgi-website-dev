@@ -42,7 +42,7 @@
           var d    = Math.sqrt(dx * dx + dy * dy);
           if (d < DIST) {
             ctx.globalAlpha = (1 - d / DIST) * 0.95;
-            ctx.strokeStyle = '#e0285a';
+            ctx.strokeStyle = '#e8700a';
             ctx.beginPath();
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.lineTo(nodes[j].x, nodes[j].y);
