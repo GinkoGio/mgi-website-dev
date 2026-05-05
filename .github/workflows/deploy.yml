@@ -3,8 +3,18 @@ name: Deploy Eleventy to GitHub Pages
 on:
   push:
     branches:
+      - main
       - restyling/solar-white
   workflow_dispatch:
+    inputs:
+      design_branch:
+        description: 'Branch to deploy (main = dark, restyling/solar-white = Solar White)'
+        required: false
+        default: 'main'
+        type: choice
+        options:
+          - main
+          - restyling/solar-white
 
 permissions:
   contents: read
@@ -13,7 +23,7 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -21,6 +31,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.design_branch || github.ref }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -32,7 +44,7 @@ jobs:
         run: npm ci
 
       - name: Build with Eleventy
-        run: npx @11ty/eleventy
+        run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
