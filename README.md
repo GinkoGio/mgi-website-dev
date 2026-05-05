@@ -103,16 +103,12 @@ Ogni branch ha il proprio `deploy.yml` configurato per triggerare solo da sé st
 
 **Pubblicare Solar White:**
 ```bash
-git checkout restyling/solar-white
-git commit --allow-empty -m "deploy: solar white preview"
-git push
+git checkout restyling/solar-white && git commit --allow-empty -m "deploy: restore solar  design on GitHub Pages" && git push
 ```
 
 **Tornare al dark (main):**
 ```bash
-git checkout main
-git commit --allow-empty -m "deploy: restore dark design"
-git push
+git checkout main && git commit --allow-empty -m "deploy: restore dark design on GitHub Pages" && git push
 ```
 
 > `git push` triggera il deploy solo se ci sono commit nuovi. Se il branch è già aggiornato, usa `git commit --allow-empty` per forzare il workflow senza modifiche reali.
