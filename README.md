@@ -90,13 +90,26 @@ Structure format:
 }
 ```
 
+## 🌿 Branches
+
+| Branch | Design |
+|---|---|
+| `main` | Dark — near-black purple/rose palette (production) |
+| `restyling/solar-white` | Solar White — warm cream, terracotta accent, Cormorant Garamond headings |
+
+```bash
+git checkout restyling/solar-white   # switch to light-mode redesign
+git checkout main                    # back to production
+npm run build                        # rebuild after switching
+```
+
 ## 🎨 Design System & Assets
 
-*   **Colors**: Controlled via CSS custom properties in `hitech.css` (e.g., `--bg-0`, `--rose`, `--text-1`).
-*   **Typography**: Space Grotesk for headings, Inter for body text, and Space Mono for monospaced data.
+*   **Colors**: Controlled via CSS custom properties in `hitech.css` (e.g., `--bg-0`, `--rose`, `--text-1`). Dark palette on `main`; Solar White palette on `restyling/solar-white`.
+*   **Typography**: Space Grotesk (headings), Inter (body), Space Mono (data). The Solar White branch adds Cormorant Garamond for H1/H2 display titles.
 *   **Animations**: The hero section features an interactive, dynamic canvas network.
 
-For extensive details regarding the architecture, brand guidelines, and legacy code notes, please refer to the `CLAUDE.md` and `UPDATES.md` (if available) files in the repository.
+For full architectural details, brand guidelines, and branch design docs see `CLAUDE.md`.
 
 ## 📄 License
 ISC License.

@@ -48,9 +48,18 @@ The `localize` filter (defined in `.eleventy.js`) resolves `{"en":"...","it":"..
 - Scroll-reveal fade-ins on `.reveal` → adds `.visible`
 - Hero parallax on `.hero-image img` (throttled via `requestAnimationFrame`)
 
-**Note:** The rose accent `#e0285a` is hardcoded in `hitech.js` line 46 (canvas stroke), not read from the CSS custom property.
+**Note:** The canvas stroke color is hardcoded in `hitech.js` line 46 — `#e0285a` on `main`, `#e8700a` on `restyling/solar-white`. It is not read from CSS; update manually when switching palette.
 
 **Note:** Legacy files (`animations.css`, `animations.js`, `fancy.css`, `fancy.js`) have been removed — they were unused reference copies of older code.
+
+## Branches
+
+| Branch | Description |
+|---|---|
+| `main` | Production — original dark design (rose/purple palette) |
+| `restyling/solar-white` | Visual restyling experiment — Solar White option C |
+
+To switch: `git checkout restyling/solar-white`, then `npm run build`.
 
 ## Adding or Editing Content
 
@@ -64,6 +73,8 @@ To change page structure: edit the relevant `.njk` in `src/` — the change appl
 To add a new text field: add it to `i18n.json` under the correct page key, then reference it in the template with `{{ t.field_key }}`.
 
 ## Design System
+
+### `main` branch — Dark (production)
 
 Color tokens (CSS custom properties in `hitech.css`):
 
@@ -79,6 +90,25 @@ Color tokens (CSS custom properties in `hitech.css`):
 | `--text-2` | `#b08898` | Secondary/muted text |
 
 Fonts: Space Grotesk (headings), Inter (body), Space Mono (monospaced data) — loaded via Google Fonts.
+
+### `restyling/solar-white` branch — Solar White
+
+Light-mode dominant. Hero, page-hero, CTA banner, and footer stay dark charcoal as bookends.
+
+| Token | Value | Usage |
+|---|---|---|
+| `--bg-0` | `#faf8f5` | Page background (warm cream) |
+| `--bg-1` | `#f0ece6` | Section background |
+| `--bg-2` | `#e8e2d9` | Card/form background |
+| `--bg-3` | `#1a1614` | Dark sections: hero, CTA, footer |
+| `--rose` | `#e8700a` | Primary accent (terracotta/solar amber) |
+| `--amber` | `#2a7d4f` | Secondary accent (verde prato) |
+| `--text-1` | `#1a1614` | Primary text (dark on light bg) |
+| `--text-2` | `#6b5e54` | Secondary/muted text |
+
+Dark sections override `--text-1/2/3` and `--bg-1/2` locally via CSS custom property scoping so cards and text inside `.section-dark`, `.hero-content`, `.cta-banner`, and `footer` remain legible.
+
+Fonts: **Cormorant Garamond** (H1/H2 display), Space Grotesk (UI/cards), Inter (body), Space Mono (data).
 
 ## Brand & Copywriting Guidelines
 
