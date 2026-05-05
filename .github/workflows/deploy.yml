@@ -3,7 +3,6 @@ name: Deploy Eleventy to GitHub Pages
 on:
   push:
     branches:
-      - main
       - restyling/solar-white
   workflow_dispatch:
 
