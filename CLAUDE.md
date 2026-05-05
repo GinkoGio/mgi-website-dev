@@ -38,7 +38,7 @@ The `localize` filter (defined in `.eleventy.js`) resolves `{"en":"...","it":"..
 
 **Static assets** (`hitech.css`, `hitech.js`, `images/`, `pv_portfolio_map_en.html`) are copied to `_site/` via passthrough in `.eleventy.js`.
 
-**CSS (`hitech.css`, ~1370 lines):** Single stylesheet — custom properties, layout, responsive breakpoints, component styles. No preprocessor.
+**CSS (`hitech.css`, ~1680 lines):** Single stylesheet — custom properties, layout, responsive breakpoints, component styles. No preprocessor.
 
 **JS (`hitech.js`, ~183 lines):** IIFE-wrapped vanilla JS:
 - Animated canvas network (hero, desktop only — skipped on `max-width: 960px`)
@@ -48,7 +48,7 @@ The `localize` filter (defined in `.eleventy.js`) resolves `{"en":"...","it":"..
 - Scroll-reveal fade-ins on `.reveal` → adds `.visible`
 - Hero parallax on `.hero-image img` (throttled via `requestAnimationFrame`)
 
-**Note:** The rose accent `#e0285a` is hardcoded in `hitech.js` line 46 (canvas stroke), not read from the CSS custom property.
+**Note:** The canvas stroke color is hardcoded in `hitech.js` line 46 — `#e0285a` on `main`, `#e8700a` on `restyling/solar-white`. It is not read from the CSS custom property; update it manually when switching palette.
 
 **Note:** Legacy files (`animations.css`, `animations.js`, `fancy.css`, `fancy.js`) have been removed — they were unused reference copies of older code.
 
@@ -63,7 +63,18 @@ To change page structure: edit the relevant `.njk` in `src/` — the change appl
 
 To add a new text field: add it to `i18n.json` under the correct page key, then reference it in the template with `{{ t.field_key }}`.
 
+## Branches
+
+| Branch | Description |
+|---|---|
+| `main` | Production — original dark design (rose/purple palette) |
+| `restyling/solar-white` | Visual restyling experiment — Solar White option C |
+
+To switch between designs: `git checkout main` or `git checkout restyling/solar-white`, then `npm run build`.
+
 ## Design System
+
+### `main` branch — Dark (original)
 
 Color tokens (CSS custom properties in `hitech.css`):
 
@@ -79,6 +90,25 @@ Color tokens (CSS custom properties in `hitech.css`):
 | `--text-2` | `#b08898` | Secondary/muted text |
 
 Fonts: Space Grotesk (headings), Inter (body), Space Mono (monospaced data) — loaded via Google Fonts.
+
+### `restyling/solar-white` branch — Solar White (option C)
+
+Light-mode dominant. Hero, page-hero, CTA banner, and footer stay dark charcoal as bookends.
+
+| Token | Value | Usage |
+|---|---|---|
+| `--bg-0` | `#faf8f5` | Page background (warm cream) |
+| `--bg-1` | `#f0ece6` | Section background |
+| `--bg-2` | `#e8e2d9` | Card/form background |
+| `--bg-3` | `#1a1614` | Dark sections: hero, CTA, footer |
+| `--rose` | `#e8700a` | Primary accent (terracotta/solar amber) |
+| `--amber` | `#2a7d4f` | Secondary accent (verde prato) |
+| `--text-1` | `#1a1614` | Primary text (dark on light bg) |
+| `--text-2` | `#6b5e54` | Secondary/muted text |
+
+Dark sections (`.hero-content`, `.page-hero`, `.section-dark`, `.cta-banner`, `footer`) override `--text-1/2/3` locally to light values via CSS custom property scoping.
+
+Fonts: **Cormorant Garamond** (H1/H2 display), Space Grotesk (UI/cards), Inter (body), Space Mono (data).
 
 ## Brand & Copywriting Guidelines
 

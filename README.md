@@ -90,13 +90,32 @@ Structure format:
 }
 ```
 
+## 🌿 Branches
+
+| Branch | Design |
+|---|---|
+| `main` | Dark — near-black purple/rose palette (production) |
+| `restyling/solar-white` | Solar White — warm cream, terracotta, Cormorant Garamond headings |
+
+```bash
+git checkout restyling/solar-white   # switch to light-mode redesign
+git checkout main                    # back to production
+npm run build                        # rebuild after switching
+```
+
 ## 🎨 Design System & Assets
 
-*   **Colors**: Controlled via CSS custom properties in `hitech.css` (e.g., `--bg-0`, `--rose`, `--text-1`).
-*   **Typography**: Space Grotesk for headings, Inter for body text, and Space Mono for monospaced data.
-*   **Animations**: The hero section features an interactive, dynamic canvas network.
+All colors are CSS custom properties in `hitech.css`. Two palettes exist across branches:
 
-For extensive details regarding the architecture, brand guidelines, and legacy code notes, please refer to the `CLAUDE.md` and `UPDATES.md` (if available) files in the repository.
+**`main` (dark):** `--bg-0: #06010a`, `--rose: #e0285a`, `--text-1: #f5e8ed`
+
+**`restyling/solar-white` (light):** `--bg-0: #faf8f5` (cream), `--rose: #e8700a` (terracotta), `--text-1: #1a1614`. Hero/footer/CTA stay dark charcoal (`--bg-3: #1a1614`) as bookends.
+
+*   **Typography (`main`)**: Space Grotesk (headings), Inter (body), Space Mono (data).
+*   **Typography (`solar-white`)**: Cormorant Garamond (H1/H2 display), Space Grotesk (UI), Inter (body), Space Mono (data).
+*   **Animations**: Interactive canvas network in the hero section (color matches active palette).
+
+For full architectural details, brand guidelines, and branch design docs see `CLAUDE.md`.
 
 ## 📄 License
 ISC License.
