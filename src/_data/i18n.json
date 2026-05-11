@@ -84,7 +84,7 @@
     "lead_p3": { "en": "Operating from Milan, we maintain deep connections with Italian and European markets while leveraging international best practices. Our independence allows us to make decisions based purely on merit, risk assessment, and alignment with our sustainability principles.", "it": "Operando da Milano, manteniamo un legame profondo con i mercati italiani ed europei, avvalendoci al contempo delle migliori prassi internazionali. La nostra indipendenza ci consente di assumere decisioni basate esclusivamente sul merito, sulla valutazione del rischio e sull'allineamento con i nostri principi di sostenibilità." },
 
     "values_eyebrow": { "en": "Our Principles", "it": "I Nostri Principi" },
-    "values_title":   { "en": "Three Pillars of<br>Our Approach", "it": "I Tre Pilastri<br>del Nostro Approccio" },
+    "values_title":   { "en": "Three Pillars of<br>Our Identity", "it": "I Tre Pilastri<br>della Nostra Identità" },
     "val1_title": { "en": "Independence",  "it": "Indipendenza" },
     "val1_body":  { "en": "Investment choices based on analysis, not fashion. We maintain complete autonomy in decision-making, free from conflicts of interest or market pressures.", "it": "Scelte d'investimento basate sull'analisi, non sulle mode del momento. Manteniamo piena autonomia decisionale, liberi da conflitti d'interesse o pressioni di mercato." },
     "val2_title": { "en": "Sustainability", "it": "Sostenibilità" },
@@ -223,7 +223,7 @@
     "vision_p2":      { "en": "This long-term orientation informs every stage of the investment process — from initial due diligence to ongoing asset management. We are not interested in financial engineering or short-term arbitrage. Our focus is the creation of genuine economic value aligned with verifiable environmental outcomes.", "it": "Questo orientamento di lungo periodo informa ogni fase del processo d'investimento, dalla due diligence iniziale alla gestione continuativa degli asset. Non siamo interessati all'ingegneria finanziaria o all'arbitraggio di breve termine. Il nostro obiettivo è la creazione di valore economico reale, allineato a risultati ambientali verificabili." },
 
     "method_eyebrow": { "en": "How We Work",               "it": "Come Lavoriamo" },
-    "method_title":   { "en": "Four Pillars of Our Method","it": "I Quattro Pilastri del Nostro Metodo" },
+    "method_title":   { "en": "Four Stages of Our Method","it": "Le Quattro Fasi del Nostro Metodo" },
     "step1_title":    { "en": "Rigorous Analysis",   "it": "Analisi Rigorosa" },
     "step1_desc":     { "en": "Every investment undergoes comprehensive technical, financial, and sustainability assessment before commitment. We leave nothing to assumption.", "it": "Ogni investimento è sottoposto a una valutazione tecnica, finanziaria e di sostenibilità esaustiva prima dell'impegno. Nessun dettaglio è lasciato al caso." },
     "step2_title":    { "en": "Strategic Selection", "it": "Selezione Strategica" },
