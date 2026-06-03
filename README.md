@@ -95,36 +95,25 @@ Structure format:
 | Branch | Design |
 |---|---|
 | `main` | Dark — near-black purple/rose palette (production) |
-| `restyling/solar-white` | Solar White — warm cream, terracotta accent, Cormorant Garamond headings |
+| `restyling/solar-white` | Solar White — warm cream, terracotta, Cormorant Garamond headings |
 
-Ogni branch ha il proprio `deploy.yml` configurato per triggerare solo da sé stesso, in modo che i due design non si sovrascrivano su GitHub Pages.
-
-### Switchare il design su GitHub Pages
-
-**Pubblicare Solar White:**
 ```bash
-git checkout restyling/solar-white && git commit --allow-empty -m "deploy: restore solar  design on GitHub Pages" && git push
-```
-
-**Tornare al dark (main):**
-```bash
-git checkout main && git commit --allow-empty -m "deploy: restore dark design on GitHub Pages" && git push
-```
-
-> `git push` triggera il deploy solo se ci sono commit nuovi. Se il branch è già aggiornato, usa `git commit --allow-empty` per forzare il workflow senza modifiche reali.
-
-### Sviluppo locale
-```bash
-git checkout restyling/solar-white   # o main
-npm run build                        # ribuilda dopo il cambio branch
-npm run preview                      # serve a http://localhost:3000
+git checkout restyling/solar-white   # switch to light-mode redesign
+git checkout main                    # back to production
+npm run build                        # rebuild after switching
 ```
 
 ## 🎨 Design System & Assets
 
-*   **Colors**: Controlled via CSS custom properties in `hitech.css` (e.g., `--bg-0`, `--rose`, `--text-1`). Dark palette on `main`; Solar White palette on `restyling/solar-white`.
-*   **Typography**: Space Grotesk (headings), Inter (body), Space Mono (data). The Solar White branch adds Cormorant Garamond for H1/H2 display titles.
-*   **Animations**: The hero section features an interactive, dynamic canvas network.
+All colors are CSS custom properties in `hitech.css`. Two palettes exist across branches:
+
+**`main` (dark):** `--bg-0: #06010a`, `--rose: #e0285a`, `--text-1: #f5e8ed`
+
+**`restyling/solar-white` (light):** `--bg-0: #faf8f5` (cream), `--rose: #e8700a` (terracotta), `--text-1: #1a1614`. Hero/footer/CTA stay dark charcoal (`--bg-3: #1a1614`) as bookends.
+
+*   **Typography (`main`)**: Space Grotesk (headings), Inter (body), Space Mono (data).
+*   **Typography (`solar-white`)**: Cormorant Garamond (H1/H2 display), Space Grotesk (UI), Inter (body), Space Mono (data).
+*   **Animations**: Interactive canvas network in the hero section (color matches active palette).
 
 For full architectural details, brand guidelines, and branch design docs see `CLAUDE.md`.
 
