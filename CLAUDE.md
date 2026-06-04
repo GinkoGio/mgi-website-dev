@@ -11,9 +11,11 @@ Corporate website for Maverick Global Investments S.r.l. (Milan, Italy) — an i
 ## Commands
 
 ```bash
-npm start          # dev server with live reload → http://localhost:8080
-npm run build      # production build → _site/ (compatible with GitHub Pages and direct disk open)
-npm run preview    # local build (pathPrefix /) + serve → http://localhost:3000
+npm start                  # dev server with live reload → http://localhost:8080
+npm run build             # production build → _site/ (compatible with GitHub Pages and direct disk open)
+npm run preview           # local build (pathPrefix /) + serve → http://localhost:3000
+npm run sync:from-main    # Sync content from main → restyling/solar-white
+npm run sync:to-main      # Sync content from restyling/solar-white → main
 ```
 
 > ✅ The generated `_site/` output now uses relative asset and page links. You can open `_site/index.html` or `_site/it/index.html` directly from disk, while `npm run preview` remains useful for local server testing.
@@ -71,6 +73,36 @@ To add a new text field: add it to `i18n.json` under the correct page key, then 
 | `restyling/solar-white` | Visual restyling experiment — Solar White option C |
 
 To switch between designs: `git checkout main` or `git checkout restyling/solar-white`, then `npm run build`.
+
+## Branch Synchronization
+
+The two branches are **identical in content** but differ only in **design** (CSS colors, fonts, JavaScript canvas color).
+
+### Automatic Sync Script
+
+Use npm scripts to keep content synchronized between branches:
+
+```bash
+npm run sync:from-main     # main → restyling/solar-white
+npm run sync:to-main       # restyling/solar-white → main
+```
+
+**What syncs:**
+- ✅ `src/` (all templates, layouts, data)
+- ✅ `CLAUDE.md`, `README.md`, `package.json`
+
+**What stays separate (by design):**
+- 🚫 `hitech.css` — color tokens, fonts, responsive rules
+- 🚫 `hitech.js` — canvas stroke color (line 45)
+
+**How it works:**
+1. Fetches latest from remote
+2. Copies shared files from source branch to target
+3. Preserves theme-only files on target branch
+4. Creates commit: `"sync: content from [branch]"`
+5. Auto-pushes to GitHub
+
+This ensures that bug fixes, content updates, and text changes propagate to both designs without creating merge conflicts or overwriting palette customizations.
 
 ## Design System
 
