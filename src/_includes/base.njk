@@ -42,7 +42,11 @@
 </head>
 <body>
 
-{% set nav_key = pageSlug == 'index' ? 'home' : pageSlug | replace('-', '_') %}
+{% if pageSlug == 'index' %}
+  {% set nav_key = 'home' %}
+{% else %}
+  {% set nav_key = pageSlug | replace('-', '_') %}
+{% endif %}
 
 <!-- Organization structured data -->
 <script type="application/ld+json">
