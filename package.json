@@ -5,8 +5,10 @@
 	"main": "hitech.js",
 	"scripts": {
 		"start": "eleventy --serve",
-		"build": "eleventy",
+		"build": "eleventy && npm run generate:sitemap",
 		"preview": "set ELEVENTY_PATH_PREFIX=/&& eleventy && npx serve _site",
+		"sync:from-main": "node scripts/sync-branches.js main restyling/solar-white",
+		"sync:to-main": "node scripts/sync-branches.js restyling/solar-white main",
 		"generate:sitemap": "node scripts/generate-sitemap.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
