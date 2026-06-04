@@ -64,6 +64,8 @@ The script automatically:
 - 🚫 Preserves: `hitech.css`, `hitech.js` (design-specific)
 - 🚀 Commits and pushes to GitHub automatically
 
+This keeps `README.md` and `CLAUDE.md` aligned across both `main` and `restyling/solar-white`.
+
 The site will be available at `http://localhost:8080`.
 
 ### Production Build
@@ -72,6 +74,8 @@ To build the site for production (with the GitHub Pages path prefix):
 npm run build
 ```
 This generates the static files in the `_site/` directory.
+
+The build also runs `scripts/generate-sitemap.js` to produce `sitemap.xml` from `src/_data/i18n.json`.
 
 The generated `_site/` files use relative asset and page links, so they can be opened directly from disk in a browser via `file://`.
 
