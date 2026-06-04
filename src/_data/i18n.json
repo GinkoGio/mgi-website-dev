@@ -21,6 +21,7 @@
   "index": {
     "meta_title":       { "en": "Maverick Global Investments — Home", "it": "Maverick Global Investments — Home" },
     "meta_description": { "en": "Maverick Global Investments is an independent investment firm based in Milan, operating in renewable energy, real estate, and alternative finance.", "it": "Maverick Global Investments è una società di investimento indipendente con sede a Milano, attiva nell'energia rinnovabile, immobiliare e finanza alternativa." },
+    "meta_keywords": { "en": "renewable energy investment, sustainable finance, real estate investment, alternative finance, Milan", "it": "investimenti energie rinnovabili, finanza sostenibile, investimento immobiliare, finanza alternativa, Milano" },
     "og_url":    { "en": "https://www.maverickglob.com/",     "it": "https://www.maverickglob.com/it/" },
     "canonical": { "en": "https://www.maverickglob.com/",     "it": "https://www.maverickglob.com/it/" },
     "og_image":  "https://www.maverickglob.com/images/solar-panels-row.webp",
@@ -71,6 +72,7 @@
   "about": {
     "meta_title":       { "en": "About — Maverick Global Investments", "it": "Chi Siamo — Maverick Global Investments" },
     "meta_description": { "en": "Learn about Maverick Global Investments — an independent firm built on analysis, integrity, and long-term vision, at the intersection of financial performance and positive impact.", "it": "Scopri Maverick Global Investments — una società indipendente fondata su analisi, integrità e visione di lungo termine, all'incrocio tra performance finanziaria e impatto positivo." },
+    "meta_keywords": { "en": "about maverick global investments, investment firm milan, sustainable investment firm", "it": "chi siamo maverick, società investimento milano, investimento sostenibile" },
     "og_url":    { "en": "https://www.maverickglob.com/about.html",     "it": "https://www.maverickglob.com/it/about.html" },
     "canonical": { "en": "https://www.maverickglob.com/about.html",     "it": "https://www.maverickglob.com/it/about.html" },
     "og_image":  "https://www.maverickglob.com/images/solar-panels-row.webp",
@@ -108,6 +110,7 @@
   "what-we-do": {
     "meta_title":       { "en": "What We Do — Maverick Global Investments", "it": "Attività — Maverick Global Investments" },
     "meta_description": { "en": "We operate as an active investor and portfolio manager in renewable energy, real estate, and alternative finance — acquiring, managing, and growing real assets across Europe.", "it": "Operiamo come investitori attivi e gestori di portafoglio nell'energia rinnovabile, nel real estate e nella finanza alternativa — acquisendo, gestendo e valorizzando asset reali in Europa." },
+    "meta_keywords": { "en": "active investor, portfolio manager, renewable energy, real estate, alternative finance", "it": "investitore attivo, gestore di portafoglio, energia rinnovabile, immobiliare, finanza alternativa" },
     "og_url":    { "en": "https://www.maverickglob.com/what-we-do.html",    "it": "https://www.maverickglob.com/it/what-we-do.html" },
     "canonical": { "en": "https://www.maverickglob.com/what-we-do.html",    "it": "https://www.maverickglob.com/it/what-we-do.html" },
     "og_image":  "https://www.maverickglob.com/images/solar-panels-row.webp",
@@ -157,6 +160,7 @@
   "investment-sectors": {
     "meta_title":       { "en": "Investment Sectors — Maverick Global Investments", "it": "Settori di Investimento — Maverick Global Investments" },
     "meta_description": { "en": "Discover the three complementary investment sectors of Maverick Global Investments: renewable energy, real estate, and alternative finance instruments.", "it": "Scopri i tre settori di investimento complementari di Maverick Global Investments: energia rinnovabile, immobiliare e strumenti di finanza alternativa." },
+    "meta_keywords": { "en": "investment sectors, renewable energy, real estate, alternative finance", "it": "settori di investimento, energia rinnovabile, immobiliare, finanza alternativa" },
     "og_url":    { "en": "https://www.maverickglob.com/investment-sectors.html",    "it": "https://www.maverickglob.com/it/investment-sectors.html" },
     "canonical": { "en": "https://www.maverickglob.com/investment-sectors.html",    "it": "https://www.maverickglob.com/it/investment-sectors.html" },
     "og_image":  "https://www.maverickglob.com/images/solar-panels-row.webp",
@@ -209,6 +213,7 @@
   "philosophy": {
     "meta_title":       { "en": "Philosophy — Maverick Global Investments", "it": "Filosofia — Maverick Global Investments" },
     "meta_description": { "en": "Our investment philosophy: transforming capital into lasting positive impact through rigorous analysis, strategic selection, active management, and transparent reporting.", "it": "La nostra filosofia di investimento: creare valore duraturo attraverso analisi rigorosa, selezione strategica, gestione attiva degli asset e reporting trasparente." },
+    "meta_keywords": { "en": "investment philosophy, positive impact, rigorous analysis, active management", "it": "filosofia di investimento, impatto positivo, analisi rigorosa, gestione attiva" },
     "og_url":    { "en": "https://www.maverickglob.com/philosophy.html",    "it": "https://www.maverickglob.com/it/philosophy.html" },
     "canonical": { "en": "https://www.maverickglob.com/philosophy.html",    "it": "https://www.maverickglob.com/it/philosophy.html" },
     "og_image":  "https://www.maverickglob.com/images/solar-panels-row.webp",
