@@ -19,12 +19,76 @@
 <meta property="og:image" content="{{ t.og_image }}">
 <meta property="og:url" content="{{ t.og_url }}">
 <link rel="canonical" href="{{ t.canonical }}">
+{% if t.meta_keywords %}
+<meta name="keywords" content="{{ t.meta_keywords }}">
+{% endif %}
+<!-- hreflang alternatives -->
+<link rel="alternate" hreflang="en" href="{{ i18n[pageSlug].canonical.en }}">
+<link rel="alternate" hreflang="it" href="{{ i18n[pageSlug].canonical.it }}">
+<link rel="alternate" hreflang="x-default" href="{{ i18n[pageSlug].canonical.en }}">
+
+<!-- Open Graph locale -->
+{% if lang.code == 'it' %}
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:locale:alternate" content="en_US">
+{% else %}
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="it_IT">
+{% endif %}
 <link rel="icon" href="{{ assetBase }}images/logo.webp" type="image/webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="{{ assetBase }}hitech.css">
 </head>
 <body>
+
+{% set nav_key = pageSlug == 'index' ? 'home' : pageSlug | replace('-', '_') %}
+
+<!-- Organization structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Maverick Global Investments",
+  "url": "https://www.maverickglob.com",
+  "logo": "https://www.maverickglob.com/images/logo.webp",
+  "description": "Independent investment firm in renewable energy, real estate, and alternative finance",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via Gabrio Serbelloni 5",
+    "addressLocality": "Milan",
+    "postalCode": "20122",
+    "addressCountry": "IT"
+  },
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "info@maverickglob.com"
+  }]
+}
+</script>
+
+<!-- Breadcrumb structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "{{ t_nav.home }}",
+      "item": "{{ i18n['index'].canonical[lang.code] }}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{ t_nav[nav_key] }}",
+      "item": "{{ i18n[pageSlug].canonical[lang.code] }}"
+    }
+  ]
+}
+</script>
 
 <nav id="main-nav">
   <a href="index.html" class="nav-logo">

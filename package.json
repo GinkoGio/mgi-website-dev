@@ -1,27 +1,30 @@
 {
-  "name": "mgi-website-dev",
-  "version": "1.0.0",
-  "description": "Corporate website for **Maverick Global Investments S.r.l.**, an independent investment firm headquartered in Milan, operating in renewable energy, real estate, and alternative finance.",
-  "main": "hitech.js",
-  "scripts": {
-    "start": "eleventy --serve",
-    "build": "eleventy",
-    "preview": "set ELEVENTY_PATH_PREFIX=/&& eleventy && npx serve _site",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GinkoGio/mgi-website-dev.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/GinkoGio/mgi-website-dev/issues"
-  },
-  "homepage": "https://github.com/GinkoGio/mgi-website-dev#readme",
-  "devDependencies": {
-    "@11ty/eleventy": "^3.0.0"
-  }
+	"name": "mgi-website-dev",
+	"version": "1.0.0",
+	"description": "Corporate website for **Maverick Global Investments S.r.l.**, an independent investment firm headquartered in Milan, operating in renewable energy, real estate, and alternative finance.",
+	"main": "hitech.js",
+	"scripts": {
+		"start": "eleventy --serve",
+		"build": "eleventy && npm run generate:sitemap",
+		"preview": "set ELEVENTY_PATH_PREFIX=/&& eleventy && npx serve _site",
+		"sync:from-main": "node scripts/sync-branches.js main restyling/solar-white",
+		"sync:to-main": "node scripts/sync-branches.js restyling/solar-white main",
+		"generate:sitemap": "node scripts/generate-sitemap.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/GinkoGio/mgi-website-dev.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"type": "commonjs",
+	"bugs": {
+		"url": "https://github.com/GinkoGio/mgi-website-dev/issues"
+	},
+	"homepage": "https://github.com/GinkoGio/mgi-website-dev#readme",
+	"devDependencies": {
+		"@11ty/eleventy": "^3.0.0"
+	}
 }
