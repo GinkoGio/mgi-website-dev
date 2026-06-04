@@ -46,8 +46,24 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 ### Development
 To start the local development server with live reload:
 ```bash
-npm start
+npm start     # dev server with live reload → http://localhost:8080
+npm run build # production build → _site/
+npm run preview  # local build + serve → http://localhost:3000
 ```
+
+### Syncing content between branches
+When you edit content on one branch, sync it to the other (preserves design-only files):
+
+```bash
+npm run sync:from-main        # Copy content from main → restyling/solar-white
+npm run sync:to-main         # Copy content from restyling/solar-white → main
+```
+
+The script automatically:
+- ✅ Syncs: `src/`, `CLAUDE.md`, `README.md`, `package.json`
+- 🚫 Preserves: `hitech.css`, `hitech.js` (design-specific)
+- 🚀 Commits and pushes to GitHub automatically
+
 The site will be available at `http://localhost:8080`.
 
 ### Production Build
