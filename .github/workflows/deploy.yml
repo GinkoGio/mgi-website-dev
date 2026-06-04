@@ -25,6 +25,8 @@ concurrency:
   group: "pages"
   cancel-in-progress: true
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -39,6 +41,13 @@ jobs:
         with:
           node-version: "20"
           cache: "npm"
+
+      - name: Debug Node/npm versions
+        run: |
+          echo "--- node/npm versions ---"
+          node --version || true
+          npm --version || true
+          npx --version || true
 
       - name: Install dependencies
         run: npm ci
