@@ -18,6 +18,8 @@ npm run sync:from-main    # Sync content from main → restyling/solar-white
 npm run sync:to-main      # Sync content from restyling/solar-white → main
 ```
 
+The build now also includes sitemap generation via `scripts/generate-sitemap.js`, and the GitHub Actions deploy workflow is configured to run for both `main` and `restyling/solar-white`.
+
 > ✅ The generated `_site/` output now uses relative asset and page links. You can open `_site/index.html` or `_site/it/index.html` directly from disk, while `npm run preview` remains useful for local server testing.
 
 ## Architecture
@@ -39,6 +41,8 @@ npm run sync:to-main      # Sync content from restyling/solar-white → main
 The `localize` filter (defined in `.eleventy.js`) resolves `{"en":"...","it":"..."}` objects to the plain string for the current locale. Use `{{ t.key | safe }}` when the value contains HTML.
 
 **Static assets** (`hitech.css`, `hitech.js`, `images/`, `pv_portfolio_map_en.html`) are copied to `_site/` via passthrough in `.eleventy.js`.
+
+**Sitemap generation:** `npm run build` invokes `scripts/generate-sitemap.js` after Eleventy to write `sitemap.xml` from all canonical URLs in `src/_data/i18n.json`.
 
 **CSS (`hitech.css`, ~1680 lines):** Single stylesheet — custom properties, layout, responsive breakpoints, component styles. No preprocessor.
 
