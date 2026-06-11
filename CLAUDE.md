@@ -40,7 +40,7 @@ The build now also includes sitemap generation via `scripts/generate-sitemap.js`
 ```
 The `localize` filter (defined in `.eleventy.js`) resolves `{"en":"...","it":"..."}` objects to the plain string for the current locale. Use `{{ t.key | safe }}` when the value contains HTML.
 
-**Static assets** (`hitech.css`, `hitech.js`, `images/`, `pv_portfolio_map_en.html`) are copied to `_site/` via passthrough in `.eleventy.js`.
+**Static assets** (`hitech.css`, `hitech.js`, `images/`, `pv_portfolio_map.html`) are copied to `_site/` via passthrough in `.eleventy.js`.
 
 **Sitemap generation:** `npm run build` invokes `scripts/generate-sitemap.js` after Eleventy to write `sitemap.xml` from all canonical URLs in `src/_data/i18n.json`.
 
@@ -156,4 +156,4 @@ Fonts: **Cormorant Garamond** (H1/H2 display), Space Grotesk (UI/cards), Inter (
 
 ## Standalone Map Page
 
-`pv_portfolio_map_en.html` is a self-contained page (Leaflet.js via CDN, inline CSS/JS, plant data hardcoded as JS array). No Italian mirror. Not part of the Eleventy build — copied to `_site/` as-is via passthrough.
+`pv_portfolio_map.html` is a self-contained page (Leaflet.js via CDN, inline CSS/JS, plant data hardcoded as JS array). **Bilingual via `?lang=` query param** (`?lang=it` → Italian, default English) — a single file resolves both languages at runtime from a small `T` i18n dictionary in the inline script; the iframe in `portfolio.njk` passes `?lang={{ lang.code }}`. Not part of the Eleventy build — copied to `_site/` as-is via passthrough. Styled with the site fonts (Space Grotesk / Space Mono / Inter); the file is **not** covered by the sync scripts, so restyle it on each branch separately (accent `#e0285a` on `main`, `#e8700a` on `restyling/solar-white`).

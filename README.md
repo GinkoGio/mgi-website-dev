@@ -23,7 +23,7 @@ mgi-website-dev/
 ├── hitech.css              # Main stylesheet (custom properties, components)
 ├── hitech.js               # Main script (animations, nav logic, observers)
 ├── images/                 # Static images and WebP assets
-├── pv_portfolio_map_en.html # Standalone Leaflet map page
+├── pv_portfolio_map.html   # Standalone Leaflet map page (bilingual via ?lang=)
 ├── .eleventy.js            # Eleventy configuration and custom filters
 └── CLAUDE.md               # Detailed architectural guidance and instructions
 ```
