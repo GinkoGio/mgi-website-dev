@@ -6,7 +6,9 @@
       "Bash(git rm *)",
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
-      "Bash(powershell -Command \"Get-Content 'd:\\\\DEV\\\\mgi-website-dev\\\\pv_portfolio_map_en.html' | Select-Object -First 5 -Skip 226\")"
+      "Bash(powershell -Command \"Get-Content 'd:\\\\DEV\\\\mgi-website-dev\\\\pv_portfolio_map_en.html' | Select-Object -First 5 -Skip 226\")",
+      "Bash(git mv *)",
+      "Bash(awk 'NR>=11 && NR<=37' \"d:/DEV/mgi-website-dev/pv_portfolio_map.html\")"
     ]
   }
 }

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>PV Portfolio — Southern Italy</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;600;700&family=Barlow:wght@300;400;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <style>
@@ -16,7 +16,7 @@
     --p15:#ffa040; --p4:#e0285a; --p105:#34D1A0;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
-  body{background:var(--bg);color:var(--text-hi);font-family:'Barlow',sans-serif;
+  body{background:var(--bg);color:var(--text-hi);font-family:'Inter',sans-serif;
        height:100vh;display:flex;flex-direction:column;overflow:hidden;}
 
   header{flex-shrink:0;background:var(--bg);border-bottom:1px solid var(--border);
@@ -24,111 +24,24 @@
          position:relative;z-index:1000;}
   header::before{content:'';position:absolute;left:0;top:10px;bottom:10px;
                  width:4px;background:var(--accent2);border-radius:0 2px 2px 0;}
-  .h-title{font-family:'Barlow Condensed',sans-serif;font-size:21px;font-weight:700;
-           letter-spacing:.06em;color:var(--text-hi);text-transform:uppercase;}
-  .h-sub{font-size:11px;color:var(--text-mid);letter-spacing:.04em;margin-top:2px;}
+  .h-title{font-family:'Space Grotesk',sans-serif;font-size:19px;font-weight:700;
+           letter-spacing:.04em;color:var(--text-hi);text-transform:uppercase;}
+  .h-sub{font-family:'Space Mono',monospace;font-size:10.5px;color:var(--text-mid);letter-spacing:.04em;margin-top:3px;}
   .h-div{width:1px;height:34px;background:var(--border);}
   .kpi-group{display:flex;gap:24px;}
-  .kpi{display:flex;flex-direction:column;align-items:center;gap:1px;}
-  .kpi-val{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;
+  .kpi{display:flex;flex-direction:column;align-items:center;gap:2px;}
+  .kpi-val{font-family:'Space Mono',monospace;font-size:19px;font-weight:700;
            color:var(--accent2);line-height:1;}
-  .kpi-lbl{font-size:9px;color:var(--text-mid);letter-spacing:.07em;text-transform:uppercase;}
-  .badge{margin-left:auto;font-size:10px;font-weight:600;letter-spacing:.1em;color:#b08898;
-         border:1px solid rgba(224,40,90,0.25);padding:4px 10px;border-radius:3px;text-transform:uppercase;}
-
-  .filterbar{flex-shrink:0;background:var(--surface);border-bottom:1px solid var(--border);
-             padding:6px 16px;display:flex;align-items:center;gap:8px;z-index:999;}
-  .filterbar-label{font-size:9.5px;color:var(--text-lo);letter-spacing:.08em;
-                   text-transform:uppercase;margin-right:4px;}
-  .filter-btn{padding:4px 13px;border-radius:20px;border:1px solid var(--border);
-              background:transparent;color:var(--text-mid);font-family:'Barlow',sans-serif;
-              font-size:11px;cursor:pointer;transition:all .15s;letter-spacing:.04em;}
-  .filter-btn:hover{border-color:var(--accent);color:var(--text-hi);}
-  .filter-btn.active{color:#fff;border-color:transparent;}
-  .filter-btn.all.active {background:var(--accent);}
-  .filter-btn.p15.active {background:var(--p15);color:#000;}
-  .filter-btn.p4.active  {background:var(--p4);}
-  .filter-btn.p105.active{background:var(--p105);color:#000;}
-  .filter-btn.bas.active {background:#1d0b28; border-color:rgba(224,40,90,0.5);}
-  .filter-btn.cam.active {background:#0f281f; border-color:#34D1A0;}
-  .filter-btn.pug.active {background:#2a1500; border-color:#ffa040;}
-  .filter-sep{width:1px;height:20px;background:var(--border);margin:0 4px;}
+  .kpi-lbl{font-family:'Space Mono',monospace;font-size:8.5px;color:var(--text-mid);letter-spacing:.1em;text-transform:uppercase;}
+  .badge{margin-left:auto;font-family:'Space Mono',monospace;font-size:9.5px;font-weight:400;letter-spacing:.1em;color:var(--text-mid);
+         border:1px solid var(--border);padding:4px 10px;border-radius:3px;text-transform:uppercase;}
 
   .main{flex:1;display:flex;min-height:0;}
   #map{flex:1;background:var(--surface);}
 
-  .sidebar{width:290px;flex-shrink:0;background:var(--surface);
-           border-left:1px solid var(--border);display:flex;flex-direction:column;overflow:hidden;}
-  .sb-hdr{padding:13px 16px 10px;border-bottom:1px solid var(--border);
-          font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:600;
-          letter-spacing:.1em;color:var(--text-mid);text-transform:uppercase;}
-
-  .legend{padding:13px 16px;border-bottom:1px solid var(--border);
-          display:flex;flex-direction:column;gap:10px;}
-  .leg-item{display:flex;align-items:center;gap:11px;}
-  .leg-dot{width:13px;height:13px;border-radius:50%;border:2px solid rgba(255,255,255,.55);flex-shrink:0;}
-  .leg-dot.p15 {background:var(--p15);box-shadow:0 0 9px var(--p15);}
-  .leg-dot.p4  {background:var(--p4); box-shadow:0 0 9px var(--p4);}
-  .leg-dot.p105{background:var(--p105);box-shadow:0 0 9px var(--p105);}
-  .leg-txt{display:flex;flex-direction:column;gap:1px;}
-  .leg-name{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:.03em;}
-  .leg-name.p15 {color:var(--p15);}
-  .leg-name.p4  {color:var(--p4);}
-  .leg-name.p105{color:var(--p105);}
-  .leg-count{font-size:10.5px;color:var(--text-mid);}
-
-  /* CE legend row */
-  .ce-legend{padding:8px 16px 10px;border-bottom:1px solid var(--border);
-             display:flex;gap:14px;flex-wrap:wrap;}
-  .ce-item{display:flex;align-items:center;gap:5px;font-size:10px;color:var(--text-mid);}
-  .ce-badge{font-size:9px;font-weight:700;padding:2px 6px;border-radius:3px;
-            font-family:'Barlow Condensed',sans-serif;letter-spacing:.05em;}
-  .ce-badge.III{background:#1A2A3A;color:#88AABB;border:1px solid #2A4A5A;}
-  .ce-badge.IV {background:#1A2010;color:#88BB77;border:1px solid #2A4A20;}
-  .ce-badge.V  {background:#2A1A08;color:#DDAA55;border:1px solid #5A3A10;}
-
-  .plant-list{flex:1;overflow-y:auto;padding:6px 0;
-              scrollbar-width:thin;scrollbar-color:var(--border) transparent;}
-  .plant-item{display:flex;align-items:center;gap:9px;padding:7px 16px;
-              cursor:pointer;border-left:3px solid transparent;transition:all .14s;}
-  .plant-item:hover{background:var(--surface2);}
-  .plant-item.active{background:var(--surface2);}
-  .plant-item.active.p15 {border-left-color:var(--p15);}
-  .plant-item.active.p4  {border-left-color:var(--p4);}
-  .plant-item.active.p105{border-left-color:var(--p105);}
-  .plant-item.hidden{display:none;}
-  .pi-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
-  .pi-dot.p15 {background:var(--p15);box-shadow:0 0 5px var(--p15);}
-  .pi-dot.p4  {background:var(--p4); box-shadow:0 0 5px var(--p4);}
-  .pi-dot.p105{background:var(--p105);box-shadow:0 0 5px var(--p105);}
-  .pi-name{font-family:'Barlow Condensed',sans-serif;font-size:13.5px;
-           font-weight:600;letter-spacing:.04em;flex:1;}
-  .pi-reg{font-size:9.5px;letter-spacing:.05em;}
-  .pi-reg.Basilicata{color:#4A7AAA;}
-  .pi-reg.Puglia    {color:#AA8A3A;}
-  .pi-reg.Campania  {color:#4AAA7A;}
-  .pi-ce{font-size:9px;font-weight:700;padding:1px 5px;border-radius:3px;
-         font-family:'Barlow Condensed',sans-serif;margin-left:2px;}
-  .pi-ce.III{background:#1A2A3A;color:#88AABB;}
-  .pi-ce.IV {background:#1A2010;color:#88BB77;}
-  .pi-ce.V  {background:#2A1A08;color:#DDAA55;}
-
-  .detail{background:var(--surface2);border-top:1px solid var(--border);
-          padding:14px 16px;min-height:108px;}
-  .det-name{font-family:'Barlow Condensed',sans-serif;font-size:19px;
-            font-weight:700;letter-spacing:.04em;margin-bottom:7px;}
-  .det-name.p15 {color:var(--p15);}
-  .det-name.p4  {color:var(--p4);}
-  .det-name.p105{color:var(--p105);}
-  .det-row{display:flex;justify-content:space-between;font-size:11px;
-           color:var(--text-mid);padding:3px 0;border-bottom:1px solid var(--border);}
-  .det-row:last-child{border:none;}
-  .det-val{color:var(--text-hi);font-weight:600;}
-  .det-empty{font-size:11.5px;color:var(--text-lo);font-style:italic;padding-top:6px;}
-
   footer{flex-shrink:0;background:var(--bg);border-top:1px solid var(--border);
          padding:6px 28px;display:flex;justify-content:space-between;
-         align-items:center;font-size:9.5px;color:var(--text-lo);letter-spacing:.04em;}
+         align-items:center;font-family:'Space Mono',monospace;font-size:9px;color:var(--text-lo);letter-spacing:.04em;}
 
   .leaflet-container{background:var(--surface)!important;}
   .leaflet-control-zoom a{background:var(--surface2)!important;color:var(--text-mid)!important;
@@ -142,28 +55,25 @@
                                   color:var(--text-hi)!important;}
   .leaflet-popup-tip{background:var(--surface2)!important;}
   .leaflet-popup-content{margin:11px 15px!important;}
-  .popup-name{font-family:'Barlow Condensed',sans-serif;font-size:17px;
-              font-weight:700;letter-spacing:.04em;margin-bottom:5px;}
-  .popup-row{font-size:11px;color:var(--text-mid);margin:2px 0;}
+  .popup-name{font-family:'Space Grotesk',sans-serif;font-size:15px;
+              font-weight:700;letter-spacing:.03em;margin-bottom:5px;}
+  .popup-row{font-family:'Space Mono',monospace;font-size:10.5px;color:var(--text-mid);margin:2px 0;}
   .popup-row span{color:var(--text-hi);font-weight:600;}
-  .plant-list::-webkit-scrollbar{width:4px;}
-  .plant-list::-webkit-scrollbar-track{background:transparent;}
-  .plant-list::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px;}
 </style>
 </head>
 <body>
 
 <header>
   <div>
-    <div class="h-title">PV Portfolio &mdash; Southern Italy</div>
+    <div class="h-title" id="hTitle">PV Portfolio &mdash; Southern Italy</div>
     <div class="h-sub">Basilicata · Campania · Puglia</div>
   </div>
   <div class="h-div"></div>
   <div class="kpi-group">
-    <div class="kpi"><span class="kpi-val">~50</span><span class="kpi-lbl">Total MWp</span></div>
-    <div class="kpi"><span class="kpi-val">3</span><span class="kpi-lbl">Regions</span></div>
+    <div class="kpi"><span class="kpi-val">~50</span><span class="kpi-lbl" id="kpiMwpLbl">Total MWp</span></div>
+    <div class="kpi"><span class="kpi-val">3</span><span class="kpi-lbl" id="kpiRegionsLbl">Regions</span></div>
   </div>
-  <div class="badge">Last update Apr 2026</div>
+  <div class="badge" id="badge">Last update Apr 2026</div>
 </header>
 
 
@@ -173,11 +83,29 @@
 </div>
 
 <footer>
-  <span>Regional boundaries: ISTAT / OnData 2026 &nbsp;·&nbsp; Plant data: project KML</span>
+  <span id="footerSrc">Regional boundaries: ISTAT / OnData 2026 &nbsp;·&nbsp; Plant data: project KML</span>
   <span></span>
 </footer>
 
 <script>
+// ── i18n (single file, language via ?lang=) ──
+const lang = (new URLSearchParams(location.search).get('lang') === 'it') ? 'it' : 'en';
+const T = {
+  en: { title:'PV Portfolio — Southern Italy', mwp:'Total MWp', regions:'Regions',
+        badge:'Last update Apr 2026', plants:'Plants in area', capacity:'Capacity',
+        footer:'Regional boundaries: ISTAT / OnData 2026 &nbsp;·&nbsp; Plant data: project KML' },
+  it: { title:'Portfolio Fotovoltaico — Sud Italia', mwp:'MWp totali', regions:'Regioni',
+        badge:'Ultimo aggiornamento Apr 2026', plants:'Impianti nell’area', capacity:'Capacità',
+        footer:'Confini regionali: ISTAT / OnData 2026 &nbsp;·&nbsp; Dati impianti: KML di progetto' }
+}[lang];
+document.documentElement.lang = lang;
+document.title = T.title;
+document.getElementById('hTitle').innerHTML = T.title.replace('—', '&mdash;');
+document.getElementById('kpiMwpLbl').textContent = T.mwp;
+document.getElementById('kpiRegionsLbl').textContent = T.regions;
+document.getElementById('badge').textContent = T.badge;
+document.getElementById('footerSrc').innerHTML = T.footer;
+
 const locations = [
   // Basilicata
   {lat:40.347222,lon:15.755556,region:"Basilicata",mwp:1,count:1},
@@ -237,10 +165,10 @@ locations.forEach(loc=>{
   const m = L.marker([loc.lat,loc.lon],{icon}).addTo(map);
   const popupHtml = loc.count>1
     ? `<div class="popup-name" style="color:${color}">${loc.region}</div>
-       <div class="popup-row">Plants in area &nbsp;<span>${loc.count}</span></div>
-       <div class="popup-row">Capacity &nbsp;<span>~${loc.mwp} MWp</span></div>`
+       <div class="popup-row">${T.plants} &nbsp;<span>${loc.count}</span></div>
+       <div class="popup-row">${T.capacity} &nbsp;<span>~${loc.mwp} MWp</span></div>`
     : `<div class="popup-name" style="color:${color}">${loc.region}</div>
-       <div class="popup-row">Capacity &nbsp;<span>~${loc.mwp} MWp</span></div>`;
+       <div class="popup-row">${T.capacity} &nbsp;<span>~${loc.mwp} MWp</span></div>`;
   m.bindPopup(popupHtml,{maxWidth:200});
 });
 
