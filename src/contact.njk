@@ -77,6 +77,9 @@ permalink: "{{ lang.urlPrefix }}/contact.html"
       <h2 class="section-title crimson" style="font-size:28px; margin-bottom: 8px;">{{ t.form_title }}</h2>
       <p style="font-size:14px; color:var(--text-2); margin-bottom: 32px;">{{ t.form_helper }}</p>
       <form onsubmit="handleSubmit(event)">
+        <input type="hidden" name="access_key" value="b8a62092-f65a-4d65-a8aa-7c4ad4a4a04e">
+        <input type="hidden" name="from_name" value="Maverick Global Investments — Website">
+        <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="form-grid">
           <div class="form-field">
             <label for="name">{{ t.form_label_name }}</label>
@@ -111,6 +114,7 @@ permalink: "{{ lang.urlPrefix }}/contact.html"
           </div>
         </div>
         <button type="submit" class="btn btn-primary">{{ t.form_submit }}</button>
+        <p class="form-result" id="form-result" role="status" aria-live="polite" style="display:none; margin-top:16px; font-size:14px;"></p>
         <p class="form-note">{{ t.form_note }}</p>
       </form>
     </div>
@@ -119,44 +123,43 @@ permalink: "{{ lang.urlPrefix }}/contact.html"
 
 {% block scripts %}
 <script>
-function handleSubmit(e) {
+async function handleSubmit(e) {
   e.preventDefault();
   const f = e.target;
-  const name    = f.name.value.trim();
-  const company = f.company.value.trim();
-  const email   = f.email.value.trim();
-  const type    = f.type.options[f.type.selectedIndex].text;
-  const subject = f.subject.value.trim() || '{{ t.form_subject_default }}';
-  const message = f.message.value.trim();
-
-  const body = [
-    '{{ t.form_js_name }}' + name,
-    company ? '{{ t.form_js_company }}' + company : '',
-    '{{ t.form_js_email }}' + email,
-    type && type !== '{{ t.form_select_default }}' ? '{{ t.form_js_profile }}' + type : '',
-    '',
-    message
-  ].filter(Boolean).join('
-');
-
-  const mailto =
-    'mailto:contact@maverickglob.com' +
-    '?subject=' + encodeURIComponent(subject) +
-    '&body='    + encodeURIComponent(body);
-
-  const a = document.createElement('a');
-  a.href = mailto;
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-
   const btn = f.querySelector('button[type=submit]');
+  const result = document.getElementById('form-result');
+
+  if (!f.subject.value.trim()) {
+    f.subject.value = '{{ t.form_subject_default }}';
+  }
+
   btn.textContent = '{{ t.form_submit_opening }}';
   btn.disabled = true;
-  setTimeout(() => {
+  result.style.display = 'none';
+
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(f)
+    });
+    const data = await res.json();
+    if (res.ok && data.success) {
+      result.textContent = '{{ t.form_success }}';
+      result.style.color = 'var(--amber)';
+      result.style.display = 'block';
+      f.reset();
+    } else {
+      throw new Error(data.message || 'submit failed');
+    }
+  } catch (err) {
+    result.textContent = '{{ t.form_error }}';
+    result.style.color = 'var(--rose)';
+    result.style.display = 'block';
+  } finally {
     btn.textContent = '{{ t.form_submit }}';
     btn.disabled = false;
-  }, 3000);
+  }
 }
 </script>
 {% endblock %}
