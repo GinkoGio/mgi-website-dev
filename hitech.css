@@ -1629,6 +1629,9 @@ footer::before {
 .page-hero,
 .section-dark,
 .cta-banner,
+/* Inline-styled dark stat cards (background:var(--bg-3)) on light pages —
+   scope the text tokens to light so labels/subs stay legible. */
+[style*="var(--bg-3)"],
 footer {
   --text-1: #f0ece8;
   --text-2: #c0a898;
