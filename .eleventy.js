@@ -12,6 +12,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "hitech.js": "hitech.js" });
   eleventyConfig.addPassthroughCopy({ "images": "images" });
   eleventyConfig.addPassthroughCopy({ "pv_portfolio_map.html": "pv_portfolio_map.html" });
+  eleventyConfig.addPassthroughCopy({ "robots.txt": "robots.txt" });
 
   // Usage: {% set t = i18n.pageName | localize(lang.code) %}
   // Returns an object with values already resolved for the current locale.
