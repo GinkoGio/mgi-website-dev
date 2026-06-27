@@ -343,7 +343,6 @@
     "phone_hours": { "en": "Available Monday–Friday · 9:00 AM – 7:00 PM CET", "it": "Disponibile lunedì–venerdì · 9:00 – 19:00 CET" },
 
     "btn_write":    { "en": "Write to Us",        "it": "Scrivici" },
-    "btn_schedule": { "en": "Schedule a Meeting", "it": "Fissa un Incontro" },
 
     "form_eyebrow":    { "en": "Send a Message",                        "it": "Invia un Messaggio" },
     "form_title":      { "en": "Tell Us About Your Project",            "it": "Raccontaci il Tuo Progetto" },
