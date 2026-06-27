@@ -199,8 +199,8 @@
     "div_btn2":    { "en": "Discuss Opportunities",    "it": "Discuti le Opportunità" },
 
     "stat1_num":      "~50 MW",
-    "stat1_label":    { "en": "Current PV Capacity",         "it": "Capacità FV Attuale" },
-    "stat1_sub":      { "en": "Puglia, Basilicata & Campania, Italy", "it": "Puglia, Basilicata e Campania, Italia" },
+    "stat1_label":    { "en": "Operational PV Capacity",     "it": "Capacità FV Operativa" },
+    "stat1_sub":      { "en": "+ ~100 MW in development · S. Italy", "it": "+ ~100 MW in sviluppo · Sud Italia" },
     "stat2_num":      "3",
     "stat2_label":    { "en": "Asset Classes",               "it": "Classi di Asset" },
     "stat2_sub":      { "en": "Energy, Real Estate, Finance","it": "Energia, Immobiliare, Finanza" },
@@ -258,7 +258,8 @@
     "stat3_num":   { "en": "70M",     "it": "70M" },
     "stat3_label": { "en": "kWh Produced Annually",  "it": "kWh Prodotti Annualmente" },
     "stat4_num":   "~50 MW",
-    "stat4_label": { "en": "Portfolio Capacity",     "it": "Capacità del Portafoglio" }
+    "stat4_label": { "en": "Portfolio Capacity",     "it": "Capacità del Portafoglio" },
+    "stat4_sub":   { "en": "+ ~100 MW in development", "it": "+ ~100 MW in sviluppo" }
   },
 
   "portfolio": {
@@ -276,8 +277,8 @@
     "intro_p2": { "en": "Each asset has been selected through our rigorous due diligence process, evaluated for technical performance, grid connection quality, irradiation levels, and long-term operational stability.", "it": "Ogni asset è sottoposto a un rigoroso processo di due diligence, che include l'analisi delle performance tecniche, la qualità dell'infrastruttura di connessione alla rete, i livelli di irraggiamento solare e la stabilità operativa di lungo periodo." },
 
     "stat1_num":   "~50 MW",
-    "stat1_label": { "en": "Total PV Capacity",      "it": "Capacità FV Totale" },
-    "stat1_sub":   { "en": "Operational portfolio",  "it": "Portafoglio operativo" },
+    "stat1_label": { "en": "Operational PV Capacity", "it": "Capacità FV Operativa" },
+    "stat1_sub":   { "en": "Operational · + ~100 MW in development",  "it": "Operativi · + ~100 MW in sviluppo" },
     "stat2_num":   { "en": "70,000", "it": "70.000" },
     "stat2_label": { "en": "MWh Produced",           "it": "MWh Prodotti" },
     "stat2_sub":   { "en": "Annual energy output",   "it": "Produzione energetica annua" },
@@ -308,7 +309,7 @@
     "hl_r2_label": { "en": "Regions",             "it": "Regioni" },
     "hl_r2_val":   "Puglia, Basilicata, Campania",
     "hl_r3_label": { "en": "Total capacity",      "it": "Capacità totale" },
-    "hl_r3_val":   "~50 MW",
+    "hl_r3_val":   { "en": "~50 MW operational + ~100 MW in development", "it": "~50 MW operativi + ~100 MW in sviluppo" },
     "hl_r4_label": { "en": "Specific yield",      "it": "Resa specifica" },
     "hl_r4_val":   { "en": ">1,400 MWh/MW/yr",    "it": ">1.400 MWh/MW/anno" },
     "hl_r5_label": { "en": "Management",          "it": "Gestione" },
