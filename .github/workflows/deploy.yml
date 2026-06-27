@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - restyling/solar-white
   workflow_dispatch:
     inputs:
       design_branch:
