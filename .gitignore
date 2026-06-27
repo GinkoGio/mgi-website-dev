@@ -10,6 +10,9 @@ npm-debug.log*
 # Eleventy build output
 _site/
 
+# Generated at build time into _site/ (see scripts/generate-sitemap.js)
+/sitemap.xml
+
 # Editor & IDE
 .vscode/
 .idea/

@@ -2,7 +2,11 @@ const fs = require('fs');
 const path = require('path');
 
 const i18nPath = path.join(__dirname, '..', 'src', '_data', 'i18n.json');
-const outPath = path.join(__dirname, '..', 'sitemap.xml');
+// Write into the build output so the sitemap is actually deployed (the
+// GitHub Pages workflow publishes _site/ only). _site/ exists because
+// Eleventy runs before this script in `npm run build`.
+const outDir = path.join(__dirname, '..', '_site');
+const outPath = path.join(outDir, 'sitemap.xml');
 
 const raw = fs.readFileSync(i18nPath, 'utf8');
 const i18n = JSON.parse(raw);
@@ -27,5 +31,6 @@ const body = unique.map(u => {
   return `  <url>\n    <loc>${u}</loc>\n    <lastmod>${now}</lastmod>\n  </url>`;
 }).join('\n');
 
+fs.mkdirSync(outDir, { recursive: true });
 fs.writeFileSync(outPath, header + body + '\n' + footer);
 console.log(`Sitemap written to ${outPath} (${unique.length} URLs)`);
