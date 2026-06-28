@@ -41,8 +41,8 @@
           var dy   = nodes[j].y - nodes[i].y;
           var d    = Math.sqrt(dx * dx + dy * dy);
           if (d < DIST) {
-            ctx.globalAlpha = (1 - d / DIST) * 0.95;
-            ctx.strokeStyle = '#e8700a';
+            ctx.globalAlpha = (1 - d / DIST) * 0.22;
+            ctx.strokeStyle = '#8e2f43';
             ctx.beginPath();
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.lineTo(nodes[j].x, nodes[j].y);

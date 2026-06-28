@@ -1,34 +1,38 @@
 /* =============================================
-   MGI — Solar White Design System (Option C)
-   Mediterranean warmth: cream bg, terracotta
-   accent, verde secondary. Dark hero / footer.
+   MGI — Private Equity Boutique Design System
+   Institutional restraint: midnight-navy dominant,
+   burgundy accent, muted-gold secondary. Ivory
+   contrast islands (page-hero / section-dark / CTA).
    ============================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 /* ── VARIABLES ─────────────────────────────── */
 :root {
-  /* Backgrounds — warm cream, light-mode dominant */
-  --bg-0:        #faf8f5;
-  --bg-1:        #f0ece6;
-  --bg-2:        #e8e2d9;
-  --bg-3:        #1a1614;
+  /* Backgrounds — warm ivory, light-mode (no dark sections) */
+  --bg-0:        #f4f1ea;   /* page — warm ivory */
+  --bg-1:        #ece7dd;   /* sections */
+  --bg-2:        #ffffff;   /* cards / form */
+  --bg-3:        #efe9df;   /* subtle warm bands (page-hero, section-dark, CTA) */
 
-  /* Primary accent — terracotta/solar amber */
-  --rose:        #e8700a;
-  --rose-dim:    rgba(232, 112, 10, 0.10);
-  --rose-border: rgba(232, 112, 10, 0.28);
-  --rose-glow:   rgba(232, 112, 10, 0.38);
+  /* Primary accent — deep burgundy */
+  --rose:        #8e2f43;
+  --rose-dim:    rgba(142, 47, 67, 0.10);
+  --rose-border: rgba(142, 47, 67, 0.28);
+  --rose-glow:   rgba(142, 47, 67, 0.38);
 
-  /* Secondary — verde prato */
-  --amber:       #2a7d4f;
+  /* Secondary — muted gold */
+  --amber:       #b08d4f;
 
-  /* Text — dark on light backgrounds */
-  --text-1:      #1a1614;
-  --text-2:      #6b5e54;
-  --text-3:      #9a8a7a;
+  /* Accent TEXT — burgundy reads cleanly on the light palette. */
+  --accent-text: #8e2f43;
 
-  --border:      rgba(232, 112, 10, 0.15);
+  /* Text — dark ink on light backgrounds */
+  --text-1:      #1f2733;
+  --text-2:      #5d6675;
+  --text-3:      #8b93a1;
+
+  --border:      rgba(142, 47, 67, 0.15);
   --nav-h:       68px;
 }
 
@@ -61,7 +65,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(26, 22, 20, 0.90);
+  background: rgba(247, 244, 238, 0.85);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border-bottom: 1px solid var(--border);
@@ -80,9 +84,9 @@ body {
 }
 
 #main-nav.scrolled {
-  background: rgba(26, 22, 20, 0.98);
+  background: rgba(247, 244, 238, 0.95);
   border-bottom-color: var(--rose-border);
-  box-shadow: 0 4px 48px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 2px 14px rgba(31, 39, 51, 0.07);
 }
 
 #main-nav.scrolled::after { opacity: 1; }
@@ -113,7 +117,7 @@ body {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 15px;
   font-weight: 700;
-  color: var(--rose);
+  color: var(--accent-text);
   line-height: 1;
   letter-spacing: 0.04em;
 }
@@ -149,7 +153,7 @@ body {
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: var(--rose);
+  color: var(--accent-text);
   background: var(--rose-dim);
 }
 
@@ -163,8 +167,8 @@ body {
 }
 
 .nav-links a.nav-cta:hover {
-  background: #f07820;
-  box-shadow: 0 0 20px rgba(232, 112, 10, 0.35);
+  background: #a8384f;
+  box-shadow: 0 0 8px rgba(142, 47, 67, 0.03);   /* glow kept ~off — raise alpha to re-enable */
   color: #fff;
 }
 
@@ -174,19 +178,19 @@ body {
   font-size: 11px !important;
   font-weight: 700 !important;
   letter-spacing: 0.1em !important;
-  color: var(--rose) !important;
+  color: var(--accent-text) !important;
   border: 1.5px solid var(--rose) !important;
   border-radius: 4px !important;
   padding: 5px 12px !important;
   opacity: 1;
   transition: background 0.2s, box-shadow 0.2s !important;
-  background: rgba(232, 112, 10, 0.08) !important;
+  background: rgba(142, 47, 67, 0.08) !important;
 }
 
 .lang-btn:hover {
   background: var(--rose-dim) !important;
-  box-shadow: 0 0 14px rgba(232, 112, 10, 0.3) !important;
-  color: var(--rose) !important;
+  box-shadow: 0 0 8px rgba(142, 47, 67, 0.03) !important;   /* glow kept ~off */
+  color: var(--accent-text) !important;
 }
 
 /* Hamburger */
@@ -242,7 +246,7 @@ body {
   align-items: center;
   gap: clamp(48px, 6vw, 96px);
   position: relative;
-  background: linear-gradient(135deg, #1a1614 0%, #221a18 55%, #2a201c 100%);
+  background: linear-gradient(135deg, #f6f3ec 0%, #efe9df 55%, #e7e0d3 100%);
   overflow: hidden;
 }
 
@@ -261,7 +265,7 @@ body {
   width: clamp(280px, 42vw, 540px);
   display: flex;
   flex-direction: column;
-  border-left: 1px solid rgba(232, 112, 10, 0.18);
+  border-left: 1px solid rgba(142, 47, 67, 0.18);
   padding-left: clamp(28px, 3vw, 48px);
   position: relative;
   z-index: 1;
@@ -279,14 +283,14 @@ body {
   width: 100%;
   height: auto;
   display: block;
-  mix-blend-mode: screen;
+  mix-blend-mode: multiply;
   opacity: 0.82;
 }
 
 /* Metrics row — horizontal under the image */
 .hero-metrics {
   display: flex;
-  border-top: 1px solid rgba(232, 112, 10, 0.18);
+  border-top: 1px solid rgba(142, 47, 67, 0.18);
   padding-top: 22px;
 }
 
@@ -294,7 +298,7 @@ body {
   flex: 1;
   padding: 0 18px 0 0;
   border-bottom: none;
-  border-right: 1px solid rgba(232, 112, 10, 0.08);
+  border-right: 1px solid rgba(142, 47, 67, 0.08);
 }
 
 .hero-metrics .hero-metric:last-child {
@@ -309,7 +313,7 @@ body {
 /* keep the rule but it's now only for bare .hero-metric outside .hero-metrics */
 .hero-metric {
   padding: 28px 0;
-  border-bottom: 1px solid rgba(232, 112, 10, 0.08);
+  border-bottom: 1px solid rgba(142, 47, 67, 0.08);
 }
 .hero-metric:first-child { padding-top: 0; }
 .hero-metric:last-child  { border-bottom: none; padding-bottom: 0; }
@@ -318,8 +322,8 @@ body {
   font-family: 'Space Mono', monospace;
   font-size: clamp(28px, 3vw, 42px);
   font-weight: 700;
-  color: var(--rose);
-  text-shadow: 0 0 18px rgba(232, 112, 10, 0.45);
+  color: var(--accent-text);
+  text-shadow: none;
   line-height: 1;
   letter-spacing: -0.02em;
 }
@@ -356,8 +360,8 @@ body {
   position: absolute;
   inset: -30%;           /* oversized: gives translate buffer inside overflow:hidden */
   background:
-    radial-gradient(ellipse 44% 38% at 78% 22%, rgba(232, 112, 10, 0.42) 0%, transparent 55%),
-    radial-gradient(ellipse 36% 44% at 18% 82%, rgba(26, 22, 20, 0.28) 0%, transparent 52%);
+    radial-gradient(ellipse 44% 38% at 78% 22%, rgba(142, 47, 67, 0.03) 0%, transparent 55%),
+    radial-gradient(ellipse 36% 44% at 18% 82%, rgba(176, 141, 79, 0.03) 0%, transparent 52%);
   pointer-events: none;
   z-index: -1;
   will-change: transform;
@@ -369,7 +373,7 @@ body {
   content: '';
   position: absolute;
   inset: -30%;
-  background: radial-gradient(ellipse 54% 46% at 22% 78%, rgba(232, 112, 10, 0.36) 0%, transparent 55%);
+  background: radial-gradient(ellipse 54% 46% at 22% 78%, rgba(142, 47, 67, 0.03) 0%, transparent 55%);
   pointer-events: none;
   z-index: -1;
   will-change: transform, opacity;
@@ -405,9 +409,9 @@ body {
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--rose);
-  background: rgba(232, 112, 10, 0.08);
-  border: 1px solid rgba(232, 112, 10, 0.24);
+  color: var(--accent-text);
+  background: rgba(142, 47, 67, 0.08);
+  border: 1px solid rgba(142, 47, 67, 0.24);
   border-radius: 40px;
   padding: 6px 14px 6px 10px;
   margin-bottom: 30px;
@@ -419,7 +423,7 @@ body {
   height: 6px;
   background: var(--amber);
   border-radius: 50%;
-  box-shadow: 0 0 8px rgba(42, 125, 79, 0.7), 0 0 16px rgba(42, 125, 79, 0.3);
+  box-shadow: 0 0 5px rgba(176, 141, 79, 0.06);   /* glow kept ~off */
   animation: pulseDot 2.2s ease-in-out infinite;
   flex-shrink: 0;
 }
@@ -442,7 +446,7 @@ body {
   width: auto;
   flex-shrink: 0;
   /* Let the logo's own crimson read naturally — no filter */
-  filter: drop-shadow(0 4px 24px rgba(232, 112, 10, 0.3));
+  filter: drop-shadow(0 4px 24px rgba(142, 47, 67, 0.3));
 }
 
 .hero-wordmark {
@@ -455,7 +459,7 @@ body {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
   font-size: clamp(44px, 6vw, 84px);
-  color: #ffffff;
+  color: var(--text-1);
   letter-spacing: -0.02em;
   line-height: 1;
 }
@@ -481,8 +485,8 @@ body {
 }
 
 .accent-word {
-  color: var(--rose);
-  text-shadow: 0 0 28px rgba(232, 112, 10, 0.45), 0 0 56px rgba(232, 112, 10, 0.18);
+  color: var(--accent-text);
+  text-shadow: none;
 }
 
 .hero-subtitle {
@@ -504,7 +508,7 @@ body {
 .hero-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  border-top: 1px solid rgba(232, 112, 10, 0.12);
+  border-top: 1px solid rgba(142, 47, 67, 0.12);
   padding-top: 28px;
   margin-bottom: 36px;
 }
@@ -512,7 +516,7 @@ body {
 .stat-item { padding-right: 16px; }
 
 .stat-item + .stat-item {
-  border-left: 1px solid rgba(232, 112, 10, 0.1);
+  border-left: 1px solid rgba(142, 47, 67, 0.1);
   padding-left: 16px;
 }
 
@@ -520,8 +524,8 @@ body {
   font-family: 'Space Mono', monospace;
   font-size: clamp(22px, 2.8vw, 34px);
   font-weight: 700;
-  color: var(--rose);
-  text-shadow: 0 0 18px rgba(232, 112, 10, 0.5), 0 0 36px rgba(232, 112, 10, 0.22);
+  color: var(--accent-text);
+  text-shadow: none;
   line-height: 1;
   letter-spacing: -0.01em;
 }
@@ -581,8 +585,8 @@ body {
 }
 
 .btn-primary:hover {
-  background: #f07820;
-  box-shadow: 0 0 28px rgba(232, 112, 10, 0.45);
+  background: #a8384f;
+  box-shadow: 0 0 10px rgba(142, 47, 67, 0.03);   /* glow kept ~off */
   transform: translateY(-1px);
 }
 
@@ -591,14 +595,14 @@ body {
 .btn-ghost {
   background: transparent;
   color: var(--text-1);
-  border: 1px solid rgba(232, 112, 10, 0.24);
+  border: 1px solid rgba(142, 47, 67, 0.24);
 }
 
 .btn-ghost:hover {
   border-color: var(--rose);
-  color: var(--rose);
+  color: var(--accent-text);
   background: var(--rose-dim);
-  box-shadow: 0 0 16px rgba(232, 112, 10, 0.12);
+  box-shadow: 0 0 8px rgba(142, 47, 67, 0.03);   /* glow kept ~off */
   transform: translateY(-1px);
 }
 
@@ -622,8 +626,8 @@ body {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(26,22,20,0.7) 0%, rgba(26,22,20,0.22) 30%, transparent 60%),
-    linear-gradient(to top, rgba(26,22,20,0.55) 0%, transparent 45%);
+    linear-gradient(90deg, rgba(12, 20, 34,0.7) 0%, rgba(12, 20, 34,0.22) 30%, transparent 60%),
+    linear-gradient(to top, rgba(12, 20, 34,0.55) 0%, transparent 45%);
   z-index: 2;
   pointer-events: none;
 }
@@ -661,8 +665,8 @@ body {
   bottom: 28px;
   right: 20px;
   z-index: 3;
-  background: rgba(26, 22, 20, 0.84);
-  border: 1px solid rgba(232, 112, 10, 0.22);
+  background: rgba(12, 20, 34, 0.84);
+  border: 1px solid rgba(142, 47, 67, 0.22);
   border-radius: 6px;
   padding: 14px 18px;
   backdrop-filter: blur(16px);
@@ -701,7 +705,7 @@ body {
 }
 
 .hud-row + .hud-row {
-  border-top: 1px solid rgba(232, 112, 10, 0.08);
+  border-top: 1px solid rgba(142, 47, 67, 0.08);
   margin-top: 5px;
   padding-top: 7px;
 }
@@ -762,7 +766,7 @@ body {
 /* ── SECTORS SECTION ───────────────────────── */
 .sectors-section {
   background: var(--bg-1);
-  background-image: radial-gradient(circle, rgba(232, 112, 10, 0.045) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(142, 47, 67, 0.045) 1px, transparent 1px);
   background-size: 36px 36px;
   padding: 96px 0;
   position: relative;
@@ -786,7 +790,7 @@ body {
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--rose);
+  color: var(--accent-text);
   margin-bottom: 12px;
   opacity: 0.75;
 }
@@ -833,11 +837,8 @@ body {
 }
 
 .sector-card:hover {
-  border-color: rgba(232, 112, 10, 0.42);
-  box-shadow:
-    0 0 40px rgba(232, 112, 10, 0.08),
-    0 20px 40px rgba(0, 0, 0, 0.5),
-    inset 0 0 40px rgba(232, 112, 10, 0.03);
+  border-color: rgba(142, 47, 67, 0.42);
+  box-shadow: 0 8px 20px rgba(31, 39, 51, 0.07);
   transform: translateY(-3px);
 }
 
@@ -860,22 +861,22 @@ body {
 .sector-icon {
   width: 46px;
   height: 46px;
-  background: rgba(232, 112, 10, 0.07);
-  border: 1px solid rgba(232, 112, 10, 0.16);
+  background: rgba(142, 47, 67, 0.07);
+  border: 1px solid rgba(142, 47, 67, 0.16);
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 22px;
-  color: var(--rose);
+  color: var(--accent-text);
   flex-shrink: 0;
   transition: background 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
 
 .sector-card:hover .sector-icon {
-  background: rgba(232, 112, 10, 0.13);
-  border-color: rgba(232, 112, 10, 0.32);
-  box-shadow: 0 0 16px rgba(232, 112, 10, 0.18);
+  background: rgba(142, 47, 67, 0.13);
+  border-color: rgba(142, 47, 67, 0.32);
+  box-shadow: 0 0 8px rgba(142, 47, 67, 0.03);   /* glow kept ~off */
 }
 
 .sector-icon svg {
@@ -903,7 +904,7 @@ body {
 .card-link {
   font-size: 12.5px;
   font-weight: 700;
-  color: var(--rose);
+  color: var(--accent-text);
   text-decoration: none;
   letter-spacing: 0.04em;
   display: inline-flex;
@@ -918,8 +919,8 @@ body {
 
 /* ── FOOTER ────────────────────────────────── */
 footer {
-  background: #1a1614;
-  border-top: 1px solid rgba(232, 112, 10, 0.18);
+  background: #e9e3d8;
+  border-top: 1px solid rgba(142, 47, 67, 0.18);
   padding: 56px 0 28px;
   position: relative;
   z-index: 1;
@@ -931,7 +932,7 @@ footer::before {
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(232, 112, 10, 0.32) 35%, rgba(232, 112, 10, 0.32) 65%, transparent);
+  background: linear-gradient(90deg, transparent, rgba(142, 47, 67, 0.32) 35%, rgba(142, 47, 67, 0.32) 65%, transparent);
 }
 
 .footer-inner {
@@ -978,7 +979,7 @@ footer::before {
 }
 
 .footer-col ul li a:hover {
-  color: var(--rose);
+  color: var(--accent-text);
   opacity: 1;
 }
 
@@ -999,7 +1000,7 @@ footer::before {
 }
 
 .footer-email:hover {
-  color: var(--rose);
+  color: var(--accent-text);
   opacity: 1;
 }
 
@@ -1045,11 +1046,11 @@ footer::before {
     flex-direction: column;
     align-items: stretch;
     gap: 0;
-    background: rgba(26, 22, 20, 0.98);
+    background: rgba(247, 244, 238, 0.98);
     border-bottom: 1px solid var(--border);
     backdrop-filter: blur(20px);
     padding: 8px 0 16px;
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 8px 24px rgba(31, 39, 51, 0.12);
   }
 
   #main-nav.nav-open .nav-links { display: flex; }
@@ -1061,12 +1062,12 @@ footer::before {
     padding: 12px 24px;
     font-size: 14px;
     border-radius: 0;
-    border-bottom: 1px solid rgba(232, 112, 10, 0.06);
+    border-bottom: 1px solid rgba(142, 47, 67, 0.06);
   }
 
   .nav-links a.nav-cta {
     background: none;
-    color: var(--rose) !important;
+    color: var(--accent-text) !important;
     box-shadow: none;
   }
 
@@ -1082,7 +1083,7 @@ footer::before {
   .hero-right {
     width: 100%;
     border-left: none;
-    border-top: 1px solid rgba(232, 112, 10, 0.18);
+    border-top: 1px solid rgba(142, 47, 67, 0.18);
     padding-left: 0;
     padding-top: 32px;
   }
@@ -1119,7 +1120,7 @@ footer::before {
     border-left: none !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
-    border-top: 1px solid rgba(232, 112, 10, 0.08);
+    border-top: 1px solid rgba(142, 47, 67, 0.08);
     padding-top: 16px;
   }
 
@@ -1151,20 +1152,20 @@ footer::before {
 /* ── PAGE HERO (inner pages) ─────────────────── */
 .page-hero {
   background-color: var(--bg-3);
-  background-image: radial-gradient(circle, rgba(232,112,10,0.20) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(142, 47, 67,0.10) 1px, transparent 1px);
   background-size: 52px 52px;
   padding: calc(var(--nav-h) + 64px) 0 64px;
   position: relative;
   overflow: hidden;
-  border-bottom: 1px solid rgba(232,112,10,0.30);
+  border-bottom: 1px solid rgba(142, 47, 67,0.18);
 }
 .page-hero::before {
   content: '';
   position: absolute;
   inset: -25%;
   background:
-    radial-gradient(ellipse 55% 48% at 22% 60%, rgba(232,112,10,0.32) 0%, transparent 58%),
-    radial-gradient(ellipse 42% 38% at 80% 18%, rgba(232,112,10,0.20) 0%, transparent 55%);
+    radial-gradient(ellipse 55% 48% at 22% 60%, rgba(142, 47, 67,0.03) 0%, transparent 58%),
+    radial-gradient(ellipse 42% 38% at 80% 18%, rgba(142, 47, 67,0.025) 0%, transparent 55%);
   pointer-events: none;
   will-change: transform;
   animation: meshFloat1 28s ease-in-out infinite alternate;
@@ -1174,7 +1175,7 @@ footer::before {
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(232,112,10,0.35) 50%, transparent);
+  background: linear-gradient(90deg, transparent, rgba(142, 47, 67,0.04) 50%, transparent);
   pointer-events: none;
   z-index: 2;
 }
@@ -1198,11 +1199,11 @@ footer::before {
   font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--rose);
+  color: var(--accent-text);
   margin-bottom: 10px;
   display: block;
 }
-.section-eyebrow.light { color: var(--rose); }
+.section-eyebrow.light { color: var(--accent-text); }
 .section-title {
   font-size: clamp(24px, 3.5vw, 38px);
   color: var(--text-1);
@@ -1210,7 +1211,7 @@ footer::before {
   margin-bottom: 24px;
 }
 .section-title.light  { color: var(--text-1); }
-.section-title.crimson { color: var(--rose); }
+.section-title.crimson { color: var(--accent-text); }
 
 /* ── LEAD TEXT ───────────────────────────────── */
 .lead {
@@ -1258,7 +1259,7 @@ footer::before {
   transition: border-color 0.2s, color 0.2s, background 0.2s;
   letter-spacing: 0.03em;
 }
-.btn-outline:hover { border-color: var(--rose); color: var(--rose); background: var(--rose-dim); }
+.btn-outline:hover { border-color: var(--rose); color: var(--accent-text); background: var(--rose-dim); }
 .btn-outline-white {
   display: inline-flex;
   align-items: center;
@@ -1274,7 +1275,7 @@ footer::before {
   transition: border-color 0.2s, color 0.2s, background 0.2s;
   letter-spacing: 0.03em;
 }
-.btn-outline-white:hover { border-color: var(--rose); color: var(--rose); background: var(--rose-dim); }
+.btn-outline-white:hover { border-color: var(--rose); color: var(--accent-text); background: var(--rose-dim); }
 
 /* ── VALUE CARDS ─────────────────────────────── */
 .value-cards {
@@ -1289,7 +1290,7 @@ footer::before {
   border-radius: 10px;
   padding: 32px;
 }
-.value-card h4 { font-size: 17px; color: var(--rose); margin-bottom: 12px; }
+.value-card h4 { font-size: 17px; color: var(--accent-text); margin-bottom: 12px; }
 .value-card p  { font-size: 14px; color: var(--text-2); line-height: 1.7; }
 
 /* ── SECTOR CARDS – inner page variant ───────── */
@@ -1307,7 +1308,7 @@ footer::before {
 .sector-body h3 { font-size: 20px; color: var(--text-1); margin-bottom: 12px; }
 .sector-body p  { font-size: 15px; color: var(--text-2); line-height: 1.7; margin-bottom: 14px; }
 .sector-body ul { padding-left: 18px; color: var(--text-2); font-size: 14px; line-height: 1.9; }
-.sector-body ul li::marker { color: var(--rose); }
+.sector-body ul li::marker { color: var(--accent-text); }
 
 /* ── PORTFOLIO COLS ──────────────────────────── */
 .portfolio-cols {
@@ -1336,7 +1337,7 @@ footer::before {
   justify-content: center;
 }
 .portfolio-col-icon svg { width: 22px; height: 22px; stroke: var(--rose); fill: none; stroke-width: 1.5; }
-.focus-tag { font-weight: 700; color: var(--rose); }
+.focus-tag { font-weight: 700; color: var(--accent-text); }
 
 /* ── PHILOSOPHY STEPS ────────────────────────── */
 .philosophy-steps {
@@ -1346,7 +1347,7 @@ footer::before {
   margin: 40px 0;
 }
 .step { background: var(--bg-2); border: 1px solid var(--rose-border); border-radius: 10px; padding: 28px; }
-.step-num  { font-family: 'Space Mono', monospace; font-size: 28px; color: var(--rose); line-height: 1; margin-bottom: 16px; }
+.step-num  { font-family: 'Space Mono', monospace; font-size: 28px; color: var(--accent-text); line-height: 1; margin-bottom: 16px; }
 .step-title { font-size: 16px; font-weight: 700; color: var(--text-1); margin-bottom: 10px; }
 .step-desc  { font-size: 14px; color: var(--text-2); line-height: 1.7; }
 
@@ -1391,7 +1392,7 @@ footer::before {
   gap: 10px;
   font-size: 13px;
   font-weight: 700;
-  color: var(--rose);
+  color: var(--accent-text);
   margin-bottom: 8px;
 }
 .contact-card-head svg {
@@ -1401,7 +1402,7 @@ footer::before {
   flex-shrink: 0;
 }
 .contact-card p, .contact-card a { font-size: 14px; color: var(--text-2); text-decoration: none; line-height: 1.5; }
-.contact-card a:hover { color: var(--rose); }
+.contact-card a:hover { color: var(--accent-text); }
 
 /* ── CONTACT FORM ────────────────────────────── */
 .contact-form-wrap {
@@ -1465,7 +1466,7 @@ footer::before {
   position: absolute;
   bottom: 0; left: 0; right: 0;
   padding: 48px 16px 14px;
-  background: linear-gradient(transparent, rgba(26,22,20,0.80));
+  background: linear-gradient(transparent, rgba(12, 20, 34,0.80));
   color: var(--text-2);
   font-family: 'Space Mono', monospace;
   font-size: 11px;
@@ -1491,7 +1492,7 @@ footer::before {
   cursor: pointer;
   transition: border-color 0.15s, color 0.15s;
 }
-.slider-toggle:hover { border-color: var(--rose); color: var(--rose); }
+.slider-toggle:hover { border-color: var(--rose); color: var(--accent-text); }
 
 /* ── DIFFERENTIATORS SECTION ─────────────────── */
 .diff-section {
@@ -1523,7 +1524,7 @@ footer::before {
   font-family: 'Space Mono', monospace;
   font-size: 10px;
   font-weight: 700;
-  color: var(--rose);
+  color: var(--accent-text);
   letter-spacing: 0.14em;
   opacity: 0.55;
   margin-bottom: 22px;
@@ -1558,7 +1559,7 @@ footer::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 60% 80% at 90% 50%, rgba(232, 112, 10, 0.10) 0%, transparent 65%);
+  background: radial-gradient(ellipse 60% 80% at 90% 50%, rgba(142, 47, 67, 0.10) 0%, transparent 65%);
   pointer-events: none;
 }
 
@@ -1621,31 +1622,25 @@ footer::before {
 
 
 /* ═══════════════════════════════════════════════
-   SOLAR WHITE — dark-section overrides
-   Hero, page-hero, section-dark, CTA, footer
-   need light text since bg is charcoal (#1a1614)
+   ALL-LIGHT — content bands
+   No dark inversion: the whole site is light, so
+   these sections inherit dark text + burgundy accent
+   from :root. They keep crisp white cards and a
+   burgundy hairline to read as distinct bands.
    ═══════════════════════════════════════════════ */
-.hero-content,
 .page-hero,
 .section-dark,
 .cta-banner,
-/* Inline-styled dark stat cards (background:var(--bg-3)) on light pages —
-   scope the text tokens to light so labels/subs stay legible. */
-[style*="var(--bg-3)"],
-footer {
-  --text-1: #f0ece8;
-  --text-2: #c0a898;
-  --text-3: #8a7868;
-  --bg-1:   rgba(255, 255, 255, 0.04);
-  --bg-2:   rgba(255, 255, 255, 0.07);
-  --border: rgba(232, 112, 10, 0.18);
+[style*="var(--bg-3)"] {
+  --bg-2:   #ffffff;
+  --border: rgba(142, 47, 67, 0.20);
 }
 
-/* Mobile nav dropdown — stays dark */
+/* Mobile nav dropdown — light panel, dark text (inherits root) */
 @media (max-width: 960px) {
   .nav-links {
-    --text-1: #f0ece8;
-    --text-2: #c0a898;
+    --text-1: #1f2733;
+    --text-2: #5d6675;
   }
 }
 
@@ -1677,7 +1672,7 @@ footer {
 
 /* Sectors dot pattern — more visible on cream */
 .sectors-section {
-  background-image: radial-gradient(circle, rgba(232, 112, 10, 0.08) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(142, 47, 67, 0.08) 1px, transparent 1px);
 }
 
 /* Cards on cream bg need slightly stronger border */
@@ -1687,19 +1682,19 @@ footer {
 .portfolio-col,
 .contact-card,
 .highlight-box {
-  box-shadow: 0 2px 12px rgba(26, 22, 20, 0.06);
+  box-shadow: 0 2px 12px rgba(12, 20, 34, 0.06);
 }
 
 /* Diff section on cream — subtle top divider */
 .diff-section {
-  border-top-color: rgba(232, 112, 10, 0.12);
+  border-top-color: rgba(142, 47, 67, 0.12);
 }
 
-/* Form inputs — warm cream bg, dark text */
+/* Form inputs — white bg, dark text */
 .form-field input,
 .form-field select,
 .form-field textarea {
-  background: #faf8f5;
-  color: #1a1614;
+  background: #ffffff;
+  color: #1f2733;
 }
-.form-field select option { background: #faf8f5; color: #1a1614; }
+.form-field select option { background: #ffffff; color: #1f2733; }

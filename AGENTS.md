@@ -1,6 +1,6 @@
-# CLAUDE.md
+# AGENTS.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to Codex (Codex.ai/code) when working with code in this repository.
 
 ## Project Overview
 
@@ -99,7 +99,7 @@ npm run sync:to-main       # restyling/solar-white → main
 **What syncs:**
 
 - ✅ `src/` (all templates, layouts, data)
-- ✅ `CLAUDE.md`, `README.md`, `package.json`
+- ✅ `AGENTS.md`, `README.md`, `package.json`
 
 **What stays separate (by design):**
 
