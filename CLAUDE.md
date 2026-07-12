@@ -58,7 +58,7 @@ The `localize` filter (defined in `.eleventy.js`) resolves `{"en":"...","it":"..
 - Scroll-reveal fade-ins on `.reveal` → adds `.visible`
 - Hero parallax on `.hero-image img` (throttled via `requestAnimationFrame`)
 
-**Note:** The canvas stroke color is hardcoded in `hitech.js` line 46 — `#e0285a` on `main`, `#e8700a` on `restyling/solar-white`. It is not read from the CSS custom property; update it manually when switching palette.
+**Note:** The canvas stroke color is hardcoded in `hitech.js` line 45 — `#e0285a` on `main`, `#8e2f43` (burgundy) on `restyling/solar-white`. It is not read from the CSS custom property; update it manually when switching palette. On `restyling/solar-white` the connection-line alpha is also dialed down (`* 0.22`) for a subtle network on the light hero.
 
 **Note:** Legacy files (`animations.css`, `animations.js`, `fancy.css`, `fancy.js`) have been removed — they were unused reference copies of older code.
 
@@ -135,22 +135,28 @@ Color tokens (CSS custom properties in `hitech.css`):
 
 Fonts: Space Grotesk (headings), Inter (body), Space Mono (monospaced data) — loaded via Google Fonts.
 
-### `restyling/solar-white` branch — Solar White (option C)
+### `restyling/solar-white` branch — Private Equity Boutique (light)
 
-Light-mode dominant. Hero, page-hero, CTA banner, and footer stay dark charcoal as bookends.
+Light-mode throughout — **no dark sections, no light/dark alternation**. Warm ivory backgrounds, deep-burgundy accent, muted-gold secondary, dark-ink text. Hero, page-hero, `.section-dark`, CTA banner, and footer are all light (subtle warm bands via `--bg-3`).
 
-| Token      | Value     | Usage                                   |
-| ---------- | --------- | --------------------------------------- |
-| `--bg-0`   | `#faf8f5` | Page background (warm cream)            |
-| `--bg-1`   | `#f0ece6` | Section background                      |
-| `--bg-2`   | `#e8e2d9` | Card/form background                    |
-| `--bg-3`   | `#1a1614` | Dark sections: hero, CTA, footer        |
-| `--rose`   | `#e8700a` | Primary accent (terracotta/solar amber) |
-| `--amber`  | `#2a7d4f` | Secondary accent (verde prato)          |
-| `--text-1` | `#1a1614` | Primary text (dark on light bg)         |
-| `--text-2` | `#6b5e54` | Secondary/muted text                    |
+| Token         | Value     | Usage                                            |
+| ------------- | --------- | ------------------------------------------------ |
+| `--bg-0`      | `#f4f1ea` | Page background (warm ivory)                      |
+| `--bg-1`      | `#ece7dd` | Section background                                |
+| `--bg-2`      | `#ffffff` | Card/form background                             |
+| `--bg-3`      | `#efe9df` | Subtle warm bands (page-hero, section-dark, CTA) |
+| `--rose`      | `#8e2f43` | Primary accent — deep burgundy (fills, borders)  |
+| `--amber`     | `#b08d4f` | Secondary accent (muted gold)                    |
+| `--accent-text` | `#8e2f43` | Accent TEXT (eyebrows, KPI numbers, links, logo) |
+| `--text-1`    | `#1f2733` | Primary text (dark ink on light bg)              |
+| `--text-2`    | `#5d6675` | Secondary/muted text                             |
 
-Dark sections (`.hero-content`, `.page-hero`, `.section-dark`, `.cta-banner`, `footer`) override `--text-1/2/3` locally to light values via CSS custom property scoping.
+Notes:
+- The hero gradient (`#f6f3ec→#e7e0d3`) and footer (`#e9e3d8`) are hardcoded light, not token-driven. Hero wireframe uses `mix-blend-mode: multiply` (required on a light background).
+- `--accent-text` exists as a separate token from `--rose` so text accents can be tuned independently of fills; both are burgundy on the light palette.
+- The `.page-hero` / `.section-dark` / `.cta-banner` rule only scopes white cards + a burgundy hairline — text is inherited from `:root` (no inversion needed since everything is light).
+- **Glows are kept near-zero on purpose** (~`0.03` alpha on accent box-shadows and hero/page-hero mesh gradients, marked with a `/* glow kept ~off */` comment) so they can be re-enabled by raising the alpha. Card/nav depth shadows are soft neutral grey, not colored glows.
+- Canvas network stroke alpha is dialed down (`* 0.22`) for a subtle hero effect.
 
 Fonts: **Cormorant Garamond** (H1/H2 display), Space Grotesk (UI/cards), Inter (body), Space Mono (data).
 
@@ -164,4 +170,4 @@ Fonts: **Cormorant Garamond** (H1/H2 display), Space Grotesk (UI/cards), Inter (
 
 ## Standalone Map Page
 
-`pv_portfolio_map.html` is a self-contained page (Leaflet.js via CDN, inline CSS/JS, plant data hardcoded as JS array). **Bilingual via `?lang=` query param** (`?lang=it` → Italian, default English) — a single file resolves both languages at runtime from a small `T` i18n dictionary in the inline script; the iframe in `portfolio.njk` passes `?lang={{ lang.code }}`. Not part of the Eleventy build — copied to `_site/` as-is via passthrough. Styled with the site fonts (Space Grotesk / Space Mono / Inter); the file is **not** covered by the sync scripts, so restyle it on each branch separately (accent `#e0285a` on `main`, `#e8700a` on `restyling/solar-white`).
+`pv_portfolio_map.html` is a self-contained page (Leaflet.js via CDN, inline CSS/JS, plant data hardcoded as JS array). **Bilingual via `?lang=` query param** (`?lang=it` → Italian, default English) — a single file resolves both languages at runtime from a small `T` i18n dictionary in the inline script; the iframe in `portfolio.njk` passes `?lang={{ lang.code }}`. Not part of the Eleventy build — copied to `_site/` as-is via passthrough. Styled with the site fonts (Space Grotesk / Space Mono / Inter); the file is **not** covered by the sync scripts, so restyle it on each branch separately (accent `#e0285a` on `main`, burgundy `#8e2f43` with a warm-ivory panel on `restyling/solar-white`).

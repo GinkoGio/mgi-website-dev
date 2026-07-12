@@ -129,7 +129,7 @@ Structure format:
 | Branch                  | Design                                                            |
 | ----------------------- | ----------------------------------------------------------------- |
 | `main`                  | Dark — near-black purple/rose palette (production)                |
-| `restyling/solar-white` | Solar White — warm cream, terracotta, Cormorant Garamond headings |
+| `restyling/solar-white` | PE Boutique (light) — warm ivory, burgundy/gold accents, Cormorant Garamond headings |
 
 ```bash
 git checkout restyling/solar-white   # switch to light-mode redesign
@@ -143,7 +143,7 @@ All colors are CSS custom properties in `hitech.css`. Two palettes exist across 
 
 **`main` (dark):** `--bg-0: #06010a`, `--rose: #e0285a`, `--text-1: #f5e8ed`
 
-**`restyling/solar-white` (light):** `--bg-0: #faf8f5` (cream), `--rose: #e8700a` (terracotta), `--text-1: #1a1614`. Hero/footer/CTA stay dark charcoal (`--bg-3: #1a1614`) as bookends.
+**`restyling/solar-white` (light, PE boutique):** `--bg-0: #f4f1ea` (warm ivory), `--rose: #8e2f43` (deep burgundy), `--amber: #b08d4f` (muted gold), `--text-1: #1f2733` (dark ink). Light throughout — no dark sections; hero/footer/CTA are subtle warm bands. Colored glows are kept near-zero (raise the `0.03` alphas to re-enable).
 
 - **Typography (`main`)**: Space Grotesk (headings), Inter (body), Space Mono (data).
 - **Typography (`solar-white`)**: Cormorant Garamond (H1/H2 display), Space Grotesk (UI), Inter (body), Space Mono (data).
