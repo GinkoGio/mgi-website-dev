@@ -27,6 +27,12 @@
   /* Accent TEXT — burgundy reads cleanly on the light palette. */
   --accent-text: #8e2f43;
 
+  /* Gold TEXT — darker than --amber for contrast on light bg */
+  --gold-text:       #9a7a3f;
+  /* consumed by inline stat-box styles in synced templates via
+     var(--stat-num-color, var(--rose)) — undefined on main, so main keeps crimson */
+  --stat-num-color:  var(--gold-text);
+
   /* Text — dark ink on light backgrounds */
   --text-1:      #1f2733;
   --text-2:      #5d6675;
@@ -322,7 +328,7 @@ body {
   font-family: 'Space Mono', monospace;
   font-size: clamp(28px, 3vw, 42px);
   font-weight: 700;
-  color: var(--accent-text);
+  color: var(--gold-text);
   text-shadow: none;
   line-height: 1;
   letter-spacing: -0.02em;
@@ -524,7 +530,7 @@ body {
   font-family: 'Space Mono', monospace;
   font-size: clamp(22px, 2.8vw, 34px);
   font-weight: 700;
-  color: var(--accent-text);
+  color: var(--gold-text);
   text-shadow: none;
   line-height: 1;
   letter-spacing: -0.01em;
@@ -799,7 +805,7 @@ body {
   font-family: 'Space Grotesk', sans-serif;
   font-size: clamp(28px, 3.5vw, 46px);
   font-weight: 700;
-  color: var(--text-1);
+  color: var(--accent-text);
   letter-spacing: -0.025em;
   line-height: 1.12;
 }
@@ -1182,7 +1188,7 @@ footer::before {
 .page-hero .container { position: relative; z-index: 1; }
 .page-hero h1 {
   font-size: clamp(32px, 5vw, 52px);
-  color: var(--text-1);
+  color: var(--accent-text);
   line-height: 1.15;
   margin: 16px 0 20px;
 }
@@ -1206,11 +1212,11 @@ footer::before {
 .section-eyebrow.light { color: var(--accent-text); }
 .section-title {
   font-size: clamp(24px, 3.5vw, 38px);
-  color: var(--text-1);
+  color: var(--accent-text);
   line-height: 1.2;
   margin-bottom: 24px;
 }
-.section-title.light  { color: var(--text-1); }
+.section-title.light  { color: var(--accent-text); }
 .section-title.crimson { color: var(--accent-text); }
 
 /* ── LEAD TEXT ───────────────────────────────── */
@@ -1347,7 +1353,7 @@ footer::before {
   margin: 40px 0;
 }
 .step { background: var(--bg-2); border: 1px solid var(--rose-border); border-radius: 10px; padding: 28px; }
-.step-num  { font-family: 'Space Mono', monospace; font-size: 28px; color: var(--accent-text); line-height: 1; margin-bottom: 16px; }
+.step-num  { font-family: 'Space Mono', monospace; font-size: 28px; color: var(--gold-text); line-height: 1; margin-bottom: 16px; }
 .step-title { font-size: 16px; font-weight: 700; color: var(--text-1); margin-bottom: 10px; }
 .step-desc  { font-size: 14px; color: var(--text-2); line-height: 1.7; }
 
