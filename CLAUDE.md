@@ -13,12 +13,14 @@ Corporate website for Maverick Global Investments S.r.l. (Milan, Italy) — an i
 ```bash
 npm start                  # dev server with live reload → http://localhost:8080
 npm run build             # production build → _site/ (compatible with GitHub Pages and direct disk open)
-npm run preview           # local build (pathPrefix /) + serve → http://localhost:3000
+npm run preview           # production build + serve → http://localhost:3000
 npm run sync:from-main    # Sync content from main → restyling/solar-white
 npm run sync:to-main      # Sync content from restyling/solar-white → main
 ```
 
-The build now also includes sitemap generation via `scripts/generate-sitemap.js`, and the GitHub Actions deploy workflow is configured to run for both `main` and `restyling/solar-white`.
+The build also generates the sitemap via `scripts/generate-sitemap.js`. The GitHub Actions deploy workflow (`.github/workflows/deploy.yml`) auto-deploys to GitHub Pages **only on push to `main`**; either design can be published manually via `workflow_dispatch`, which deploys whichever branch it is launched from.
+
+`node_modules/` is git-ignored and must not be committed — CI reinstalls it with `npm ci` from `package-lock.json`.
 
 > ✅ The generated `_site/` output now uses relative asset and page links. You can open `_site/index.html` or `_site/it/index.html` directly from disk, while `npm run preview` remains useful for local server testing.
 
