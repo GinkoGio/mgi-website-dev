@@ -60,7 +60,8 @@
 - [ ] Supportare `prefers-reduced-motion`: canvas animato, parallax e counter animati oggi ignorano la preferenza di sistema
 
 ### 10. Dominio e SEO
-- [ ] Canonical/og:url/hreflang puntano a `www.maverickglob.com` (oggi non attivo) — da verificare appena il dominio va live
+- [x] Canonical/og:url/hreflang/sitemap/robots allineati al dominio principale `https://maverickglob.com` (senza www: `www.` fa 301 verso l'apex) — dominio live (2026-11-11)
+- [ ] Inviare `https://maverickglob.com/sitemap.xml` a Google Search Console (proprietà di dominio `maverickglob.com`)
 - [ ] Rimuovere `meta_keywords` (ignorato dai motori dal ~2009)
 - [ ] `© 2026` hardcoded nel footer → generare l'anno al build o aggiornarlo annualmente
 

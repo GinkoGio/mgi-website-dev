@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.maverickglob.com/sitemap.xml
+Sitemap: https://maverickglob.com/sitemap.xml
