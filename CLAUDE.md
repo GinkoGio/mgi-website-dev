@@ -22,6 +22,15 @@ The build also generates the sitemap via `scripts/generate-sitemap.js`. The GitH
 
 `node_modules/` is git-ignored and must not be committed — CI reinstalls it with `npm ci` from `package-lock.json`.
 
+## Open Items
+
+`IMPROVEMENTS.md` is the running checklist of pending site updates — check it before starting new work. Notably:
+
+- **Privacy policy is deliberately deferred** (decision 2026-11-11): no `privacy.html`, no GDPR consent checkbox in the contact form, and `form_note` still claims data is not shared with third parties (it goes through Web3Forms). Do not add these unless asked; the planned contents are listed in `IMPROVEMENTS.md` §2.
+- **Share capital (capitale sociale)** is missing from the footer legal line (`footer.legal` in `i18n.json`) — not available in the company registry extract.
+- Company data shown on the site: P.IVA / C.F. `12887430960`, REA `MI-2690910`, PEC `mavkglob@pec.it`. Emails: `info@maverickglob.com` is the general address used everywhere on the site (footer, contact page, meta, structured data); `contact@maverickglob.com` is **reserved for the contact form only** (Web3Forms delivery, and the `form_error` fallback message) — do not use it elsewhere.
+- `pv_portfolio_map_en_with details.html` is intentionally kept as a base for future map development — do not delete it.
+
 > ✅ The generated `_site/` output now uses relative asset and page links. You can open `_site/index.html` or `_site/it/index.html` directly from disk, while `npm run preview` remains useful for local server testing.
 
 ## Architecture

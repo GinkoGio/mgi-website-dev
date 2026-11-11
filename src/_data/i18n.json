@@ -15,6 +15,7 @@
     "tagline":  { "en": "An independent investment firm. Disciplined capital allocation. Active asset management.", "it": "Una società d'investimento indipendente. Allocazione disciplinata del capitale. Gestione attiva degli asset." },
     "address":  { "en": "Via Gabrio Serbelloni 5<br>20122 Milan, Italy", "it": "Via Gabrio Serbelloni 5<br>20122 Milano, Italia" },
     "copyright": { "en": "© 2026 Maverick Global Investments S.r.l. All rights reserved.", "it": "© 2026 Maverick Global Investments S.r.l. Tutti i diritti riservati." },
+    "legal":     { "en": "VAT No. and Tax Code 12887430960 · REA MI-2690910", "it": "P.IVA e C.F. 12887430960 · REA MI-2690910" },
     "disclaimer": { "en": "All investment opportunities are subject to thorough due diligence and appropriate risk assessment.", "it": "Ogni opportunità di investimento è subordinata a processi di due diligence e valutazione dei profili di rischio." }
   },
 
@@ -175,7 +176,7 @@
 
     "s1_eyebrow": { "en": "Sector 01",        "it": "Settore 01" },
     "s1_title":   { "en": "Renewable Energy", "it": "Energia Rinnovabile" },
-    "s1_p1":      { "en": "Maverick invests in utility-scale photovoltaic plants and renewable energy infrastructure, in partnership with selected industrial operators. Our portfolio includes <strong>operational and developing PV assets</strong> with annual specific yield exceeding 1,700 MWh/MW, strategically distributed throughout Italy.", "it": "Maverick investe in impianti fotovoltaici utility-scale e infrastrutture di energia rinnovabile, in partnership con operatori industriali selezionati. Il portafoglio include <strong>asset FV operativi e in sviluppo</strong> con una produzione specifica annua superiore a 1.700 MWh/MW, distribuiti strategicamente sul territorio italiano." },
+    "s1_p1":      { "en": "Maverick invests in utility-scale photovoltaic plants and renewable energy infrastructure, in partnership with selected industrial operators. Our portfolio includes <strong>operational and developing PV assets</strong> with annual specific yield exceeding 1,400 MWh/MW, strategically distributed throughout Italy.", "it": "Maverick investe in impianti fotovoltaici utility-scale e infrastrutture di energia rinnovabile, in partnership con operatori industriali selezionati. Il portafoglio include <strong>asset FV operativi e in sviluppo</strong> con una produzione specifica annua superiore a 1.400 MWh/MW, distribuiti strategicamente sul territorio italiano." },
     "s1_focus_label": { "en": "Focus areas:", "it": "Settori di riferimento:" },
     "s1_p2":      { "en": "Revamping, repowering, and integrated management. We specialize in enhancing the performance of existing installations while developing new capacity in strategic locations. Our technical expertise, combined with advanced monitoring technologies, allows us to maximize energy output and extend asset lifespans significantly beyond industry averages.", "it": "Revamping, repowering e gestione integrata. Siamo specializzati nel miglioramento delle performance di installazioni esistenti e nello sviluppo di nuova capacità in siti strategici. La nostra competenza tecnica, integrata da tecnologie avanzate di monitoraggio, ci consente di massimizzare la produzione energetica e di estendere significativamente la vita utile degli asset oltre le medie di settore." },
 
