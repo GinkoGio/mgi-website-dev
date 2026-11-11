@@ -28,6 +28,7 @@ The build also generates the sitemap via `scripts/generate-sitemap.js`. The GitH
 
 - **Privacy policy is deliberately deferred** (decision 2026-11-11): no `privacy.html`, no GDPR consent checkbox in the contact form, and `form_note` still claims data is not shared with third parties (it goes through Web3Forms). Do not add these unless asked; the planned contents are listed in `IMPROVEMENTS.md` §2.
 - **Share capital (capitale sociale)** is missing from the footer legal line (`footer.legal` in `i18n.json`) — not available in the company registry extract.
+- **Primary domain is `https://maverickglob.com` (no www)** — `www.` and the `github.io` URL 301-redirect to it. All canonical/og/hreflang URLs (`canonical` keys in `i18n.json`), structured data, `robots.txt` and the sitemap must use the apex host.
 - Company data shown on the site: P.IVA / C.F. `12887430960`, REA `MI-2690910`, PEC `mavkglob@pec.it`. Emails: `info@maverickglob.com` is the general address used everywhere on the site (footer, contact page, meta, structured data); `contact@maverickglob.com` is **reserved for the contact form only** (Web3Forms delivery, and the `form_error` fallback message) — do not use it elsewhere.
 - `pv_portfolio_map_en_with details.html` is intentionally kept as a base for future map development — do not delete it.
 
