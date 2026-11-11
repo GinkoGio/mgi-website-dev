@@ -90,13 +90,13 @@ The generated `_site/` files use relative asset and page links, so they can be o
 
 ### Local Preview (built output)
 
-To build and preview the static output locally (without the GitHub Pages path prefix):
+To build and preview the static output locally:
 
 ```bash
 npm run preview
 ```
 
-This builds the site with `pathPrefix=/` and serves it at `http://localhost:3000`.
+This runs the production build (including the sitemap) and serves `_site/` at `http://localhost:3000`. Works on Windows, macOS and Linux.
 
 > ✅ You can also open `_site/index.html` or `_site/it/index.html` directly in your browser after `npm run build`.
 

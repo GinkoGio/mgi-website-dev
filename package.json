@@ -6,7 +6,7 @@
 	"scripts": {
 		"start": "eleventy --serve",
 		"build": "eleventy && npm run generate:sitemap",
-		"preview": "set ELEVENTY_PATH_PREFIX=/&& eleventy && npx serve _site",
+		"preview": "npm run build && npx serve _site",
 		"sync:from-main": "node scripts/sync-branches.js main restyling/solar-white",
 		"sync:to-main": "node scripts/sync-branches.js restyling/solar-white main",
 		"generate:sitemap": "node scripts/generate-sitemap.js",
