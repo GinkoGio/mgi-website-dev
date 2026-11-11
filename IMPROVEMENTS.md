@@ -14,14 +14,21 @@
 - _Motivo: per un investitore istituzionale una firm senza volti è un segnale di opacità. È il singolo intervento a più alto impatto._
 
 ### 2. Adempimenti legali (obblighi di legge)
-- [ ] **P.IVA nel footer** — obbligatoria sul sito per una S.r.l. (art. 35 DPR 633/72); aggiungere anche capitale sociale e REA
-- [ ] **Privacy policy** — pagina dedicata linkata dal footer (il form raccoglie dati personali e li invia a Web3Forms, servizio terzo)
-- [ ] **Checkbox consenso GDPR** nel form contatti + informativa ex art. 13
+- [x] **P.IVA nel footer** — aggiunti P.IVA/C.F. 12887430960 e REA MI-2690910 (da visura CCIAA), chiave `footer.legal` in i18n.json + `vatID`/`taxID` nei dati strutturati (2026-11-11)
+- [ ] **Capitale sociale nel footer** — manca: non è nella visura di inizio attività. Aggiungerlo a `footer.legal` (formato "Cap. soc. € … i.v.") quando disponibile
+- [ ] ⏸️ **Privacy policy — RIMANDATA (decisione 2026-11-11)** — pagina dedicata `privacy.html` IT/EN linkata dal footer, informativa ex art. 13 GDPR. Contenuti da coprire:
+  - titolare: Maverick Global Investments S.r.l., Via Gabrio Serbelloni 5, 20122 Milano, info@maverickglob.com / mavkglob@pec.it
+  - dati raccolti dal form (nome, azienda, email, oggetto, messaggio) + dati tecnici di navigazione
+  - destinatari/responsabili: Web3Forms (invio form), GitHub Pages (hosting), Google Fonts (vedi punto 8) — trasferimenti extra-UE (USA)
+  - finalità, base giuridica, conservazione, diritti dell'interessato, reclamo al Garante
+  - far rivedere il testo da un consulente prima della pubblicazione
+- [ ] ⏸️ **Checkbox consenso GDPR** nel form contatti con link all'informativa — insieme alla privacy policy
+- [ ] ⏸️ **Correggere `form_note`** (i18n.json, sezione `contact`): oggi dice che i dati "non saranno condivisi con terze parti", ma transitano da Web3Forms → sostituire con rinvio all'informativa — insieme alla privacy policy
 - [ ] Valutare pagina "Note legali / Legal"
 
 ### 3. Incoerenze nei numeri e nei contenuti
-- [ ] **1.700 vs 1.400 MWh/MW**: `investment-sectors` dice "exceeding 1,700 MWh/MW" nel testo (`s1_p1`, i18n.json:178) ma "1,400+" nella stat (i18n.json:207) e nel portfolio (">1,400"). Nota: 50 MW × 1.400 = 70.000 MWh → coerente con la metrica hero, quindi è il 1.700 a essere probabilmente errato
-- [ ] **Email errore form**: `form_error` rimanda a `contact@maverickglob.com` (i18n.json:371) ma ovunque si usa `info@maverickglob.com` — se `contact@` non esiste, il lead va perso
+- [x] **1.700 vs 1.400 MWh/MW**: `s1_p1` (investment-sectors) portato a 1.400 MWh/MW, coerente con stat e portfolio (2026-11-11)
+- [x] **Email**: verificato (2026-11-11) — `contact@maverickglob.com` è dedicato **solo al form** (messaggio di errore `form_error`); in tutto il resto del sito si usa `info@maverickglob.com`. Nessuna modifica necessaria
 - [ ] **CTA hero divergente tra lingue**: bottone primario EN → What We Do, IT → Portfolio (i18n.json:34). Verificare se intenzionale
 
 ---
@@ -61,6 +68,6 @@
 
 ## ⚪ Igiene repository (invisibile agli utenti)
 
-- [ ] **Rimuovere `node_modules` da git** su entrambi i branch (~1.900 file committati prima del .gitignore): `git rm -r --cached node_modules`
-- [ ] Eliminare file orfano `pv_portfolio_map_en_with details.html` (entrambi i branch)
+- [x] **Rimuovere `node_modules` da git** su entrambi i branch (2026-11-11)
+- [x] ~~Eliminare `pv_portfolio_map_en_with details.html`~~ — **da tenere**: base per sviluppi futuri della mappa
 - [ ] `UPDATES.md` non esiste su nessun branch ma CLAUDE.md dice di consultarlo → ripristinare il file o correggere il riferimento
