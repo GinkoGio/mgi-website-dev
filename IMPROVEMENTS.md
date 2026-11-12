@@ -57,7 +57,7 @@
 - [ ] Sostituire Google Fonts CDN con font self-hosted — risolve sia GDPR (giurisprudenza tedesca su Google Fonts) sia performance (render-blocking)
 
 ### 9. Accessibilità / motion
-- [ ] Supportare `prefers-reduced-motion`: canvas animato, parallax e counter animati oggi ignorano la preferenza di sistema
+- [x] `prefers-reduced-motion` supportato su `restyling/solar-white` (canvas, parallax e contatori rimossi del tutto) — 2026-11-12. Su `main` resta da fare
 
 ### 10. Dominio e SEO
 - [x] Canonical/og:url/hreflang/sitemap/robots allineati al dominio principale `https://maverickglob.com` (senza www: `www.` fa 301 verso l'apex) — dominio live (2026-11-11)
@@ -72,3 +72,16 @@
 - [x] **Rimuovere `node_modules` da git** su entrambi i branch (2026-11-11)
 - [x] ~~Eliminare `pv_portfolio_map_en_with details.html`~~ — **da tenere**: base per sviluppi futuri della mappa
 - [ ] `UPDATES.md` non esiste su nessun branch ma CLAUDE.md dice di consultarlo → ripristinare il file o correggere il riferimento
+
+---
+
+## 🎨 Restyling editoriale (`restyling/solar-white`) — 2026-11-12
+
+- [x] Home: apertura semplificata con foto, fascia KPI statica in serif
+- [x] Tutte le pagine: testate sobrie, due soli font (Cormorant Garamond + Inter), niente rete animata / mirini / contatori
+- [ ] Foto impianti ad alta risoluzione (le attuali sono max 917×515 px) per usarle in grande
+- [ ] Variare le sezioni "titolo + tre schede" con impaginazioni più editoriali (foto + testo affiancati)
+- [ ] Font self-hosted (oggi ancora da Google Fonts, ma ridotti a due famiglie)
+- [ ] Logo in formato SVG
+- [ ] Decidere se promuovere solar-white a produzione (poi allineare `main` o sostituirlo)
+- [x] Mappa portfolio: tolto lo sfondo CARTO che mostrava "API KEY REQUIRED"; le regioni sono disegnate su fondo pulito, su entrambi i branch (2026-11-12)

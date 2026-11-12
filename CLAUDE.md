@@ -27,6 +27,7 @@ The build also generates the sitemap via `scripts/generate-sitemap.js`. The GitH
 `IMPROVEMENTS.md` is the running checklist of pending site updates — check it before starting new work. Notably:
 
 - **Privacy policy is deliberately deferred** (decision 2026-11-11): no `privacy.html`, no GDPR consent checkbox in the contact form, and `form_note` still claims data is not shared with third parties (it goes through Web3Forms). Do not add these unless asked; the planned contents are listed in `IMPROVEMENTS.md` §2.
+- **Home template is ahead on `restyling/solar-white`** (2026-11-12): `src/index.njk` there uses the editorial hero (`.hero-ed*`) and KPI band (`.kpi-band`, `.kpi*`), whose CSS exists only in that branch's `hitech.css`. **Do not run `npm run sync:to-main`** until `main` either gets matching styles or is replaced by solar-white — the dark home would render unstyled.
 - **Share capital (capitale sociale)** is missing from the footer legal line (`footer.legal` in `i18n.json`) — not available in the company registry extract.
 - **Primary domain is `https://maverickglob.com` (no www)** — `www.` and the `github.io` URL 301-redirect to it. All canonical/og/hreflang URLs (`canonical` keys in `i18n.json`), structured data, `robots.txt` and the sitemap must use the apex host.
 - Company data shown on the site: P.IVA / C.F. `12887430960`, REA `MI-2690910`, PEC `mavkglob@pec.it`. Emails: `info@maverickglob.com` is the general address used everywhere on the site (footer, contact page, meta, structured data); `contact@maverickglob.com` is **reserved for the contact form only** (Web3Forms delivery, and the `form_error` fallback message) — do not use it elsewhere.
@@ -170,7 +171,16 @@ Notes:
 - **Glows are kept near-zero on purpose** (~`0.03` alpha on accent box-shadows and hero/page-hero mesh gradients, marked with a `/* glow kept ~off */` comment) so they can be re-enabled by raising the alpha. Card/nav depth shadows are soft neutral grey, not colored glows.
 - Canvas network stroke alpha is dialed down (`* 0.22`) for a subtle hero effect.
 
-Fonts: **Cormorant Garamond** (H1/H2 display), Space Grotesk (UI/cards), Inter (body), Space Mono (data).
+Fonts: **Cormorant Garamond** (display headings and figures), **Inter** (UI and body).
+
+**Editorial restyle (2026-11-12, this branch only):**
+- **Two font families only**: Cormorant Garamond (display headings, all figures/KPIs) + Inter (everything else). Space Grotesk and Space Mono are no longer loaded; inline `font-family:'Space Grotesk'` on stat numbers in the synced templates is overridden to the serif via a `[style*="Space Grotesk"]` rule.
+- **Home**: photo-led hero (`images/hero-panels.webp`, a 4:5 crop of `solar-wireframe.webp`, with a small real-plant inset + caption) and a static KPI band below it. No hero logo block, no badge pill, no second paragraph.
+- **Inner pages**: `.page-hero` is a quiet ivory band (no dot grid, no drifting mesh); eyebrows are small gold caps site-wide.
+- **No tech ornaments**: `#hero-canvas`, `.hero-crosshair`, `.card-shine` are hidden via CSS (markup remains in shared templates). `hitech.js` on this branch has **no** canvas network, counter animation or parallax — only nav scroll state, hamburger and scroll-reveal.
+- `prefers-reduced-motion` is respected (CSS + reveal fallback in JS).
+- `pv_portfolio_map.html` on this branch uses Inter only.
+
 
 ## Brand & Copywriting Guidelines
 
@@ -182,4 +192,4 @@ Fonts: **Cormorant Garamond** (H1/H2 display), Space Grotesk (UI/cards), Inter (
 
 ## Standalone Map Page
 
-`pv_portfolio_map.html` is a self-contained page (Leaflet.js via CDN, inline CSS/JS, plant data hardcoded as JS array). **Bilingual via `?lang=` query param** (`?lang=it` → Italian, default English) — a single file resolves both languages at runtime from a small `T` i18n dictionary in the inline script; the iframe in `portfolio.njk` passes `?lang={{ lang.code }}`. Not part of the Eleventy build — copied to `_site/` as-is via passthrough. Styled with the site fonts (Space Grotesk / Space Mono / Inter); the file is **not** covered by the sync scripts, so restyle it on each branch separately (accent `#e0285a` on `main`, burgundy `#8e2f43` with a warm-ivory panel on `restyling/solar-white`).
+`pv_portfolio_map.html` is a self-contained page (Leaflet.js via CDN, inline CSS/JS, plant data hardcoded as JS array). **No external basemap** — region outlines (embedded GeoJSON) are drawn on a plain background; the CARTO tiles used before started requiring an API key in 2026, so do not re-add them. **Bilingual via `?lang=` query param** (`?lang=it` → Italian, default English) — a single file resolves both languages at runtime from a small `T` i18n dictionary in the inline script; the iframe in `portfolio.njk` passes `?lang={{ lang.code }}`. Not part of the Eleventy build — copied to `_site/` as-is via passthrough. Styled with the site fonts (Space Grotesk / Space Mono / Inter); the file is **not** covered by the sync scripts, so restyle it on each branch separately (accent `#e0285a` on `main`, burgundy `#8e2f43` with a warm-ivory panel on `restyling/solar-white`).
